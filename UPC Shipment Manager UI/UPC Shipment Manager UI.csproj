@@ -236,6 +236,10 @@
       <Project>{d4106c9f-688c-4036-b499-20f3b3f489c5}</Project>
       <Name>UPC.Library</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UPC.UIManager\UPC.UIManager.csproj">
+      <Project>{a328232e-cbd8-4723-b482-145095217b1b}</Project>
+      <Name>UPC.UIManager</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
