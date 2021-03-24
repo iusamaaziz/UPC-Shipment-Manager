@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPC Shipment Manager UI", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPC.Library", "UPC.Library\UPC.Library.csproj", "{D4106C9F-688C-4036-B499-20F3B3F489C5}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "UPCData", "UPCData\UPCData.sqlproj", "{062B9ED8-E10C-4FE5-B739-9A0B341FBFAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,12 @@ Global
 		{D4106C9F-688C-4036-B499-20F3B3F489C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4106C9F-688C-4036-B499-20F3B3F489C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4106C9F-688C-4036-B499-20F3B3F489C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{062B9ED8-E10C-4FE5-B739-9A0B341FBFAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{062B9ED8-E10C-4FE5-B739-9A0B341FBFAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{062B9ED8-E10C-4FE5-B739-9A0B341FBFAD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{062B9ED8-E10C-4FE5-B739-9A0B341FBFAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{062B9ED8-E10C-4FE5-B739-9A0B341FBFAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{062B9ED8-E10C-4FE5-B739-9A0B341FBFAD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
