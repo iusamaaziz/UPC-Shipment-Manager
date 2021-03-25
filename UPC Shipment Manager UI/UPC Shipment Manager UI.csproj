@@ -119,6 +119,12 @@
     <Compile Include="Forms\Login\FormNewUser.Designer.cs">
       <DependentUpon>FormNewUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Login\FormRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login\FormRegister.Designer.cs">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -232,6 +238,9 @@
     <EmbeddedResource Include="Forms\Login\FormNewUser.resx">
       <DependentUpon>FormNewUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login\FormRegister.resx">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -319,6 +328,7 @@
     <Content Include="Icons\icons8_settings_24px.png" />
     <Content Include="Icons\icons8_shipment_logistic_48px.png" />
     <Content Include="Icons\icons8_show_property_24px.png" />
+    <Content Include="Icons\icons8_switch_host.ico" />
     <Content Include="Icons\icons8_toolbox_52px.png" />
     <Content Include="Icons\icons8_users_settings_24px.png" />
     <Content Include="Icons\icons8_warehouse_24px.png" />

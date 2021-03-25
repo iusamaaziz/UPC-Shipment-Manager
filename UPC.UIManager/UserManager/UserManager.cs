@@ -33,5 +33,10 @@ namespace UPC.UIManager.UserManager
 			};
 			Access.ExecuteProcedure("[dbo].[InsertUser]", parameters.ToArray());
 		}
+
+		public static int GetUserCount()
+		{
+			return Access.GetInt("SELECT [dbo].[GetUserCount]()");
+		}
 	}
 }

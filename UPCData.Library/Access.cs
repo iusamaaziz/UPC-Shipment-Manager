@@ -90,6 +90,25 @@ namespace UPCData.Library
 			return -1;
 		}
 
+		public static int GetInt(string command, SqlParameter[] parameters = null)
+		{
+			using (SqlConnection cnn = DB.SqlConnection)
+			{
+				SqlCommand cmd = new SqlCommand(command, cnn);
+				if (parameters != null)
+					cmd.Parameters.AddRange(parameters);
+				SqlDataReader reader = cmd.ExecuteReader();
+				if (reader.HasRows)
+				{
+					while (reader.Read())
+					{
+						return reader.GetInt32(0);
+					}
+				}
+			}
+			return -1;
+		}
+
 		public static async Task<User> GetUserAsync(string command, SqlParameter[] parameters = null)
 		{
 			using (SqlConnection cnn = await DB.GetSqlConnectionAsync())

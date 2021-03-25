@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using UPC_Shipment_Manager_UI.Forms.Login;
 using UPC_Shipment_Manager_UI.UserControls;
 using UPC_Shipment_Manager_UI.UserControls.Inventory;
+using UPC.Library.LoginModels;
 
 namespace UPC_Shipment_Manager_UI.Forms
 {
@@ -212,11 +213,15 @@ namespace UPC_Shipment_Manager_UI.Forms
 
 		public void Inward_Click(object sender, EventArgs e)
 		{
+			MessageBox.Show("Will be available sooner.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+			return;
 			ActivateControl(new UC_Inward());
 		}
 
 		public void Outward_Click(object sender, EventArgs e)
 		{
+			MessageBox.Show("Will be available sooner.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+			return;
 			ActivateControl(new UC_Outward());
 		}
 
@@ -232,6 +237,11 @@ namespace UPC_Shipment_Manager_UI.Forms
 
 		private void UserSettings_Click(object sender, EventArgs e)
 		{
+			if (UPC.Library.LoginModels.Login.Role == "Operator")
+			{
+				MessageBox.Show("Operators do not have access to this section. Please contact administrator for further details.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
+			}
 			using (FormNewUser frm = new FormNewUser())
 			{
 				frm.ShowDialog();

@@ -1,0 +1,7 @@
+﻿CREATE FUNCTION [dbo].[GetUserCount]
+()
+RETURNS INT
+AS
+BEGIN
+	RETURN (SELECT COUNT(*) FROM [dbo].[User])
+END

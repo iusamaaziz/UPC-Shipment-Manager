@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using UPC.UIManager.UserManager;
+
 using UPC_Shipment_Manager_UI.Forms;
 using UPC_Shipment_Manager_UI.Forms.Login;
 
@@ -19,7 +21,11 @@ namespace UPC_Shipment_Manager_UI
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new FormLogin());
+			if (UserManager.GetUserCount() == 0)
+			{
+				Application.Run(new FormRegister());
+			}
+			else Application.Run(new FormLogin());
 		}
 	}
 }
