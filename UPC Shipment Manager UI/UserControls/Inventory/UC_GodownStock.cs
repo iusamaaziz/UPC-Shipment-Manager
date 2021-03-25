@@ -8,7 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using UPC.Library.InventoryModels;
 using UPC.UIManager.InventoryManager;
+
+using UPC_Shipment_Manager_UI.Reporting;
 
 namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 {
@@ -28,7 +31,12 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 
 		private async void Godown_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			dg.DataSource = await InventoryManager.GetGodownStockAsync(Godown.Text);
+			inventoryItemBindingSource.DataSource = await InventoryManager.GetGodownStockAsync(Godown.Text);
+		}
+
+		private void Print_Click(object sender, EventArgs e)
+		{
+			using (FormGodownPrintout frm = new FormGodownPrintout(inventoryItemBindingSource.List.OfType<InventoryItem>().ToArray(), Godown.Text)) frm.ShowDialog();
 		}
 	}
 }

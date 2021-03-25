@@ -1,7 +1,7 @@
 ﻿
 namespace UPC_Shipment_Manager_UI.Reporting
 {
-	partial class FormPicklistPrintout
+	partial class FormGodownPrintout
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -30,41 +30,37 @@ namespace UPC_Shipment_Manager_UI.Reporting
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-			this.InventoryItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+			this.InventoryItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.InventoryItemBindingSource)).BeginInit();
 			this.SuspendLayout();
+			// 
+			// reportViewer1
+			// 
+			this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.reportViewer1.LocalReport.ReportEmbeddedResource = "UPC_Shipment_Manager_UI.Reporting.GodownStockPrintout.rdlc";
+			this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+			this.reportViewer1.Name = "reportViewer1";
+			this.reportViewer1.ServerReport.BearerToken = null;
+			this.reportViewer1.Size = new System.Drawing.Size(800, 525);
+			this.reportViewer1.TabIndex = 0;
 			// 
 			// InventoryItemBindingSource
 			// 
 			this.InventoryItemBindingSource.DataSource = typeof(UPC.Library.InventoryModels.InventoryItem);
 			// 
-			// reportViewer1
-			// 
-			this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-			reportDataSource1.Name = "PicklistDataset";
-			reportDataSource1.Value = this.InventoryItemBindingSource;
-			this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-			this.reportViewer1.LocalReport.ReportEmbeddedResource = "UPC_Shipment_Manager_UI.Reporting.PicklistPrintout.rdlc";
-			this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-			this.reportViewer1.Name = "reportViewer1";
-			this.reportViewer1.ServerReport.BearerToken = null;
-			this.reportViewer1.Size = new System.Drawing.Size(800, 529);
-			this.reportViewer1.TabIndex = 0;
-			// 
-			// FormPicklistPrintout
+			// FormGodownPrintout
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 529);
+			this.ClientSize = new System.Drawing.Size(800, 525);
 			this.Controls.Add(this.reportViewer1);
-			this.Name = "FormPicklistPrintout";
+			this.Name = "FormGodownPrintout";
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Picklist Printout";
-			this.Load += new System.EventHandler(this.FormPicklistPrintout_Load);
+			this.Text = "Godown Stock - Printout";
+			this.Load += new System.EventHandler(this.FormGodownPrintout_Load);
 			((System.ComponentModel.ISupportInitialize)(this.InventoryItemBindingSource)).EndInit();
 			this.ResumeLayout(false);
 

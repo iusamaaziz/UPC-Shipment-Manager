@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+using UPC.Library.InventoryModels;
 
 namespace UPCData.Library
 {
@@ -122,6 +123,35 @@ namespace UPCData.Library
 					while (await reader.ReadAsync())
 					{
 						col.Add(reader[0].ToString());
+					}
+				}
+			}
+			return col.ToArray();
+		}
+
+		public static async Task<InventoryItem[]> GetInventoryItemsAsync(string command, SqlParameter[] parameters = null)
+		{
+			List<InventoryItem> col = new List<InventoryItem>();
+			using (SqlConnection cnn = await DB.GetSqlConnectionAsync())
+			{
+				SqlCommand cmd = new SqlCommand(command, cnn);
+				if (parameters != null)
+					cmd.Parameters.AddRange(parameters);
+				SqlDataReader reader = await cmd.ExecuteReaderAsync();
+				if (reader.HasRows)
+				{
+					while (await reader.ReadAsync())
+					{
+						InventoryItem item = new InventoryItem()
+						{
+							Id = (int)reader["Id"],
+							ItemName = reader["ItemName"].ToString(),
+							Godown = reader["Godown"].ToString(),
+							Quantity = (int)reader["Quantity"],
+							TransactionDate = (DateTime)reader["TransactionDate"],
+							Remarks = reader["Remarks"].ToString()
+						};
+						col.Add(item);
 					}
 				}
 			}

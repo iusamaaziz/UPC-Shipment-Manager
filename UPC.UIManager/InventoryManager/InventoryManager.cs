@@ -79,13 +79,13 @@ namespace UPC.UIManager.InventoryManager
 			return await Access.GetDataTableAsync("SELECT * FROM [dbo].[GetLast30InventoryInTransactions]()");
 		}
 
-		public static async Task<DataTable> GetGodownStockAsync(string godown)
+		public static async Task<InventoryItem[]> GetGodownStockAsync(string godown)
 		{
 			List<SqlParameter> parameters = new List<SqlParameter>
 			{
 				new SqlParameter("@godown", godown)
 			};
-			return await Access.GetDataTableAsync("SELECT * FROM [dbo].[GetGodownStock](@godown)", parameters.ToArray());
+			return await Access.GetInventoryItemsAsync("SELECT * FROM [dbo].[GetGodownStock](@godown)", parameters.ToArray());
 		}
 
 		public static async Task<DataTable> GetLast30InventoryCheckoutsAsync()

@@ -30,28 +30,29 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.label7 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.Godown = new System.Windows.Forms.ComboBox();
 			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
 			this.dg = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.Print = new System.Windows.Forms.PictureBox();
 			this.Export = new System.Windows.Forms.PictureBox();
 			this.inventoryItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+			this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.godownDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.transactionDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.transactionTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.Print)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Export)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.inventoryItemBindingSource)).BeginInit();
 			this.SuspendLayout();
@@ -114,41 +115,44 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			// 
 			this.dg.AllowUserToAddRows = false;
 			this.dg.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.dg.AutoGenerateColumns = false;
 			this.dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dg.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
 			this.dg.BackgroundColor = System.Drawing.Color.Gainsboro;
 			this.dg.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.Maroon;
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
-			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F);
-			dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Transparent;
-			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dg.DefaultCellStyle = dataGridViewCellStyle7;
+            this.idDataGridViewTextBoxColumn,
+            this.itemNameDataGridViewTextBoxColumn,
+            this.godownDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn,
+            this.remarksDataGridViewTextBoxColumn,
+            this.transactionDateDataGridViewTextBoxColumn,
+            this.transactionTypeDataGridViewTextBoxColumn});
+			this.dg.DataSource = this.inventoryItemBindingSource;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dg.DefaultCellStyle = dataGridViewCellStyle3;
 			this.dg.DoubleBuffered = true;
 			this.dg.EnableHeadersVisualStyles = false;
 			this.dg.HeaderBgColor = System.Drawing.Color.Maroon;
@@ -159,70 +163,27 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.dg.ReadOnly = true;
 			this.dg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
 			this.dg.RowHeadersVisible = false;
-			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Transparent;
-			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-			this.dg.RowsDefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+			this.dg.RowsDefaultCellStyle = dataGridViewCellStyle4;
 			this.dg.Size = new System.Drawing.Size(675, 330);
 			this.dg.TabIndex = 56;
 			this.dg.TabStop = false;
 			// 
-			// Column1
+			// Print
 			// 
-			this.Column1.DataPropertyName = "Id";
-			this.Column1.HeaderText = "Id";
-			this.Column1.Name = "Column1";
-			this.Column1.ReadOnly = true;
-			this.Column1.Visible = false;
-			// 
-			// Column2
-			// 
-			this.Column2.DataPropertyName = "ItemName";
-			this.Column2.HeaderText = "Item Name";
-			this.Column2.Name = "Column2";
-			this.Column2.ReadOnly = true;
-			// 
-			// Column3
-			// 
-			this.Column3.DataPropertyName = "Godown";
-			this.Column3.HeaderText = "Godown Number";
-			this.Column3.Name = "Column3";
-			this.Column3.ReadOnly = true;
-			// 
-			// Column4
-			// 
-			this.Column4.DataPropertyName = "Quantity";
-			this.Column4.HeaderText = "Quantity";
-			this.Column4.Name = "Column4";
-			this.Column4.ReadOnly = true;
-			// 
-			// Column5
-			// 
-			this.Column5.DataPropertyName = "Remarks";
-			this.Column5.HeaderText = "Remarks";
-			this.Column5.Name = "Column5";
-			this.Column5.ReadOnly = true;
-			this.Column5.Visible = false;
-			// 
-			// Column6
-			// 
-			this.Column6.DataPropertyName = "TransactionDate";
-			this.Column6.HeaderText = "Last Updated";
-			this.Column6.Name = "Column6";
-			this.Column6.ReadOnly = true;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.pictureBox1.BackColor = System.Drawing.Color.White;
-			this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.pictureBox1.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_print_24px;
-			this.pictureBox1.Location = new System.Drawing.Point(712, 83);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.pictureBox1.TabIndex = 58;
-			this.pictureBox1.TabStop = false;
-			this.toolTip1.SetToolTip(this.pictureBox1, "Print");
+			this.Print.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.Print.BackColor = System.Drawing.Color.White;
+			this.Print.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Print.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_print_24px;
+			this.Print.Location = new System.Drawing.Point(712, 83);
+			this.Print.Name = "Print";
+			this.Print.Size = new System.Drawing.Size(24, 24);
+			this.Print.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.Print.TabIndex = 58;
+			this.Print.TabStop = false;
+			this.toolTip1.SetToolTip(this.Print, "Print");
+			this.Print.Click += new System.EventHandler(this.Print_Click);
 			// 
 			// Export
 			// 
@@ -242,12 +203,64 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			// 
 			this.inventoryItemBindingSource.DataSource = typeof(UPC.Library.InventoryModels.InventoryItem);
 			// 
+			// idDataGridViewTextBoxColumn
+			// 
+			this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+			this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+			this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+			this.idDataGridViewTextBoxColumn.ReadOnly = true;
+			this.idDataGridViewTextBoxColumn.Visible = false;
+			// 
+			// itemNameDataGridViewTextBoxColumn
+			// 
+			this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
+			this.itemNameDataGridViewTextBoxColumn.HeaderText = "Item Name";
+			this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
+			this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// godownDataGridViewTextBoxColumn
+			// 
+			this.godownDataGridViewTextBoxColumn.DataPropertyName = "Godown";
+			this.godownDataGridViewTextBoxColumn.HeaderText = "Godown";
+			this.godownDataGridViewTextBoxColumn.Name = "godownDataGridViewTextBoxColumn";
+			this.godownDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// quantityDataGridViewTextBoxColumn
+			// 
+			this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+			this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+			this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+			this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// remarksDataGridViewTextBoxColumn
+			// 
+			this.remarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks";
+			this.remarksDataGridViewTextBoxColumn.HeaderText = "Remarks";
+			this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
+			this.remarksDataGridViewTextBoxColumn.ReadOnly = true;
+			this.remarksDataGridViewTextBoxColumn.Visible = false;
+			// 
+			// transactionDateDataGridViewTextBoxColumn
+			// 
+			this.transactionDateDataGridViewTextBoxColumn.DataPropertyName = "TransactionDate";
+			this.transactionDateDataGridViewTextBoxColumn.HeaderText = "Last Modified";
+			this.transactionDateDataGridViewTextBoxColumn.Name = "transactionDateDataGridViewTextBoxColumn";
+			this.transactionDateDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// transactionTypeDataGridViewTextBoxColumn
+			// 
+			this.transactionTypeDataGridViewTextBoxColumn.DataPropertyName = "TransactionType";
+			this.transactionTypeDataGridViewTextBoxColumn.HeaderText = "TransactionType";
+			this.transactionTypeDataGridViewTextBoxColumn.Name = "transactionTypeDataGridViewTextBoxColumn";
+			this.transactionTypeDataGridViewTextBoxColumn.ReadOnly = true;
+			this.transactionTypeDataGridViewTextBoxColumn.Visible = false;
+			// 
 			// UC_GodownStock
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.Print);
 			this.Controls.Add(this.Export);
 			this.Controls.Add(this.dg);
 			this.Controls.Add(this.label2);
@@ -258,7 +271,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.Size = new System.Drawing.Size(801, 473);
 			this.Load += new System.EventHandler(this.UC_GodownStock_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.Print)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Export)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.inventoryItemBindingSource)).EndInit();
 			this.ResumeLayout(false);
@@ -275,14 +288,15 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 		private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
 		private Bunifu.Framework.UI.BunifuCustomDataGrid dg;
 		private System.Windows.Forms.BindingSource inventoryItemBindingSource;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
 		private System.Windows.Forms.PictureBox Export;
-		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.PictureBox Print;
 		private System.Windows.Forms.ToolTip toolTip1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn godownDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn remarksDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn transactionDateDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn transactionTypeDataGridViewTextBoxColumn;
 	}
 }
