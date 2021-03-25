@@ -42,6 +42,20 @@ namespace UPC.UIManager.InventoryManager
 			Access.ExecuteProcedure("[dbo].[InsertInventoryOut]", parameters.ToArray());
 		}
 
+		public static void InsertPicklistItem(InventoryItem item)
+		{
+			List<SqlParameter> parameters = new List<SqlParameter>
+			{
+				new SqlParameter("@name", item.ItemName),
+				new SqlParameter("@godown", item.Godown),
+				new SqlParameter("@quantity", item.Quantity),
+				new SqlParameter("@remarks", item.Remarks),
+				new SqlParameter("@date", item.TransactionDate),
+				new SqlParameter("@type", "Picklist")
+			};
+			Access.ExecuteProcedure("[dbo].[InsertInventoryOut]", parameters.ToArray());
+		}
+
 		public static void InsertGodown(string godown)
 		{
 			List<SqlParameter> parameters = new List<SqlParameter>
@@ -63,6 +77,15 @@ namespace UPC.UIManager.InventoryManager
 		public static async Task<DataTable> GetInventoryDetailsAsync()
 		{
 			return await Access.GetDataTableAsync("SELECT * FROM [dbo].[GetLast30InventoryInTransactions]()");
+		}
+
+		public static async Task<DataTable> GetGodownStockAsync(string godown)
+		{
+			List<SqlParameter> parameters = new List<SqlParameter>
+			{
+				new SqlParameter("@godown", godown)
+			};
+			return await Access.GetDataTableAsync("SELECT * FROM [dbo].[GetGodownStock](@godown)", parameters.ToArray());
 		}
 
 		public static async Task<DataTable> GetLast30InventoryCheckoutsAsync()

@@ -78,6 +78,7 @@
     <Build Include="Functions\ScalerValuedFunctions\GetQuantityByItem.sql" />
     <Build Include="StoredProcedures\InsertInventoryOut.sql" />
     <Build Include="Functions\TableValuedFunctions\GetLast30InventoryCheckouts.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetGodownStock.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\UPCData.publish.xml" />

@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using UPC.Library.InventoryModels;
 using UPC.UIManager.InventoryManager;
 
+using UPC_Shipment_Manager_UI.Reporting;
+
 namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 {
 	public partial class UC_InventoryOut : UserControl
@@ -155,6 +157,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 				if (IsValidSingle)
 				{
 					InventoryItem item = new InventoryItem() { ItemName = ItemName.Text, Godown = Godown.Text, Quantity = Convert.ToInt32(Quantity.Value * -1), Remarks = Remarks.Text, TransactionDate = TransactionDate.Value };
+
 					InventoryManager.InsertInventoryOut(item);
 					MessageBox.Show("Checked out"); // UNDONE -- Notification
 					ResetSingle();
@@ -194,6 +197,17 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 				if (IsValidPicklist)
 				{
 					InventoryItem item = new InventoryItem() { ItemName = PLItemName.Text, Godown = PLGodown.Text, Quantity = Convert.ToInt32(PLQuantity.Value * -1), Remarks = PLRemarks.Text, TransactionDate = PLTransactionDate.Value };
+					foreach (InventoryItem hell in inventoryItemBindingSource.List)
+					{
+						if (hell.ItemName == item.ItemName && hell.Godown == item.Godown)
+						{
+							hell.Quantity = item.Quantity; hell.Remarks = item.Remarks; hell.TransactionDate = item.TransactionDate;
+							inventoryItemBindingSource.ResetBindings(false);
+							ClearForPiclist();
+							ResetPicklist();
+							return;
+						}
+					}
 					inventoryItemBindingSource.List.Add(item);
 					ClearForPiclist();
 					ResetPicklist();
@@ -202,6 +216,35 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			catch (Exception ex)
 			{
 				MessageBox.Show($"Could not item to Picklist due to:\nException type: {ex.GetType()}\nMessage: {ex.Message}", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void CheckoutPicklist_Click(object sender, EventArgs e)
+		{
+			if (inventoryItemBindingSource.List.Count == 0)
+			{
+				MessageBox.Show("Picklist is empty. You can not checkout at the moment.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				return;
+			}
+			try
+			{
+
+				foreach (InventoryItem item in inventoryItemBindingSource.List.OfType<InventoryItem>())
+				{
+					InventoryManager.InsertPicklistItem(item);
+					// UNDONE -- Show notification
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show($"Could not check out inventory picklist due to:\nException type: {ex.GetType()}\nMessage: {ex.Message}", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			if (TakePrintout.Checked)
+			{
+				using (FormPicklistPrintout frm = new FormPicklistPrintout(inventoryItemBindingSource.List.OfType<InventoryItem>().ToArray()))
+				{
+					frm.ShowDialog();
+				}
 			}
 		}
 	}

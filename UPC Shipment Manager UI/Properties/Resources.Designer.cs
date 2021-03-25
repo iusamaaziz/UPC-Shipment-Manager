@@ -193,6 +193,16 @@ namespace UPC_Shipment_Manager_UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_print_24px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_print_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_report_file_24px_2 {
             get {
                 object obj = ResourceManager.GetObject("icons8_report_file_24px_2", resourceCulture);

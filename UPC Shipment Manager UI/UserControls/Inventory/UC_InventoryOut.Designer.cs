@@ -49,7 +49,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.label5 = new System.Windows.Forms.Label();
 			this.TransactionDate = new System.Windows.Forms.DateTimePicker();
-			this.Export = new System.Windows.Forms.PictureBox();
 			this.Checkout = new System.Windows.Forms.Button();
 			this.label7 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
@@ -67,7 +66,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.CheckoutPicklist = new System.Windows.Forms.Button();
 			this.label8 = new System.Windows.Forms.Label();
 			this.PLTransactionDate = new System.Windows.Forms.DateTimePicker();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.AddToPicklist = new System.Windows.Forms.Button();
 			this.label9 = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
@@ -84,7 +82,8 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
 			this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
 			this.ItemsGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-			this.inventoryItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.TakePrintout = new System.Windows.Forms.CheckBox();
+			this.Export = new System.Windows.Forms.PictureBox();
 			this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.godownDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,17 +91,18 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.transactionDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.transactionTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.checkBox1 = new System.Windows.Forms.CheckBox();
+			this.inventoryItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.tabControl1.SuspendLayout();
 			this.SingleItem.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.Export)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Quantity)).BeginInit();
 			this.CreatePicklist.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.PLQuantity)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.ItemsGrid)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.Export)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.inventoryItemBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tabControl1
@@ -196,7 +196,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
 			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
 			this.dg.RowsDefaultCellStyle = dataGridViewCellStyle4;
-			this.dg.Size = new System.Drawing.Size(675, 224);
+			this.dg.Size = new System.Drawing.Size(675, 220);
 			this.dg.TabIndex = 53;
 			this.dg.TabStop = false;
 			// 
@@ -265,19 +265,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.TransactionDate.Name = "TransactionDate";
 			this.TransactionDate.Size = new System.Drawing.Size(236, 23);
 			this.TransactionDate.TabIndex = 4;
-			// 
-			// Export
-			// 
-			this.Export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.Export.BackColor = System.Drawing.Color.White;
-			this.Export.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Export.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.excel_24px_dark;
-			this.Export.Location = new System.Drawing.Point(698, 206);
-			this.Export.Name = "Export";
-			this.Export.Size = new System.Drawing.Size(30, 30);
-			this.Export.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.Export.TabIndex = 51;
-			this.Export.TabStop = false;
 			// 
 			// Checkout
 			// 
@@ -440,12 +427,11 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			// 
 			// CreatePicklist
 			// 
-			this.CreatePicklist.Controls.Add(this.checkBox1);
+			this.CreatePicklist.Controls.Add(this.TakePrintout);
 			this.CreatePicklist.Controls.Add(this.ItemsGrid);
 			this.CreatePicklist.Controls.Add(this.CheckoutPicklist);
 			this.CreatePicklist.Controls.Add(this.label8);
 			this.CreatePicklist.Controls.Add(this.PLTransactionDate);
-			this.CreatePicklist.Controls.Add(this.pictureBox1);
 			this.CreatePicklist.Controls.Add(this.AddToPicklist);
 			this.CreatePicklist.Controls.Add(this.label9);
 			this.CreatePicklist.Controls.Add(this.panel2);
@@ -459,6 +445,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.CreatePicklist.Controls.Add(this.label14);
 			this.CreatePicklist.Controls.Add(this.PLGodown);
 			this.CreatePicklist.Controls.Add(this.label15);
+			this.CreatePicklist.Controls.Add(this.pictureBox1);
 			this.CreatePicklist.Location = new System.Drawing.Point(4, 24);
 			this.CreatePicklist.Name = "CreatePicklist";
 			this.CreatePicklist.Padding = new System.Windows.Forms.Padding(3);
@@ -476,6 +463,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.CheckoutPicklist.TabIndex = 8;
 			this.CheckoutPicklist.Text = "Checkout";
 			this.CheckoutPicklist.UseVisualStyleBackColor = true;
+			this.CheckoutPicklist.Click += new System.EventHandler(this.CheckoutPicklist_Click);
 			// 
 			// label8
 			// 
@@ -499,19 +487,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.PLTransactionDate.Name = "PLTransactionDate";
 			this.PLTransactionDate.Size = new System.Drawing.Size(236, 23);
 			this.PLTransactionDate.TabIndex = 4;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.pictureBox1.BackColor = System.Drawing.Color.White;
-			this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.pictureBox1.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.excel_24px_dark;
-			this.pictureBox1.Location = new System.Drawing.Point(705, 183);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.pictureBox1.TabIndex = 68;
-			this.pictureBox1.TabStop = false;
 			// 
 			// AddToPicklist
 			// 
@@ -738,9 +713,31 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.ItemsGrid.TabIndex = 6;
 			this.ItemsGrid.TabStop = false;
 			// 
-			// inventoryItemBindingSource
+			// TakePrintout
 			// 
-			this.inventoryItemBindingSource.DataSource = typeof(UPC.Library.InventoryModels.InventoryItem);
+			this.TakePrintout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.TakePrintout.AutoSize = true;
+			this.TakePrintout.Checked = true;
+			this.TakePrintout.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.TakePrintout.Location = new System.Drawing.Point(480, 441);
+			this.TakePrintout.Name = "TakePrintout";
+			this.TakePrintout.Size = new System.Drawing.Size(95, 19);
+			this.TakePrintout.TabIndex = 7;
+			this.TakePrintout.Text = "Take Printout";
+			this.TakePrintout.UseVisualStyleBackColor = true;
+			// 
+			// Export
+			// 
+			this.Export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.Export.BackColor = System.Drawing.Color.White;
+			this.Export.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Export.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.excel_24px_dark;
+			this.Export.Location = new System.Drawing.Point(698, 206);
+			this.Export.Name = "Export";
+			this.Export.Size = new System.Drawing.Size(30, 30);
+			this.Export.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.Export.TabIndex = 51;
+			this.Export.TabStop = false;
 			// 
 			// idDataGridViewTextBoxColumn
 			// 
@@ -793,18 +790,22 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.transactionTypeDataGridViewTextBoxColumn.ReadOnly = true;
 			this.transactionTypeDataGridViewTextBoxColumn.Visible = false;
 			// 
-			// checkBox1
+			// inventoryItemBindingSource
 			// 
-			this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.checkBox1.AutoSize = true;
-			this.checkBox1.Checked = true;
-			this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.checkBox1.Location = new System.Drawing.Point(480, 441);
-			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(95, 19);
-			this.checkBox1.TabIndex = 7;
-			this.checkBox1.Text = "Take Printout";
-			this.checkBox1.UseVisualStyleBackColor = true;
+			this.inventoryItemBindingSource.DataSource = typeof(UPC.Library.InventoryModels.InventoryItem);
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.pictureBox1.BackColor = System.Drawing.Color.White;
+			this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.pictureBox1.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.excel_24px_dark;
+			this.pictureBox1.Location = new System.Drawing.Point(705, 183);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.pictureBox1.TabIndex = 68;
+			this.pictureBox1.TabStop = false;
 			// 
 			// UC_InventoryOut
 			// 
@@ -820,14 +821,14 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.SingleItem.ResumeLayout(false);
 			this.SingleItem.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.Export)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Quantity)).EndInit();
 			this.CreatePicklist.ResumeLayout(false);
 			this.CreatePicklist.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.PLQuantity)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.ItemsGrid)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.Export)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.inventoryItemBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -888,6 +889,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 		private System.Windows.Forms.DataGridViewTextBoxColumn transactionDateDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn transactionTypeDataGridViewTextBoxColumn;
 		private System.Windows.Forms.BindingSource inventoryItemBindingSource;
-		private System.Windows.Forms.CheckBox checkBox1;
+		private System.Windows.Forms.CheckBox TakePrintout;
 	}
 }

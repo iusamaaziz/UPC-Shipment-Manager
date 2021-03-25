@@ -84,6 +84,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.38.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.38\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Forms\Dashboard.cs">
@@ -113,6 +116,12 @@
       <DependentUpon>FormPicklistPrintout.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UserControls\Inventory\UC_GodownStock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Inventory\UC_GodownStock.Designer.cs">
+      <DependentUpon>UC_GodownStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Inventory\UC_InventoryIn.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -191,6 +200,9 @@
       <DependentUpon>FormPicklistPrintout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reporting\PicklistPrintout.rdlc" />
+    <EmbeddedResource Include="UserControls\Inventory\UC_GodownStock.resx">
+      <DependentUpon>UC_GodownStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Inventory\UC_InventoryIn.resx">
       <DependentUpon>UC_InventoryIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +268,7 @@
     <Content Include="Icons\icons8_internal_60px.png" />
     <Content Include="Icons\icons8_list_16px.png" />
     <Content Include="Icons\icons8_people_64px.png" />
+    <Content Include="Icons\icons8_print_24px.png" />
     <Content Include="Icons\icons8_report_file_24px_2.png" />
     <Content Include="Icons\icons8_settings_24px.png" />
     <Content Include="Icons\icons8_shipment_logistic_48px.png" />

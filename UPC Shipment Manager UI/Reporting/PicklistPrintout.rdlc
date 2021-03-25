@@ -6,19 +6,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.42431in</Width>
+              <Width>1.84097in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.26806in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.52066in</Width>
+              <Width>0.86441in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.86615in</Width>
+              <Width>1.46385in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.38958in</Width>
+              <Width>1.03146in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -335,7 +335,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!TransactionDate.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>g</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -379,8 +381,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>PicklistDataset</DataSetName>
-        <Top>1.81125in</Top>
-        <Left>0.99875in</Left>
+        <Top>1.42236in</Top>
+        <Left>0.84646in</Left>
         <Height>0.5in</Height>
         <Width>6.46875in</Width>
         <Style>
@@ -411,8 +413,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>1.00917in</Top>
-        <Left>0.99875in</Left>
+        <Top>0.62028in</Top>
+        <Left>0.84646in</Left>
         <Height>0.34375in</Height>
         <Width>6.46875in</Width>
         <ZIndex>1</ZIndex>
@@ -447,8 +449,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>1.51264in</Top>
-        <Left>1.01563in</Left>
+        <Top>1.12375in</Top>
+        <Left>0.86333in</Left>
         <Height>0.22917in</Height>
         <Width>6.46875in</Width>
         <ZIndex>2</ZIndex>
@@ -471,12 +473,10 @@
       </Border>
     </Style>
   </Body>
-  <Width>8.5in</Width>
+  <Width>8.17708in</Width>
   <Page>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <LeftMargin>0.1in</LeftMargin>
+    <RightMargin>0.1in</RightMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
@@ -532,6 +532,7 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>7a9d684e-6c82-44db-af91-f7fab9948f91</rd:ReportID>
 </Report>

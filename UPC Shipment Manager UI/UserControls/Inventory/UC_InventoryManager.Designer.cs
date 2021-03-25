@@ -31,17 +31,17 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 		{
 			this.components = new System.ComponentModel.Container();
 			this.Navbar = new System.Windows.Forms.Panel();
+			this.Back = new System.Windows.Forms.PictureBox();
 			this.NavTitle = new System.Windows.Forms.Label();
 			this.MenuBar = new System.Windows.Forms.Panel();
-			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-			this.Canva = new System.Windows.Forms.Panel();
 			this.Reports = new FontAwesome.Sharp.IconButton();
 			this.InventoryOut = new FontAwesome.Sharp.IconButton();
 			this.InventoryIn = new FontAwesome.Sharp.IconButton();
-			this.Back = new System.Windows.Forms.PictureBox();
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+			this.Canva = new System.Windows.Forms.Panel();
 			this.Navbar.SuspendLayout();
-			this.MenuBar.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Back)).BeginInit();
+			this.MenuBar.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// Navbar
@@ -54,6 +54,21 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.Navbar.Name = "Navbar";
 			this.Navbar.Size = new System.Drawing.Size(958, 30);
 			this.Navbar.TabIndex = 1;
+			// 
+			// Back
+			// 
+			this.Back.BackColor = System.Drawing.SystemColors.AppWorkspace;
+			this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Back.Dock = System.Windows.Forms.DockStyle.Left;
+			this.Back.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.back;
+			this.Back.Location = new System.Drawing.Point(0, 0);
+			this.Back.Name = "Back";
+			this.Back.Size = new System.Drawing.Size(30, 30);
+			this.Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.Back.TabIndex = 8;
+			this.Back.TabStop = false;
+			this.toolTip1.SetToolTip(this.Back, "Back to Main Page");
+			this.Back.Click += new System.EventHandler(this.Back_Click);
 			// 
 			// NavTitle
 			// 
@@ -77,14 +92,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.MenuBar.Name = "MenuBar";
 			this.MenuBar.Size = new System.Drawing.Size(157, 498);
 			this.MenuBar.TabIndex = 2;
-			// 
-			// Canva
-			// 
-			this.Canva.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.Canva.Location = new System.Drawing.Point(157, 30);
-			this.Canva.Name = "Canva";
-			this.Canva.Size = new System.Drawing.Size(801, 498);
-			this.Canva.TabIndex = 3;
 			// 
 			// Reports
 			// 
@@ -152,20 +159,13 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.InventoryIn.UseVisualStyleBackColor = true;
 			this.InventoryIn.Click += new System.EventHandler(this.InventoryIn_Click);
 			// 
-			// Back
+			// Canva
 			// 
-			this.Back.BackColor = System.Drawing.SystemColors.AppWorkspace;
-			this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Back.Dock = System.Windows.Forms.DockStyle.Left;
-			this.Back.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.back;
-			this.Back.Location = new System.Drawing.Point(0, 0);
-			this.Back.Name = "Back";
-			this.Back.Size = new System.Drawing.Size(30, 30);
-			this.Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.Back.TabIndex = 8;
-			this.Back.TabStop = false;
-			this.toolTip1.SetToolTip(this.Back, "Back to Main Page");
-			this.Back.Click += new System.EventHandler(this.Back_Click);
+			this.Canva.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Canva.Location = new System.Drawing.Point(157, 30);
+			this.Canva.Name = "Canva";
+			this.Canva.Size = new System.Drawing.Size(801, 498);
+			this.Canva.TabIndex = 3;
 			// 
 			// UC_InventoryManager
 			// 
@@ -180,8 +180,8 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.Load += new System.EventHandler(this.UC_InventoryManager_Load);
 			this.Navbar.ResumeLayout(false);
 			this.Navbar.PerformLayout();
-			this.MenuBar.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.Back)).EndInit();
+			this.MenuBar.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -190,12 +190,12 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 
 		private System.Windows.Forms.Panel Navbar;
 		private System.Windows.Forms.PictureBox Back;
-		private System.Windows.Forms.Label NavTitle;
 		private System.Windows.Forms.Panel MenuBar;
 		private FontAwesome.Sharp.IconButton InventoryIn;
 		private FontAwesome.Sharp.IconButton Reports;
 		private FontAwesome.Sharp.IconButton InventoryOut;
 		private System.Windows.Forms.ToolTip toolTip1;
 		private System.Windows.Forms.Panel Canva;
+		public System.Windows.Forms.Label NavTitle;
 	}
 }
