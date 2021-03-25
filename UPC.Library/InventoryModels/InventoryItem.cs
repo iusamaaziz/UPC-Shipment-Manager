@@ -20,5 +20,7 @@ namespace UPC.Library.InventoryModels
 
 		public DateTime TransactionDate { get; set; }
 
+		public string TransactionType { get; set; }
+
 	}
 }

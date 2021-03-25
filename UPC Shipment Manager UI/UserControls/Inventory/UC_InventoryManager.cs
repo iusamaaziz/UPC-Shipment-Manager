@@ -16,16 +16,10 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 {
 	public partial class UC_InventoryManager : UserControl
 	{
-		private UC_InventoryIn ii;
-		private UC_InventoryOut io;
-		private UC_Reports rep;
 
 		public UC_InventoryManager()
 		{
 			InitializeComponent();
-			ii = new UC_InventoryIn();
-			io = new UC_InventoryOut();
-			rep = new UC_Reports();
 		}
 
 		private void ActivateControl(UserControl c)
@@ -38,19 +32,19 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 		private void InventoryIn_Click(object sender, EventArgs e)
 		{
 			NavTitle.Text = "UPC Inventory Manager → Inventory In";
-			ActivateControl(ii);
+			ActivateControl(new UC_InventoryIn());
 		}
 
 		private void InventoryOut_Click(object sender, EventArgs e)
 		{
 			NavTitle.Text = "UPC Inventory Manager → Inventory Out";
-			ActivateControl(io);
+			ActivateControl(new UC_InventoryOut());
 		}
 
 		private void Reports_Click(object sender, EventArgs e)
 		{
 			NavTitle.Text = "UPC Inventory Manager → Reports";
-			ActivateControl(rep);
+			ActivateControl(new UC_Reports());
 		}
 
 		private void Back_Click(object sender, EventArgs e)

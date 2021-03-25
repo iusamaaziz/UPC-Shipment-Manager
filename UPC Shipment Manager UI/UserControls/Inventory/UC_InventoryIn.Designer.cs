@@ -30,10 +30,10 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.SoftwareName = new System.Windows.Forms.Label();
 			this.Remarks = new System.Windows.Forms.RichTextBox();
 			this.ItemName = new System.Windows.Forms.TextBox();
@@ -72,11 +72,11 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.SoftwareName.AutoSize = true;
 			this.SoftwareName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
 			this.SoftwareName.ForeColor = System.Drawing.Color.Black;
-			this.SoftwareName.Location = new System.Drawing.Point(319, 229);
+			this.SoftwareName.Location = new System.Drawing.Point(332, 229);
 			this.SoftwareName.Name = "SoftwareName";
-			this.SoftwareName.Size = new System.Drawing.Size(152, 20);
+			this.SoftwareName.Size = new System.Drawing.Size(130, 20);
 			this.SoftwareName.TabIndex = 2;
-			this.SoftwareName.Text = "Last 30 Transactions";
+			this.SoftwareName.Text = "Inventory Details";
 			// 
 			// Remarks
 			// 
@@ -97,7 +97,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.ItemName.Location = new System.Drawing.Point(136, 81);
 			this.ItemName.Name = "ItemName";
 			this.ItemName.Size = new System.Drawing.Size(236, 25);
-			this.ItemName.TabIndex = 1;
+			this.ItemName.TabIndex = 0;
 			// 
 			// label6
 			// 
@@ -144,7 +144,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.Godown.Location = new System.Drawing.Point(460, 81);
 			this.Godown.Name = "Godown";
 			this.Godown.Size = new System.Drawing.Size(247, 25);
-			this.Godown.TabIndex = 0;
+			this.Godown.TabIndex = 1;
 			this.Godown.SelectedIndexChanged += new System.EventHandler(this.Godown_SelectedIndexChanged);
 			// 
 			// Quantity
@@ -190,8 +190,8 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			// 
 			this.dg.AllowUserToAddRows = false;
 			this.dg.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
 			this.dg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -201,14 +201,14 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.dg.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.Maroon;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
 			this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -217,14 +217,14 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
             this.Column4,
             this.Column5,
             this.Column6});
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
-			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dg.DefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+			dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Transparent;
+			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dg.DefaultCellStyle = dataGridViewCellStyle7;
 			this.dg.DoubleBuffered = true;
 			this.dg.EnableHeadersVisualStyles = false;
 			this.dg.HeaderBgColor = System.Drawing.Color.Maroon;
@@ -235,11 +235,12 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.dg.ReadOnly = true;
 			this.dg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
 			this.dg.RowHeadersVisible = false;
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-			this.dg.RowsDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Transparent;
+			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+			this.dg.RowsDefaultCellStyle = dataGridViewCellStyle8;
 			this.dg.Size = new System.Drawing.Size(675, 224);
 			this.dg.TabIndex = 30;
+			this.dg.TabStop = false;
 			// 
 			// Column1
 			// 

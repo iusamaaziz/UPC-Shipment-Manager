@@ -69,6 +69,25 @@ namespace UPCData.Library
 			return false;
 		}
 
+		public static async Task<int> GetIntAsync(string command, SqlParameter[] parameters = null)
+		{
+			using (SqlConnection cnn = await DB.GetSqlConnectionAsync())
+			{
+				SqlCommand cmd = new SqlCommand(command, cnn);
+				if (parameters != null)
+					cmd.Parameters.AddRange(parameters);
+				SqlDataReader reader = await cmd.ExecuteReaderAsync();
+				if (reader.HasRows)
+				{
+					while (await reader.ReadAsync())
+					{
+						return reader.GetInt32(0);
+					}
+				}
+			}
+			return -1;
+		}
+
 		public static async Task<AutoCompleteStringCollection> GetAutoCompleteStringCollectionAsync(string command, SqlParameter[] parameters = null)
 		{
 			AutoCompleteStringCollection col = new AutoCompleteStringCollection();

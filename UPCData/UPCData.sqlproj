@@ -72,6 +72,12 @@
     <Build Include="Functions\TableValuedFunctions\GetLast30InventoryInTransactions.sql" />
     <Build Include="Functions\ScalerValuedFunctions\IsGodownExists.sql" />
     <Build Include="StoredProcedures\InsertGodown.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetGodownsByItem.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetItemNames.sql" />
+    <Build Include="Tables\Checkouts.sql" />
+    <Build Include="Functions\ScalerValuedFunctions\GetQuantityByItem.sql" />
+    <Build Include="StoredProcedures\InsertInventoryOut.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetLast30InventoryCheckouts.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\UPCData.publish.xml" />

@@ -7,7 +7,7 @@
 AS
 BEGIN
 
-    DECLARE @count INT = (SELECT COUNT(*) FROM InventoryItem WHERE InventoryItem.ItemName = @name)
+    DECLARE @count INT = (SELECT COUNT(*) FROM InventoryItem WHERE InventoryItem.ItemName = @name AND InventoryItem.Godown = @godown)
     IF(@count = 0)
        INSERT INTO [dbo].[InventoryItem]
            ([ItemName]

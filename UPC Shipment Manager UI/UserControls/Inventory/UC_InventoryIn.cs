@@ -17,6 +17,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 {
 	public partial class UC_InventoryIn : UserControl
 	{
+		ErrorProvider error = new ErrorProvider();
 		public UC_InventoryIn()
 		{
 			InitializeComponent();
@@ -31,6 +32,26 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			TransactionDate.Value = DateTime.Now;
 		}
 
+		private bool IsValid
+		{
+			get
+			{
+				if (ItemName.TextLength == 0)
+				{
+					error.SetError(ItemName, "Item name can't be empty.");
+					return false;
+				}
+				else error.SetError(ItemName, "");
+				if (Godown.Text.Length == 0)
+				{
+					error.SetError(Godown, "Godown can't be empty.");
+					return false;
+				}
+				else error.SetError(Godown, "");
+				return true;
+			}
+		}
+
 		private void Godown_SelectedIndexChanged(object sender, EventArgs e)
 		{
 
@@ -40,7 +61,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 		{
 			Godown.Items.Clear();
 			Godown.Items.AddRange(await InventoryManager.GetGodownsAsync());
-			dg.DataSource = await InventoryManager.GetLast30InventoryInTransactionsAsync();
+			dg.DataSource = await InventoryManager.GetInventoryDetailsAsync();
 			dg.ClearSelection();
 		}
 
@@ -48,11 +69,14 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 		{
 			try
 			{
-				InventoryItem item = new InventoryItem() { ItemName = ItemName.Text, Godown = Godown.Text, Quantity = Convert.ToInt32(Quantity.Value), Remarks = Remarks.Text, TransactionDate = TransactionDate.Value };
-				InventoryManager.InsertInventoryIn(item);
-				MessageBox.Show("Added"); // UNDONE - Customize notification
-				Clear();
-				UC_InventoryIn_Load(this, e);
+				if (IsValid)
+				{
+					InventoryItem item = new InventoryItem() { ItemName = ItemName.Text, Godown = Godown.Text, Quantity = Convert.ToInt32(Quantity.Value), Remarks = Remarks.Text, TransactionDate = TransactionDate.Value };
+					InventoryManager.InsertInventoryIn(item);
+					MessageBox.Show("Added"); // UNDONE - Customize notification
+					Clear();
+					UC_InventoryIn_Load(this, e);
+				}
 			}
 			catch (Exception ex)
 			{
