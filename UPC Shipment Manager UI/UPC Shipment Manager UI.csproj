@@ -146,6 +146,18 @@
     <Compile Include="UserControls\Inventory\UC_InventoryOut.Designer.cs">
       <DependentUpon>UC_InventoryOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Inventory\UC_ItemReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Inventory\UC_ItemReports.Designer.cs">
+      <DependentUpon>UC_ItemReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Inventory\UC_PastPicklists.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Inventory\UC_PastPicklists.Designer.cs">
+      <DependentUpon>UC_PastPicklists.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Inventory\UC_Reports.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -221,6 +233,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Inventory\UC_InventoryOut.resx">
       <DependentUpon>UC_InventoryOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Inventory\UC_ItemReports.resx">
+      <DependentUpon>UC_ItemReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Inventory\UC_PastPicklists.resx">
+      <DependentUpon>UC_PastPicklists.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Inventory\UC_Reports.resx">
       <DependentUpon>UC_Reports.cs</DependentUpon>

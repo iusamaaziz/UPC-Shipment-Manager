@@ -18,6 +18,7 @@ namespace UPC_Shipment_Manager_UI.Forms
 		public Dashboard()
 		{
 			InitializeComponent();
+			this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 		}
 
 		private void Close_Click(object sender, EventArgs e)

@@ -30,13 +30,13 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 		private void InitializeComponent()
 		{
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+			this.ItemReports = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.GodownStock = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+			this.PastPicklists = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
 			this.Canva = new System.Windows.Forms.Panel();
-			this.ItemReports = new System.Windows.Forms.ToolStripButton();
-			this.GodownStock = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -47,7 +47,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
             this.toolStripSeparator1,
             this.GodownStock,
             this.toolStripSeparator2,
-            this.toolStripButton3,
+            this.PastPicklists,
             this.toolStripSeparator3});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
@@ -55,15 +55,42 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.toolStrip1.TabIndex = 0;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
+			// ItemReports
+			// 
+			this.ItemReports.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_report_file_24px_2;
+			this.ItemReports.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.ItemReports.Name = "ItemReports";
+			this.ItemReports.Size = new System.Drawing.Size(94, 22);
+			this.ItemReports.Text = "Item Reports";
+			this.ItemReports.Click += new System.EventHandler(this.ItemReports_Click);
+			// 
 			// toolStripSeparator1
 			// 
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
 			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
 			// 
+			// GodownStock
+			// 
+			this.GodownStock.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_warehouse_24px;
+			this.GodownStock.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.GodownStock.Name = "GodownStock";
+			this.GodownStock.Size = new System.Drawing.Size(104, 22);
+			this.GodownStock.Text = "Godown Stock";
+			this.GodownStock.Click += new System.EventHandler(this.GodownStock_Click);
+			// 
 			// toolStripSeparator2
 			// 
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
 			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+			// 
+			// PastPicklists
+			// 
+			this.PastPicklists.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_list_16px;
+			this.PastPicklists.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.PastPicklists.Name = "PastPicklists";
+			this.PastPicklists.Size = new System.Drawing.Size(94, 22);
+			this.PastPicklists.Text = "Past Picklists";
+			this.PastPicklists.Click += new System.EventHandler(this.PastPicklists_Click);
 			// 
 			// toolStripSeparator3
 			// 
@@ -77,32 +104,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.Canva.Name = "Canva";
 			this.Canva.Size = new System.Drawing.Size(801, 473);
 			this.Canva.TabIndex = 1;
-			// 
-			// ItemReports
-			// 
-			this.ItemReports.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_report_file_24px_2;
-			this.ItemReports.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.ItemReports.Name = "ItemReports";
-			this.ItemReports.Size = new System.Drawing.Size(94, 22);
-			this.ItemReports.Text = "Item Reports";
-			this.ItemReports.Click += new System.EventHandler(this.ItemReports_Click);
-			// 
-			// GodownStock
-			// 
-			this.GodownStock.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_warehouse_24px;
-			this.GodownStock.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.GodownStock.Name = "GodownStock";
-			this.GodownStock.Size = new System.Drawing.Size(104, 22);
-			this.GodownStock.Text = "Godown Stock";
-			this.GodownStock.Click += new System.EventHandler(this.GodownStock_Click);
-			// 
-			// toolStripButton3
-			// 
-			this.toolStripButton3.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_list_16px;
-			this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton3.Name = "toolStripButton3";
-			this.toolStripButton3.Size = new System.Drawing.Size(94, 22);
-			this.toolStripButton3.Text = "Past Picklists";
 			// 
 			// UC_Reports
 			// 
@@ -127,7 +128,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripButton GodownStock;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-		private System.Windows.Forms.ToolStripButton toolStripButton3;
+		private System.Windows.Forms.ToolStripButton PastPicklists;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 		private System.Windows.Forms.Panel Canva;
 	}

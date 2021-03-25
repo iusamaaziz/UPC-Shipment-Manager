@@ -6,6 +6,18 @@
 	@date       datetime2(7)
 AS
 BEGIN
+    INSERT INTO [dbo].[CheckIns]
+           ([ItemName]
+           ,[Godown]
+           ,[Quantity]
+           ,[Remarks]
+           ,[TransactionDate])
+        VALUES
+           (@name    
+           ,@godown  
+           ,@quantity
+           ,@remarks 
+           ,@date)
 
     DECLARE @count INT = (SELECT COUNT(*) FROM InventoryItem WHERE InventoryItem.ItemName = @name AND InventoryItem.Godown = @godown)
     IF(@count = 0)

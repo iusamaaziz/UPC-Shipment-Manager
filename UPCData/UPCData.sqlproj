@@ -79,6 +79,12 @@
     <Build Include="StoredProcedures\InsertInventoryOut.sql" />
     <Build Include="Functions\TableValuedFunctions\GetLast30InventoryCheckouts.sql" />
     <Build Include="Functions\TableValuedFunctions\GetGodownStock.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetItemStock.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetItemCheckouts.sql" />
+    <Build Include="Tables\CheckIns.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetItemCheckIns.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetItemInventory.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetPastPicklists.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\UPCData.publish.xml" />

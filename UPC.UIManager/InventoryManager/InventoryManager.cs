@@ -88,6 +88,42 @@ namespace UPC.UIManager.InventoryManager
 			return await Access.GetInventoryItemsAsync("SELECT * FROM [dbo].[GetGodownStock](@godown)", parameters.ToArray());
 		}
 
+		public static async Task<InventoryItem[]> GetItemStockAsync(string itemName)
+		{
+			List<SqlParameter> parameters = new List<SqlParameter>
+			{
+				new SqlParameter("@name", itemName)
+			};
+			return await Access.GetInventoryItemsAsync("SELECT * FROM [dbo].[GetItemStock](@name)", parameters.ToArray());
+		}
+
+		public static async Task<InventoryItem[]> GetItemCheckInsAsync(string itemName)
+		{
+			List<SqlParameter> parameters = new List<SqlParameter>
+			{
+				new SqlParameter("@name", itemName)
+			};
+			return await Access.GetInventoryItemsAsync("SELECT * FROM [dbo].[GetItemCheckIns](@name)", parameters.ToArray());
+		}
+
+		public static async Task<InventoryItem[]> GetItemCheckOutsAsync(string itemName)
+		{
+			List<SqlParameter> parameters = new List<SqlParameter>
+			{
+				new SqlParameter("@name", itemName)
+			};
+			return await Access.GetInventoryItemsAsync("SELECT * FROM [dbo].[GetItemCheckOuts](@name)", parameters.ToArray());
+		}
+
+		public static async Task<InventoryItem[]> GetPastPicklistsAsync()
+		{
+			//List<SqlParameter> parameters = new List<SqlParameter>
+			//{
+			//	new SqlParameter("@name", itemName)
+			//};
+			return await Access.GetInventoryItemsAsync("SELECT * FROM [dbo].[GetPastPicklists]()");
+		}
+
 		public static async Task<DataTable> GetLast30InventoryCheckoutsAsync()
 		{
 			return await Access.GetDataTableAsync("SELECT * FROM [dbo].[GetLast30InventoryCheckouts]()");
