@@ -14,7 +14,7 @@ namespace UPC.Library.InventoryModels
 
 		public string Godown { get; set; }
 
-		public string Quantity { get; set; }
+		public int Quantity { get; set; }
 
 		public string Remarks { get; set; }
 

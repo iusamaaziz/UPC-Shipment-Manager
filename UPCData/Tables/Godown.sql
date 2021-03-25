@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Godown]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Value] NVARCHAR(128) UNIQUE NOT NULL
+)

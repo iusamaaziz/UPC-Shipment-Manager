@@ -29,8 +29,11 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.SoftwareName = new System.Windows.Forms.Label();
 			this.Remarks = new System.Windows.Forms.RichTextBox();
 			this.ItemName = new System.Windows.Forms.TextBox();
@@ -41,15 +44,25 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.Quantity = new System.Windows.Forms.NumericUpDown();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
-			this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+			this.dg = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label7 = new System.Windows.Forms.Label();
 			this.Register = new System.Windows.Forms.Button();
-			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.TransactionDate = new System.Windows.Forms.DateTimePicker();
 			this.label5 = new System.Windows.Forms.Label();
+			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+			this.NewGodown = new System.Windows.Forms.PictureBox();
 			this.Export = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.Quantity)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.NewGodown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Export)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -63,7 +76,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.SoftwareName.Name = "SoftwareName";
 			this.SoftwareName.Size = new System.Drawing.Size(152, 20);
 			this.SoftwareName.TabIndex = 2;
-			this.SoftwareName.Text = "Last 20 Transactions";
+			this.SoftwareName.Text = "Last 30 Transactions";
 			// 
 			// Remarks
 			// 
@@ -81,9 +94,9 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.ItemName.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.ItemName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
 			this.ItemName.Font = new System.Drawing.Font("Segoe UI", 10F);
-			this.ItemName.Location = new System.Drawing.Point(460, 81);
+			this.ItemName.Location = new System.Drawing.Point(136, 81);
 			this.ItemName.Name = "ItemName";
-			this.ItemName.Size = new System.Drawing.Size(247, 25);
+			this.ItemName.Size = new System.Drawing.Size(236, 25);
 			this.ItemName.TabIndex = 1;
 			// 
 			// label6
@@ -104,7 +117,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label4.ForeColor = System.Drawing.Color.Black;
-			this.label4.Location = new System.Drawing.Point(388, 86);
+			this.label4.Location = new System.Drawing.Point(64, 86);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(66, 15);
 			this.label4.TabIndex = 24;
@@ -116,7 +129,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label2.ForeColor = System.Drawing.Color.Black;
-			this.label2.Location = new System.Drawing.Point(56, 86);
+			this.label2.Location = new System.Drawing.Point(380, 86);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(74, 15);
 			this.label2.TabIndex = 23;
@@ -128,9 +141,9 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.Godown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Godown.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.Godown.FormattingEnabled = true;
-			this.Godown.Location = new System.Drawing.Point(136, 81);
+			this.Godown.Location = new System.Drawing.Point(460, 81);
 			this.Godown.Name = "Godown";
-			this.Godown.Size = new System.Drawing.Size(236, 25);
+			this.Godown.Size = new System.Drawing.Size(247, 25);
 			this.Godown.TabIndex = 0;
 			this.Godown.SelectedIndexChanged += new System.EventHandler(this.Godown_SelectedIndexChanged);
 			// 
@@ -173,34 +186,103 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.label3.TabIndex = 28;
 			this.label3.Text = "Date";
 			// 
-			// bunifuCustomDataGrid1
+			// dg
 			// 
+			this.dg.AllowUserToAddRows = false;
+			this.dg.AllowUserToDeleteRows = false;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-			this.bunifuCustomDataGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.dg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			this.dg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
-			this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			this.dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dg.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+			this.dg.BackgroundColor = System.Drawing.Color.Gainsboro;
+			this.dg.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.dg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+			this.dg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
 			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
 			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
 			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
 			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-			this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.bunifuCustomDataGrid1.DoubleBuffered = true;
-			this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
-			this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.Maroon;
-			this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.White;
-			this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(72, 259);
-			this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
-			this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(648, 224);
-			this.bunifuCustomDataGrid1.TabIndex = 30;
+			this.dg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dg.DefaultCellStyle = dataGridViewCellStyle3;
+			this.dg.DoubleBuffered = true;
+			this.dg.EnableHeadersVisualStyles = false;
+			this.dg.HeaderBgColor = System.Drawing.Color.Maroon;
+			this.dg.HeaderForeColor = System.Drawing.Color.White;
+			this.dg.Location = new System.Drawing.Point(59, 259);
+			this.dg.MultiSelect = false;
+			this.dg.Name = "dg";
+			this.dg.ReadOnly = true;
+			this.dg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			this.dg.RowHeadersVisible = false;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+			this.dg.RowsDefaultCellStyle = dataGridViewCellStyle4;
+			this.dg.Size = new System.Drawing.Size(675, 224);
+			this.dg.TabIndex = 30;
+			// 
+			// Column1
+			// 
+			this.Column1.DataPropertyName = "Id";
+			this.Column1.HeaderText = "Id";
+			this.Column1.Name = "Column1";
+			this.Column1.ReadOnly = true;
+			this.Column1.Visible = false;
+			// 
+			// Column2
+			// 
+			this.Column2.DataPropertyName = "ItemName";
+			this.Column2.HeaderText = "Item Name";
+			this.Column2.Name = "Column2";
+			this.Column2.ReadOnly = true;
+			// 
+			// Column3
+			// 
+			this.Column3.DataPropertyName = "Godown";
+			this.Column3.HeaderText = "Godown No.";
+			this.Column3.Name = "Column3";
+			this.Column3.ReadOnly = true;
+			// 
+			// Column4
+			// 
+			this.Column4.DataPropertyName = "Quantity";
+			this.Column4.HeaderText = "Quantity";
+			this.Column4.Name = "Column4";
+			this.Column4.ReadOnly = true;
+			// 
+			// Column5
+			// 
+			this.Column5.DataPropertyName = "Remarks";
+			this.Column5.HeaderText = "Remarks";
+			this.Column5.Name = "Column5";
+			this.Column5.ReadOnly = true;
+			// 
+			// Column6
+			// 
+			this.Column6.DataPropertyName = "TransactionDate";
+			this.Column6.HeaderText = "Date";
+			this.Column6.Name = "Column6";
+			this.Column6.ReadOnly = true;
 			// 
 			// panel1
 			// 
@@ -234,16 +316,16 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.Register.UseVisualStyleBackColor = true;
 			this.Register.Click += new System.EventHandler(this.Register_Click);
 			// 
-			// dateTimePicker1
+			// TransactionDate
 			// 
-			this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-			this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dateTimePicker1.Location = new System.Drawing.Point(136, 143);
-			this.dateTimePicker1.Name = "dateTimePicker1";
-			this.dateTimePicker1.Size = new System.Drawing.Size(236, 22);
-			this.dateTimePicker1.TabIndex = 4;
+			this.TransactionDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.TransactionDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+			this.TransactionDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+			this.TransactionDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.TransactionDate.Location = new System.Drawing.Point(136, 142);
+			this.TransactionDate.Name = "TransactionDate";
+			this.TransactionDate.Size = new System.Drawing.Size(236, 22);
+			this.TransactionDate.TabIndex = 4;
 			// 
 			// label5
 			// 
@@ -257,31 +339,53 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.label5.TabIndex = 35;
 			this.label5.Text = "Please fill out the following information to register new inventory in entry.";
 			// 
+			// bunifuElipse1
+			// 
+			this.bunifuElipse1.ElipseRadius = 7;
+			this.bunifuElipse1.TargetControl = this.dg;
+			// 
+			// NewGodown
+			// 
+			this.NewGodown.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.NewGodown.BackColor = System.Drawing.Color.White;
+			this.NewGodown.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.NewGodown.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_add_24px;
+			this.NewGodown.Location = new System.Drawing.Point(710, 82);
+			this.NewGodown.Name = "NewGodown";
+			this.NewGodown.Size = new System.Drawing.Size(24, 24);
+			this.NewGodown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.NewGodown.TabIndex = 36;
+			this.NewGodown.TabStop = false;
+			this.toolTip1.SetToolTip(this.NewGodown, "Add new Godown number");
+			this.NewGodown.Click += new System.EventHandler(this.NewGodown_Click);
+			// 
 			// Export
 			// 
 			this.Export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.Export.BackColor = System.Drawing.Color.White;
 			this.Export.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Export.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.excel_24px_dark;
-			this.Export.Location = new System.Drawing.Point(690, 223);
+			this.Export.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_file_excel_24px_1;
+			this.Export.Location = new System.Drawing.Point(710, 229);
 			this.Export.Name = "Export";
-			this.Export.Size = new System.Drawing.Size(30, 30);
+			this.Export.Size = new System.Drawing.Size(24, 24);
 			this.Export.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.Export.TabIndex = 34;
 			this.Export.TabStop = false;
+			this.toolTip1.SetToolTip(this.Export, "Export last 30 transactions");
 			// 
 			// UC_InventoryIn
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
+			this.Controls.Add(this.NewGodown);
 			this.Controls.Add(this.label5);
-			this.Controls.Add(this.dateTimePicker1);
+			this.Controls.Add(this.TransactionDate);
 			this.Controls.Add(this.Export);
 			this.Controls.Add(this.Register);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.panel1);
-			this.Controls.Add(this.bunifuCustomDataGrid1);
+			this.Controls.Add(this.dg);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.Quantity);
@@ -298,7 +402,8 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.Size = new System.Drawing.Size(801, 498);
 			this.Load += new System.EventHandler(this.UC_InventoryIn_Load);
 			((System.ComponentModel.ISupportInitialize)(this.Quantity)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.NewGodown)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Export)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -317,12 +422,21 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 		private System.Windows.Forms.NumericUpDown Quantity;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label3;
-		private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
+		private Bunifu.Framework.UI.BunifuCustomDataGrid dg;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Button Register;
 		private System.Windows.Forms.PictureBox Export;
-		private System.Windows.Forms.DateTimePicker dateTimePicker1;
+		private System.Windows.Forms.DateTimePicker TransactionDate;
 		private System.Windows.Forms.Label label5;
+		private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+		private System.Windows.Forms.PictureBox NewGodown;
+		private System.Windows.Forms.ToolTip toolTip1;
 	}
 }
