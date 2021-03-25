@@ -98,6 +98,7 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.UserSettings.TabIndex = 5;
 			this.UserSettings.TabStop = false;
 			this.toolTip1.SetToolTip(this.UserSettings, "Manage Users - Admin only");
+			this.UserSettings.Click += new System.EventHandler(this.UserSettings_Click);
 			// 
 			// Settings
 			// 

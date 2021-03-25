@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 using FontAwesome.Sharp;
 
+using UPC.Library.LoginModels;
+
 using UPC_Shipment_Manager_UI.Forms;
 
 namespace UPC_Shipment_Manager_UI.UserControls.Inventory
@@ -43,6 +45,11 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 
 		private void Reports_Click(object sender, EventArgs e)
 		{
+			if (Login.Role == "Operator")
+			{
+				MessageBox.Show("Operators do not have access to this section. Please contact administrator for further details.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
+			}
 			NavTitle.Text = "UPC Inventory Manager → Reports";
 			ActivateControl(new UC_Reports());
 		}

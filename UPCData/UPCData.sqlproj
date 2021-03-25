@@ -85,6 +85,9 @@
     <Build Include="Functions\TableValuedFunctions\GetItemCheckIns.sql" />
     <Build Include="Functions\TableValuedFunctions\GetItemInventory.sql" />
     <Build Include="Functions\TableValuedFunctions\GetPastPicklists.sql" />
+    <Build Include="Tables\User.sql" />
+    <Build Include="StoredProcedures\InsertUser.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetUserForLogin.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\UPCData.publish.xml" />

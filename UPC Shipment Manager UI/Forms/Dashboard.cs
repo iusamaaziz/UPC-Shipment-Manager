@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using UPC_Shipment_Manager_UI.Forms.Login;
 using UPC_Shipment_Manager_UI.UserControls;
 using UPC_Shipment_Manager_UI.UserControls.Inventory;
 
@@ -227,6 +228,14 @@ namespace UPC_Shipment_Manager_UI.Forms
 		private void Dashboard_Load(object sender, EventArgs e)
 		{
 
+		}
+
+		private void UserSettings_Click(object sender, EventArgs e)
+		{
+			using (FormNewUser frm = new FormNewUser())
+			{
+				frm.ShowDialog();
+			}
 		}
 	}
 }

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using UPC.Library.InventoryModels;
+using UPC.Library.LoginModels;
+using UPC.UIManager;
 using UPC.UIManager.InventoryManager;
 
 using UPC_Shipment_Manager_UI.Reporting;
@@ -22,6 +24,13 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 		{
 			InitializeComponent();
 			dg.AutoGenerateColumns = false;
+			if (Login.Role == "Operator")
+			{
+				TransactionDate.Enabled = false;
+				TransactionDate.Value = DateTime.Now;
+				PLTransactionDate.Enabled = false;
+				PLTransactionDate.Value = DateTime.Now;
+			}
 		}
 
 		private async void UC_InventoryOut_Load(object sender, EventArgs e)
@@ -46,6 +55,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 		{
 			PLGodown.Enabled = false;
 			PLQuantity.Enabled = false;
+			PLItemName.Focus();
 		}
 
 		private void ClearForPiclist()
@@ -246,6 +256,11 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 					frm.ShowDialog();
 				}
 			}
+		}
+
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+			GeneralManager.ExportDataGrid(dg);
 		}
 	}
 }

@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InventoryModels\InventoryItem.cs" />
+    <Compile Include="LoginModels\Login.cs" />
+    <Compile Include="LoginModels\User.cs" />
     <Compile Include="Models\InwardBulkShipment.cs" />
     <Compile Include="Models\InwardSingleShipment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

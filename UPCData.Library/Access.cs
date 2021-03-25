@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
 using UPC.Library.InventoryModels;
+using UPC.Library.LoginModels;
 
 namespace UPCData.Library
 {
@@ -87,6 +88,32 @@ namespace UPCData.Library
 				}
 			}
 			return -1;
+		}
+
+		public static async Task<User> GetUserAsync(string command, SqlParameter[] parameters = null)
+		{
+			using (SqlConnection cnn = await DB.GetSqlConnectionAsync())
+			{
+				SqlCommand cmd = new SqlCommand(command, cnn);
+				if (parameters != null)
+					cmd.Parameters.AddRange(parameters);
+				SqlDataReader reader = await cmd.ExecuteReaderAsync();
+				if (reader.HasRows)
+				{
+					while (await reader.ReadAsync())
+					{
+						User user = new User()
+						{
+							Id = (int)reader["Id"],
+							Username = (string)reader["Username"],
+							Password = (string)reader["Password"],
+							Role = (string)reader["Role"]
+						};
+						return user;
+					}
+				}
+			}
+			return null;
 		}
 
 		public static async Task<AutoCompleteStringCollection> GetAutoCompleteStringCollectionAsync(string command, SqlParameter[] parameters = null)

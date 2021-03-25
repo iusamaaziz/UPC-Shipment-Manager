@@ -40,10 +40,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.Godown = new System.Windows.Forms.ComboBox();
 			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
 			this.dg = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-			this.Print = new System.Windows.Forms.PictureBox();
-			this.Export = new System.Windows.Forms.PictureBox();
-			this.inventoryItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.godownDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,10 +47,14 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.transactionDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.transactionTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.inventoryItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.Print = new System.Windows.Forms.PictureBox();
+			this.Export = new System.Windows.Forms.PictureBox();
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.inventoryItemBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Print)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Export)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.inventoryItemBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label7
@@ -170,39 +170,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.dg.TabIndex = 56;
 			this.dg.TabStop = false;
 			// 
-			// Print
-			// 
-			this.Print.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.Print.BackColor = System.Drawing.Color.White;
-			this.Print.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Print.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_print_24px;
-			this.Print.Location = new System.Drawing.Point(712, 83);
-			this.Print.Name = "Print";
-			this.Print.Size = new System.Drawing.Size(24, 24);
-			this.Print.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.Print.TabIndex = 58;
-			this.Print.TabStop = false;
-			this.toolTip1.SetToolTip(this.Print, "Print");
-			this.Print.Click += new System.EventHandler(this.Print_Click);
-			// 
-			// Export
-			// 
-			this.Export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.Export.BackColor = System.Drawing.Color.White;
-			this.Export.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Export.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_file_excel_24px_1;
-			this.Export.Location = new System.Drawing.Point(688, 83);
-			this.Export.Name = "Export";
-			this.Export.Size = new System.Drawing.Size(24, 24);
-			this.Export.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.Export.TabIndex = 57;
-			this.Export.TabStop = false;
-			this.toolTip1.SetToolTip(this.Export, "Export to Excel");
-			// 
-			// inventoryItemBindingSource
-			// 
-			this.inventoryItemBindingSource.DataSource = typeof(UPC.Library.InventoryModels.InventoryItem);
-			// 
 			// idDataGridViewTextBoxColumn
 			// 
 			this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -255,6 +222,40 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.transactionTypeDataGridViewTextBoxColumn.ReadOnly = true;
 			this.transactionTypeDataGridViewTextBoxColumn.Visible = false;
 			// 
+			// inventoryItemBindingSource
+			// 
+			this.inventoryItemBindingSource.DataSource = typeof(UPC.Library.InventoryModels.InventoryItem);
+			// 
+			// Print
+			// 
+			this.Print.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.Print.BackColor = System.Drawing.Color.White;
+			this.Print.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Print.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_print_24px;
+			this.Print.Location = new System.Drawing.Point(712, 83);
+			this.Print.Name = "Print";
+			this.Print.Size = new System.Drawing.Size(24, 24);
+			this.Print.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.Print.TabIndex = 58;
+			this.Print.TabStop = false;
+			this.toolTip1.SetToolTip(this.Print, "Print");
+			this.Print.Click += new System.EventHandler(this.Print_Click);
+			// 
+			// Export
+			// 
+			this.Export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.Export.BackColor = System.Drawing.Color.White;
+			this.Export.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Export.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_file_excel_24px_1;
+			this.Export.Location = new System.Drawing.Point(688, 83);
+			this.Export.Name = "Export";
+			this.Export.Size = new System.Drawing.Size(24, 24);
+			this.Export.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.Export.TabIndex = 57;
+			this.Export.TabStop = false;
+			this.toolTip1.SetToolTip(this.Export, "Export to Excel");
+			this.Export.Click += new System.EventHandler(this.Export_Click);
+			// 
 			// UC_GodownStock
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,9 +272,9 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.Size = new System.Drawing.Size(801, 473);
 			this.Load += new System.EventHandler(this.UC_GodownStock_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.inventoryItemBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Print)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Export)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.inventoryItemBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
