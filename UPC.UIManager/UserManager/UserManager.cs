@@ -38,5 +38,6 @@ namespace UPC.UIManager.UserManager
 		{
 			return Access.GetInt("SELECT [dbo].[GetUserCount]()");
 		}
+
 	}
 }

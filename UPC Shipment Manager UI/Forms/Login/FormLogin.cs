@@ -51,5 +51,18 @@ namespace UPC_Shipment_Manager_UI.Forms.Login
 			dsh.Show();
 			this.Hide();
 		}
+
+		private void Exit_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+
+		private void Print_Click(object sender, EventArgs e)
+		{
+			using (FormConfiguration frm = new FormConfiguration())
+			{
+				frm.ShowDialog();
+			}
+		}
 	}
 }

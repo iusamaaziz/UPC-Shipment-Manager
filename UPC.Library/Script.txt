@@ -1,0 +1,304 @@
+﻿-- Database Name: UPCShipmentManager
+
+CREATE TABLE [dbo].[User]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Username] NVARCHAR(128) NOT NULL UNIQUE, 
+    [Password] NVARCHAR(128) NOT NULL, 
+    [Role] NVARCHAR(50) NOT NULL, 
+    [RegisterationDate] DATETIME2 NOT NULL DEFAULT GETDATE()
+)
+
+CREATE TABLE [dbo].[Godown]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Value] NVARCHAR(128) UNIQUE NOT NULL
+)
+
+CREATE TABLE [dbo].[InventoryItem]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
+    [ItemName] NVARCHAR(128) NOT NULL, 
+    [Godown] NVARCHAR(128) NOT NULL, 
+    [Quantity] INT NOT NULL, 
+    [Remarks] NVARCHAR(MAX) NULL, 
+    [TransactionDate] DATETIME2 NOT NULL DEFAULT GETDATE(), 
+    CONSTRAINT [FK_InventoryItem_Godown] FOREIGN KEY ([Godown]) REFERENCES [Godown]([Value]) ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+CREATE TABLE [dbo].[CheckIns]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [ItemName] NVARCHAR(128) NOT NULL, 
+    [Quantity] INT NOT NULL, 
+    [Godown] NVARCHAR(128) NOT NULL, 
+    [Remarks] NVARCHAR(MAX) NULL, 
+    [TransactionDate] DATETIME2 NOT NULL DEFAULT GETDATE()
+)
+
+CREATE TABLE [dbo].[Checkouts]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [ItemName] NVARCHAR(128) NOT NULL, 
+    [Quantity] INT NOT NULL, 
+    [Godown] NVARCHAR(128) NOT NULL, 
+    [Remarks] NVARCHAR(MAX) NULL, 
+    [TransactionDate] DATETIME2 NOT NULL DEFAULT GETDATE(), 
+    [TransactionType] NVARCHAR(50) NOT NULL, 
+    CONSTRAINT [CK_Checkouts_TransactionType] CHECK ([TransactionType] = 'Single' OR [TransactionType] = 'Picklist')
+)
+
+GO
+
+CREATE PROCEDURE [dbo].[InsertGodown]
+	@godown nvarchar(128)
+AS
+BEGIN
+	INSERT INTO Godown([Value])VALUES(@godown);
+END
+
+GO
+
+CREATE PROCEDURE [dbo].[InsertInventoryItem]
+	@name       nvarchar(128),
+	@godown     nvarchar(128),
+	@quantity   int,
+	@remarks    nvarchar(max),
+	@date       datetime2(7)
+AS
+BEGIN
+    INSERT INTO [dbo].[CheckIns]
+           ([ItemName]
+           ,[Godown]
+           ,[Quantity]
+           ,[Remarks]
+           ,[TransactionDate])
+        VALUES
+           (@name    
+           ,@godown  
+           ,@quantity
+           ,@remarks 
+           ,@date)
+
+    DECLARE @count INT = (SELECT COUNT(*) FROM InventoryItem WHERE InventoryItem.ItemName = @name AND InventoryItem.Godown = @godown)
+    IF(@count = 0)
+       INSERT INTO [dbo].[InventoryItem]
+           ([ItemName]
+           ,[Godown]
+           ,[Quantity]
+           ,[Remarks]
+           ,[TransactionDate])
+        VALUES
+           (@name    
+           ,@godown  
+           ,@quantity
+           ,@remarks 
+           ,@date)
+    ELSE
+        UPDATE [dbo].[InventoryItem]
+           SET [Godown]          = @godown  
+              ,[Quantity]        = [Quantity] + @quantity
+              ,[Remarks]         = @remarks 
+              ,[TransactionDate] = @date    
+         WHERE [ItemName]        = @name
+END
+
+GO
+
+CREATE PROCEDURE [dbo].[InsertInventoryOut]
+	@name       nvarchar(128),
+	@godown     nvarchar(128),
+	@quantity   int,
+	@remarks    nvarchar(max),
+    @date       datetime2(7),
+    @type       nvarchar(50)
+AS
+BEGIN
+
+INSERT INTO [dbo].[Checkouts]
+           ([ItemName]
+           ,[Quantity]
+           ,[Godown]
+           ,[Remarks]
+           ,[TransactionDate]
+           ,[TransactionType])
+     VALUES
+           (@name    
+           ,@quantity  
+           ,@godown
+           ,@remarks 
+           ,@date    
+           ,@type    )
+
+UPDATE [InventoryItem]
+SET [Quantity] = [Quantity] + @quantity
+WHERE [InventoryItem].[ItemName] = @name AND [InventoryItem].[Godown] = @godown
+
+END
+
+GO
+
+CREATE PROCEDURE [dbo].[InsertUser]
+	@name nvarchar(128),
+	@pass nvarchar(128),
+	@role nvarchar(128)
+AS
+	INSERT INTO [dbo].[User]([Username], [Password], [Role])
+	VALUES (@name, @pass, @role)
+
+GO
+
+CREATE FUNCTION [dbo].[GetGodowns]
+()
+RETURNS TABLE
+AS RETURN
+	SELECT [Value] FROM dbo.Godown
+
+GO
+
+CREATE FUNCTION [dbo].[GetGodownsByItem]
+(
+	@name nvarchar(128)
+)
+RETURNS TABLE
+AS RETURN
+	SELECT [Value] FROM Godown
+	INNER JOIN [InventoryItem] ON [InventoryItem].[Godown] = [Godown].[Value]
+	WHERE [InventoryItem].[ItemName] = @name
+
+GO
+
+CREATE FUNCTION [dbo].[GetGodownStock]
+(
+	@godown nvarchar(128)
+)
+RETURNS TABLE
+AS RETURN
+	SELECT * FROM [dbo].[InventoryItem] WHERE [InventoryItem].[Godown] = @godown;
+
+GO
+
+CREATE FUNCTION [dbo].[GetItemCheckIns]
+(
+	@name nvarchar(128)
+)
+RETURNS TABLE
+AS RETURN
+	SELECT * FROM [CheckIns] WHERE [CheckIns].[ItemName] = @name;
+
+GO
+
+CREATE FUNCTION [dbo].[GetItemCheckouts]
+(
+	@name nvarchar(128)
+)
+RETURNS TABLE
+AS RETURN
+	SELECT * FROM [Checkouts] WHERE [Checkouts].[ItemName] = @name;
+
+GO
+
+CREATE FUNCTION [dbo].[GetItemInventory]
+(
+	@name nvarchar(128)
+)
+RETURNS TABLE
+AS RETURN
+	SELECT * FROM [InventoryItem] WHERE [InventoryItem].[ItemName] = @name;
+
+GO
+
+CREATE FUNCTION [dbo].[GetItemNames]
+()
+RETURNS TABLE
+AS RETURN
+	SELECT [ItemName] FROM [dbo].[InventoryItem]
+
+GO
+
+CREATE FUNCTION [dbo].[GetItemStock]
+(
+	@name nvarchar(128)
+)
+RETURNS TABLE
+AS RETURN
+	SELECT * FROM [InventoryItem] WHERE [InventoryItem].[ItemName] = @name;
+
+
+GO
+
+CREATE FUNCTION [dbo].[GetLast30InventoryCheckouts]
+()
+RETURNS TABLE
+AS
+RETURN
+	SELECT TOP 30 * FROM Checkouts WHERE Checkouts.TransactionType = 'Single' ORDER BY Checkouts.TransactionDate DESC
+
+
+GO
+
+CREATE FUNCTION [dbo].[GetLast30InventoryInTransactions]
+()
+RETURNS TABLE
+AS
+RETURN
+	SELECT * FROM InventoryItem
+
+GO
+
+CREATE FUNCTION [dbo].[GetPastPicklists]
+()
+RETURNS TABLE
+AS RETURN
+	SELECT * FROM [Checkouts] WHERE [Checkouts].[TransactionType] = 'Picklist'
+
+
+GO
+
+CREATE FUNCTION [dbo].[GetUserForLogin]
+(
+	@name nvarchar(128),
+	@pass nvarchar(128)
+)
+RETURNS TABLE
+AS RETURN
+	SELECT * FROM [dbo].[User] WHERE [Username] = @name AND [Password] = @pass
+
+GO
+
+CREATE FUNCTION [dbo].[GetQuantityByItem]
+(
+	@name nvarchar(128),
+	@godown nvarchar(128)
+)
+RETURNS INT
+AS
+BEGIN
+	RETURN (SELECT ISNULL([Quantity], 0) FROM [dbo].[InventoryItem] WHERE [InventoryItem].[ItemName] = @name AND [InventoryItem].[Godown] = @godown)
+END
+
+GO
+
+CREATE FUNCTION [dbo].[GetUserCount]
+()
+RETURNS INT
+AS
+BEGIN
+	RETURN (SELECT COUNT(*) FROM [dbo].[User])
+END
+
+GO
+
+CREATE FUNCTION [dbo].[IsGodownExists]
+(
+	@godown nvarchar(128))
+RETURNS BIT
+AS
+BEGIN
+	DECLARE @count INT = (SELECT COUNT(*) FROM Godown WHERE Godown.[Value] = @godown)
+	IF (@count > 0)
+		RETURN 1
+	RETURN 0;
+END
+
+GO

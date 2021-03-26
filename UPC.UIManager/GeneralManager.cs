@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using UPCData.Library;
+
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace UPC.UIManager
@@ -117,6 +119,23 @@ namespace UPC.UIManager
 							}
 						}
 					}
+				}
+			}
+		}
+
+		public static bool IsConnected
+		{
+			get
+			{
+				try
+				{
+					Access.GetInt("SELECT COUNT(*) FROM [dbo].[Checkouts]");
+					return true;
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show($"Could not establish a connection to SQL Server due to:\nException Type:{ex.GetType()}\nMessage:{ex.Message}", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return false;
 				}
 			}
 		}

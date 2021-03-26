@@ -37,14 +37,17 @@ namespace UPC_Shipment_Manager_UI.Forms.Login
 			this.Username = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.SoftwareName = new System.Windows.Forms.Label();
-			this.Login = new FontAwesome.Sharp.IconButton();
 			this.TitleBar = new System.Windows.Forms.Panel();
-			this.Exit = new System.Windows.Forms.PictureBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
 			this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
 			this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+			this.Print = new System.Windows.Forms.PictureBox();
+			this.Exit = new System.Windows.Forms.PictureBox();
+			this.Login = new FontAwesome.Sharp.IconButton();
 			this.TitleBar.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.Print)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -117,22 +120,6 @@ namespace UPC_Shipment_Manager_UI.Forms.Login
 			this.SoftwareName.TabIndex = 11;
 			this.SoftwareName.Text = "UPC Shipment Manager";
 			// 
-			// Login
-			// 
-			this.Login.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.Login.Enabled = false;
-			this.Login.Font = new System.Drawing.Font("Sitka Small", 8.25F);
-			this.Login.IconChar = FontAwesome.Sharp.IconChar.None;
-			this.Login.IconColor = System.Drawing.Color.Black;
-			this.Login.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.Login.Location = new System.Drawing.Point(41, 234);
-			this.Login.Name = "Login";
-			this.Login.Size = new System.Drawing.Size(209, 30);
-			this.Login.TabIndex = 2;
-			this.Login.Text = "Login";
-			this.Login.UseVisualStyleBackColor = true;
-			this.Login.Click += new System.EventHandler(this.Login_Click);
-			// 
 			// TitleBar
 			// 
 			this.TitleBar.BackColor = System.Drawing.Color.Maroon;
@@ -143,19 +130,6 @@ namespace UPC_Shipment_Manager_UI.Forms.Login
 			this.TitleBar.Name = "TitleBar";
 			this.TitleBar.Size = new System.Drawing.Size(286, 31);
 			this.TitleBar.TabIndex = 16;
-			// 
-			// Exit
-			// 
-			this.Exit.BackColor = System.Drawing.Color.Maroon;
-			this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Exit.Dock = System.Windows.Forms.DockStyle.Right;
-			this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
-			this.Exit.Location = new System.Drawing.Point(256, 0);
-			this.Exit.Name = "Exit";
-			this.Exit.Size = new System.Drawing.Size(30, 31);
-			this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.Exit.TabIndex = 1;
-			this.Exit.TabStop = false;
 			// 
 			// label4
 			// 
@@ -187,12 +161,58 @@ namespace UPC_Shipment_Manager_UI.Forms.Login
 			this.bunifuDragControl2.TargetControl = this;
 			this.bunifuDragControl2.Vertical = true;
 			// 
+			// Print
+			// 
+			this.Print.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.Print.BackColor = System.Drawing.Color.White;
+			this.Print.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Print.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_server_24px;
+			this.Print.Location = new System.Drawing.Point(261, 278);
+			this.Print.Name = "Print";
+			this.Print.Size = new System.Drawing.Size(24, 24);
+			this.Print.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.Print.TabIndex = 59;
+			this.Print.TabStop = false;
+			this.toolTip1.SetToolTip(this.Print, "Server Configuration");
+			this.Print.Click += new System.EventHandler(this.Print_Click);
+			// 
+			// Exit
+			// 
+			this.Exit.BackColor = System.Drawing.Color.Maroon;
+			this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Exit.Dock = System.Windows.Forms.DockStyle.Right;
+			this.Exit.Image = ((System.Drawing.Image)(resources.GetObject("Exit.Image")));
+			this.Exit.Location = new System.Drawing.Point(256, 0);
+			this.Exit.Name = "Exit";
+			this.Exit.Size = new System.Drawing.Size(30, 31);
+			this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.Exit.TabIndex = 1;
+			this.Exit.TabStop = false;
+			this.Exit.Click += new System.EventHandler(this.Exit_Click);
+			// 
+			// Login
+			// 
+			this.Login.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.Login.Enabled = false;
+			this.Login.Font = new System.Drawing.Font("Sitka Small", 8.25F);
+			this.Login.IconChar = FontAwesome.Sharp.IconChar.None;
+			this.Login.IconColor = System.Drawing.Color.Black;
+			this.Login.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.Login.Location = new System.Drawing.Point(41, 234);
+			this.Login.Name = "Login";
+			this.Login.Size = new System.Drawing.Size(209, 30);
+			this.Login.TabIndex = 2;
+			this.Login.Text = "Login";
+			this.Login.UseVisualStyleBackColor = true;
+			this.Login.Click += new System.EventHandler(this.Login_Click);
+			// 
 			// FormLogin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(286, 304);
+			this.Controls.Add(this.Print);
 			this.Controls.Add(this.TitleBar);
 			this.Controls.Add(this.Login);
 			this.Controls.Add(this.label3);
@@ -204,11 +224,11 @@ namespace UPC_Shipment_Manager_UI.Forms.Login
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "FormLogin";
 			this.ShowIcon = false;
-			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Login - UPC Shipment Manager";
 			this.TitleBar.ResumeLayout(false);
 			this.TitleBar.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.Print)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -230,5 +250,7 @@ namespace UPC_Shipment_Manager_UI.Forms.Login
 		private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
 		private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
 		private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
+		private System.Windows.Forms.PictureBox Print;
+		private System.Windows.Forms.ToolTip toolTip1;
 	}
 }

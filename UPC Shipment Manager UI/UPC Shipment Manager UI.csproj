@@ -73,6 +73,7 @@
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
@@ -94,6 +95,12 @@
     </Compile>
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormConfiguration.Designer.cs">
+      <DependentUpon>FormConfiguration.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormImportTrackingId.cs">
       <SubType>Form</SubType>
@@ -226,6 +233,9 @@
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormConfiguration.resx">
+      <DependentUpon>FormConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormImportTrackingId.resx">
       <DependentUpon>FormImportTrackingId.cs</DependentUpon>
     </EmbeddedResource>
@@ -325,6 +335,7 @@
     <Content Include="Icons\icons8_people_64px.png" />
     <Content Include="Icons\icons8_print_24px.png" />
     <Content Include="Icons\icons8_report_file_24px_2.png" />
+    <Content Include="Icons\icons8_server_24px.png" />
     <Content Include="Icons\icons8_settings_24px.png" />
     <Content Include="Icons\icons8_shipment_logistic_48px.png" />
     <Content Include="Icons\icons8_show_property_24px.png" />

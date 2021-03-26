@@ -58,5 +58,13 @@ namespace UPC_Shipment_Manager_UI.Forms.Login
 				MessageBox.Show($"Could not register user due to:\nException type: {ex.GetType()}\nMessage: {ex.Message}", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
+
+		private void Print_Click(object sender, EventArgs e)
+		{
+			using (FormConfiguration frm = new FormConfiguration())
+			{
+				frm.ShowDialog();
+			}
+		}
 	}
 }
