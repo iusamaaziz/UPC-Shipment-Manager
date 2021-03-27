@@ -206,6 +206,12 @@
     <Compile Include="UserControls\Shipment\UC_InwardShipments.Designer.cs">
       <DependentUpon>UC_InwardShipments.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Shipment\UC_OutwardShipments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Shipment\UC_OutwardShipments.Designer.cs">
+      <DependentUpon>UC_OutwardShipments.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Shipment\UC_ShipmentManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -229,6 +235,12 @@
     </Compile>
     <Compile Include="UserControls\Shipment\UC_SingleInward.Designer.cs">
       <DependentUpon>UC_SingleInward.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Shipment\UC_SingleOutward.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Shipment\UC_SingleOutward.Designer.cs">
+      <DependentUpon>UC_SingleOutward.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -291,6 +303,9 @@
     <EmbeddedResource Include="UserControls\Shipment\UC_InwardShipments.resx">
       <DependentUpon>UC_InwardShipments.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Shipment\UC_OutwardShipments.resx">
+      <DependentUpon>UC_OutwardShipments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Shipment\UC_ShipmentManager.resx">
       <DependentUpon>UC_ShipmentManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Shipment\UC_SingleInward.resx">
       <DependentUpon>UC_SingleInward.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Shipment\UC_SingleOutward.resx">
+      <DependentUpon>UC_SingleOutward.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\UPC.Library.InventoryModels.InventoryItem.datasource" />

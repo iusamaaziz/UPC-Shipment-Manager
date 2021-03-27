@@ -226,7 +226,8 @@ namespace UPCData.Library
 							Remarks = (string)reader["Remarks"],
 							TrackingId = (string)reader["TrackingId"],
 							CourierName = (string)reader["CourierName"],
-							ShipmentType = (string)reader["ShipmentType"]
+							ShipmentType = (string)reader["ShipmentType"],
+							CustomerName = (string)reader["CustomerName"]
 						};
 						col.Add(ship);
 					}

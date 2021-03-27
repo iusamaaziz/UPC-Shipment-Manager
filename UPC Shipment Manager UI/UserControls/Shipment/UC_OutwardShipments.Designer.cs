@@ -1,7 +1,7 @@
 ﻿
-namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
+namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 {
-	partial class UC_InwardShipments
+	partial class UC_OutwardShipments
 	{
 		/// <summary> 
 		/// Required designer variable.
@@ -33,7 +33,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.SingleShipments = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-			this.GodownStock = new System.Windows.Forms.ToolStripButton();
+			this.BulkShipments = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
@@ -44,19 +44,19 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 			this.Canva.Location = new System.Drawing.Point(0, 25);
 			this.Canva.Name = "Canva";
 			this.Canva.Size = new System.Drawing.Size(801, 473);
-			this.Canva.TabIndex = 3;
+			this.Canva.TabIndex = 5;
 			// 
 			// toolStrip1
 			// 
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SingleShipments,
             this.toolStripSeparator1,
-            this.GodownStock,
+            this.BulkShipments,
             this.toolStripSeparator2});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.Size = new System.Drawing.Size(801, 25);
-			this.toolStrip1.TabIndex = 2;
+			this.toolStrip1.TabIndex = 4;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
 			// SingleShipments
@@ -73,29 +73,28 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
 			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
 			// 
-			// GodownStock
+			// BulkShipments
 			// 
-			this.GodownStock.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_warehouse_24px;
-			this.GodownStock.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.GodownStock.Name = "GodownStock";
-			this.GodownStock.Size = new System.Drawing.Size(109, 22);
-			this.GodownStock.Text = "Bulk Shipments";
+			this.BulkShipments.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_warehouse_24px;
+			this.BulkShipments.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.BulkShipments.Name = "BulkShipments";
+			this.BulkShipments.Size = new System.Drawing.Size(109, 22);
+			this.BulkShipments.Text = "Bulk Shipments";
 			// 
 			// toolStripSeparator2
 			// 
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
 			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
 			// 
-			// UC_InwardShipments
+			// UC_OutwardShipments
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.White;
 			this.Controls.Add(this.Canva);
 			this.Controls.Add(this.toolStrip1);
-			this.Name = "UC_InwardShipments";
+			this.Name = "UC_OutwardShipments";
 			this.Size = new System.Drawing.Size(801, 498);
-			this.Load += new System.EventHandler(this.UC_InwardShipments_Load);
+			this.Load += new System.EventHandler(this.UC_OutwardShipments_Load);
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
 			this.ResumeLayout(false);
@@ -109,7 +108,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 		private System.Windows.Forms.ToolStrip toolStrip1;
 		private System.Windows.Forms.ToolStripButton SingleShipments;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-		private System.Windows.Forms.ToolStripButton GodownStock;
+		private System.Windows.Forms.ToolStripButton BulkShipments;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
 	}
 }

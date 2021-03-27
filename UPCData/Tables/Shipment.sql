@@ -8,5 +8,6 @@
     [ItemCondition] NVARCHAR(128) NOT NULL, 
     [Remarks] NVARCHAR(MAX) NULL, 
     [ShipmentType] NVARCHAR(128) NOT NULL, 
+    [CustomerName] NVARCHAR(128) NULL, 
     CONSTRAINT [CK_Shipment_Type] CHECK ([ShipmentType] = 'Inward' OR [ShipmentType] = 'Outward')
 )

@@ -1,18 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using UPC.Library.Models;
 using UPC.UIManager;
-using UPC.UIManager.InventoryManager;
 
 using UPC_Shipment_Manager_UI.Forms;
 
-namespace UPC_Shipment_Manager_UI.UserControls
+namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 {
-	public partial class UC_SingleInward : UserControl
+	public partial class UC_SingleOutward : UserControl
 	{
-		public UC_SingleInward()
+		public UC_SingleOutward()
 		{
 			InitializeComponent();
 		}
@@ -21,7 +26,7 @@ namespace UPC_Shipment_Manager_UI.UserControls
 		{
 			get
 			{
-				return (TrackingId.TextLength > 0 && ItemName.TextLength > 0 && CourierName.Text.Length > 0 && ItemCondition.Text.Length > 0);
+				return (TrackingId.TextLength > 0 && ItemName.TextLength > 0 && CourierName.Text.Length > 0);
 			}
 		}
 
@@ -30,13 +35,11 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			ShipmentDate.Value = DateTime.Now;
 			ItemName.Clear();
 			Remarks.Clear();
-			ItemCondition.SelectedIndex = -1;
-			ItemCondition.Text = "";
 			CourierName.SelectedIndex = -1;
 			CourierName.Text = "";
 			TrackingId.Clear();
-			CourierName.Focus();
 			Register.Enabled = false;
+			CourierName.Focus();
 		}
 
 		private void Tb_TextChanged(object sender, EventArgs e)
@@ -45,11 +48,11 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			else Register.Enabled = false;
 		}
 
-		private async void UC_SingleInward_Load(object sender, EventArgs e)
+		private async void UC_SingleOutward_Load(object sender, EventArgs e)
 		{
 			CourierName.Items.Clear();
 			CourierName.Items.AddRange(await ShipmentLibrary.GetCourierNamesAsync());
-			inwardSingleShipmentBindingSource.DataSource = await ShipmentLibrary.GetInwardShipmentsAsync();
+			inwardSingleShipmentBindingSource.DataSource = await ShipmentLibrary.GetOutwardShipmentsAsync();
 			dg.ClearSelection();
 		}
 
@@ -62,11 +65,11 @@ namespace UPC_Shipment_Manager_UI.UserControls
 		{
 			try
 			{
-				InwardSingleShipment si = new InwardSingleShipment() { CourierName = CourierName.Text, Date = ShipmentDate.Value, ItemCondition = ItemCondition.Text, ItemName = ItemName.Text, Remarks = Remarks.Text, TrackingId = TrackingId.Text, ShipmentType = "Inward", CustomerName = "" };
+				InwardSingleShipment si = new InwardSingleShipment() { CourierName = CourierName.Text, Date = ShipmentDate.Value, ItemCondition = "", ItemName = ItemName.Text, Remarks = Remarks.Text, TrackingId = TrackingId.Text, CustomerName = CustomerName.Text, ShipmentType = "Outward" };
 				ShipmentLibrary.InsertInwardSingleShipment(si);
 				MessageBox.Show("Shipment Registered", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 				Clear();
-				inwardSingleShipmentBindingSource.DataSource = await ShipmentLibrary.GetInwardShipmentsAsync();
+				inwardSingleShipmentBindingSource.DataSource = await ShipmentLibrary.GetOutwardShipmentsAsync();
 				dg.ClearSelection();
 			}
 			catch (Exception ex)

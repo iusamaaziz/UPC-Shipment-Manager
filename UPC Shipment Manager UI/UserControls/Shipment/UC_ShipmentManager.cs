@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 using UPC_Shipment_Manager_UI.Forms;
 using UPC_Shipment_Manager_UI.UserControls.Inventory;
+using UPC_Shipment_Manager_UI.UserControls.Shipment;
 
 namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 {
@@ -34,7 +35,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 		private void Outward_Click(object sender, EventArgs e)
 		{
 			NavTitle.Text = "UPC Inventory Manager → Outward Shipments";
-			ActivateControl(new UC_InventoryIn());
+			ActivateControl(new UC_OutwardShipments());
 		}
 
 		private void Reports_Click(object sender, EventArgs e)

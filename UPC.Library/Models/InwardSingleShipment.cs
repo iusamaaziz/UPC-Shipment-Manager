@@ -30,5 +30,8 @@ namespace UPC.Library.Models
 		[DisplayName("Shipment Type")]
 		public string ShipmentType { get; set; }
 
+		[DisplayName("Customer Name")]
+		public string CustomerName { get; set; }
+
 	}
 }

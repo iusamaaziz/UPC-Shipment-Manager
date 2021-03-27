@@ -96,6 +96,7 @@
     <Build Include="Functions\ScalerValuedFunctions\IsCourierNameExists.sql" />
     <Build Include="Functions\TableValuedFunctions\GetCourierNames.sql" />
     <Build Include="Functions\TableValuedFunctions\GetInwardSingleShipments.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetOutwardShipments.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\UPCData.publish.xml" />

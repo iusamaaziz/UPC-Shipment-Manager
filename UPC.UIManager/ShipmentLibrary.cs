@@ -25,7 +25,8 @@ namespace UPC.UIManager
 				new SqlParameter("@item     ", si.ItemName),
 				new SqlParameter("@condition", si.ItemCondition),
 				new SqlParameter("@remarks  ", si.Remarks),
-				new SqlParameter("@type     ", "Inward")
+				new SqlParameter("@type     ", si.ShipmentType),
+				new SqlParameter("@customer ", si.CustomerName)
 			};
 			Access.ExecuteProcedure("[dbo].[InsertShipment]", parameters.ToArray());
 		}
@@ -42,6 +43,11 @@ namespace UPC.UIManager
 		public static async Task<InwardSingleShipment[]> GetInwardShipmentsAsync()
 		{
 			return await Access.GetInwardSingleShipmentsAsync("SELECT * FROM [dbo].[GetInwardShipments]()");
+		}
+
+		public static async Task<InwardSingleShipment[]> GetOutwardShipmentsAsync()
+		{
+			return await Access.GetInwardSingleShipmentsAsync("SELECT * FROM [dbo].[GetOutwardShipments]()");
 		}
 
 		public static async Task<string[]> GetCourierNamesAsync()

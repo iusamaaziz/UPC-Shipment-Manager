@@ -10,6 +10,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 		{
 			InitializeComponent();
 			si = new UC_SingleInward();
+
 		}
 
 		private void ActivateControls(UserControl uc)
@@ -23,7 +24,11 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 		{
 			(this.Parent.Parent as UC_ShipmentManager).NavTitle.Text = "UPC Inventory Manager → Inwards → Single Shipment";
 			ActivateControls(si);
+		}
 
+		private void UC_InwardShipments_Load(object sender, EventArgs e)
+		{
+			SingleShipments_Click(SingleShipments, e);
 		}
 	}
 }
