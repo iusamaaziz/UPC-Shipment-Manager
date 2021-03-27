@@ -225,6 +225,18 @@
     <Compile Include="UserControls\Shipment\UC_OutwardShipments.Designer.cs">
       <DependentUpon>UC_OutwardShipments.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Shipment\UC_SearchTrackingId.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Shipment\UC_SearchTrackingId.Designer.cs">
+      <DependentUpon>UC_SearchTrackingId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Shipment\UC_ShipementReportDateRange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Shipment\UC_ShipementReportDateRange.Designer.cs">
+      <DependentUpon>UC_ShipementReportDateRange.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Shipment\UC_ShipmentManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -328,6 +340,12 @@
     <EmbeddedResource Include="UserControls\Shipment\UC_OutwardShipments.resx">
       <DependentUpon>UC_OutwardShipments.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Shipment\UC_SearchTrackingId.resx">
+      <DependentUpon>UC_SearchTrackingId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Shipment\UC_ShipementReportDateRange.resx">
+      <DependentUpon>UC_ShipementReportDateRange.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Shipment\UC_ShipmentManager.resx">
       <DependentUpon>UC_ShipmentManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -393,6 +411,7 @@
     <Content Include="Icons\close.png" />
     <Content Include="Icons\UPCLogo-min.png" />
     <Content Include="Icons\UPCLogo.png" />
+    <None Include="Resources\icons8_search_property_26px.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

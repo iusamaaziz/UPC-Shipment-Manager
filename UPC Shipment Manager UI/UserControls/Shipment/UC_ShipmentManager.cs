@@ -41,7 +41,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 		private void Reports_Click(object sender, EventArgs e)
 		{
 			NavTitle.Text = "UPC Inventory Manager → Reports";
-			ActivateControl(new UC_InventoryIn());
+			ActivateControl(new UC_ShipmentReports());
 		}
 
 		private void UC_ShipmentManager_Load(object sender, EventArgs e)

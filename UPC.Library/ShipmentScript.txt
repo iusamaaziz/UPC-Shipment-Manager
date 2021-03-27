@@ -112,3 +112,24 @@ BEGIN
 END
 
 GO
+
+CREATE FUNCTION [dbo].[GetShipmentsByTracking]
+(@id nvarchar(128))
+RETURNS TABLE
+AS
+RETURN
+	SELECT * FROM [dbo].[Shipment] WHERE [TrackingId] = @id
+
+GO
+
+CREATE FUNCTION [dbo].[GetShipmentsByDate]
+(
+	@start date,
+	@end date
+)
+RETURNS TABLE
+AS
+RETURN
+	SELECT * FROM [dbo].[Shipment] WHERE [ShipmentDate] >= @start AND [ShipmentDate] <= @end;
+
+GO

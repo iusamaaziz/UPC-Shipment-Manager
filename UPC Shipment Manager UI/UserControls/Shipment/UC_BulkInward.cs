@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 using ExcelDataReader;
 
+using UPC.Library.LoginModels;
 using UPC.Library.Models;
 using UPC.UIManager;
 
@@ -24,6 +25,11 @@ namespace UPC_Shipment_Manager_UI.UserControls
 		public UC_BulkInward()
 		{
 			InitializeComponent();
+			if (Login.Role == "Operator")
+			{
+				ShipmentDate.Enabled = false;
+				ShipmentDate.Value = DateTime.Now;
+			}
 		}
 
 		private void Clear()
@@ -147,8 +153,7 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			}
 			catch (Exception ex)
 			{
-
-				// TODO -- Add Exception message
+				MessageBox.Show($"Failed to register shipments due to:\nException Type:{ex.GetType()}\nMessage:{ex.Message}", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 	}

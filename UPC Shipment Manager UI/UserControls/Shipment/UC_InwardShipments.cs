@@ -23,7 +23,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 
 		private void SingleShipments_Click(object sender, EventArgs e)
 		{
-			(this.Parent.Parent as UC_ShipmentManager).NavTitle.Text = "UPC Inventory Manager → Inwards → Single Shipment";
+			(this.Parent.Parent as UC_ShipmentManager).NavTitle.Text = "UPC Shipment Manager → Inwards → Single Shipment";
 			ActivateControls(si);
 		}
 
@@ -34,7 +34,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 
 		private void GodownStock_Click(object sender, EventArgs e)
 		{
-			(this.Parent.Parent as UC_ShipmentManager).NavTitle.Text = "UPC Inventory Manager → Inwards → Bulk Shipment";
+			(this.Parent.Parent as UC_ShipmentManager).NavTitle.Text = "UPC Shipment Manager → Inwards → Bulk Shipment";
 			ActivateControls(bi);
 		}
 	}

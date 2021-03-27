@@ -98,6 +98,8 @@
     <Build Include="Functions\TableValuedFunctions\GetInwardSingleShipments.sql" />
     <Build Include="Functions\TableValuedFunctions\GetOutwardShipments.sql" />
     <Build Include="Functions\ScalerValuedFunctions\IsTrackingExists.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetShipmentsByTracking.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetShipmentsByDate.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\UPCData.publish.xml" />
