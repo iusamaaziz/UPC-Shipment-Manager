@@ -29,123 +29,18 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			this.label = new System.Windows.Forms.Label();
-			this.Outward = new System.Windows.Forms.Panel();
-			this.label3 = new System.Windows.Forms.Label();
-			this.pictureBox2 = new System.Windows.Forms.PictureBox();
-			this.Inward = new System.Windows.Forms.Panel();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.elInward = new Bunifu.Framework.UI.BunifuElipse(this.components);
-			this.elOutward = new Bunifu.Framework.UI.BunifuElipse(this.components);
 			this.Navbar = new System.Windows.Forms.Panel();
 			this.Back = new System.Windows.Forms.PictureBox();
 			this.NavTitle = new System.Windows.Forms.Label();
-			this.Outward.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-			this.Inward.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.Canva = new System.Windows.Forms.Panel();
+			this.MenuBar = new System.Windows.Forms.Panel();
+			this.Reports = new FontAwesome.Sharp.IconButton();
+			this.Outward = new FontAwesome.Sharp.IconButton();
+			this.Inward = new FontAwesome.Sharp.IconButton();
 			this.Navbar.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Back)).BeginInit();
+			this.MenuBar.SuspendLayout();
 			this.SuspendLayout();
-			// 
-			// label
-			// 
-			this.label.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.label.AutoSize = true;
-			this.label.Font = new System.Drawing.Font("Segoe UI", 10F);
-			this.label.ForeColor = System.Drawing.Color.Black;
-			this.label.Location = new System.Drawing.Point(367, 185);
-			this.label.Name = "label";
-			this.label.Size = new System.Drawing.Size(221, 19);
-			this.label.TabIndex = 9;
-			this.label.Text = "Please select an option to proceed:";
-			// 
-			// Outward
-			// 
-			this.Outward.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.Outward.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
-			this.Outward.Controls.Add(this.label3);
-			this.Outward.Controls.Add(this.pictureBox2);
-			this.Outward.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Outward.Location = new System.Drawing.Point(489, 223);
-			this.Outward.Name = "Outward";
-			this.Outward.Size = new System.Drawing.Size(148, 120);
-			this.Outward.TabIndex = 8;
-			// 
-			// label3
-			// 
-			this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.label3.AutoSize = true;
-			this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
-			this.label3.ForeColor = System.Drawing.Color.White;
-			this.label3.Location = new System.Drawing.Point(44, 90);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(63, 19);
-			this.label3.TabIndex = 6;
-			this.label3.Text = "Outward";
-			// 
-			// pictureBox2
-			// 
-			this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
-			this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.pictureBox2.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_external_60px;
-			this.pictureBox2.Location = new System.Drawing.Point(35, 20);
-			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(74, 64);
-			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox2.TabIndex = 5;
-			this.pictureBox2.TabStop = false;
-			// 
-			// Inward
-			// 
-			this.Inward.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.Inward.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
-			this.Inward.Controls.Add(this.pictureBox1);
-			this.Inward.Controls.Add(this.label2);
-			this.Inward.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Inward.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-			this.Inward.Location = new System.Drawing.Point(322, 223);
-			this.Inward.Name = "Inward";
-			this.Inward.Size = new System.Drawing.Size(148, 120);
-			this.Inward.TabIndex = 7;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
-			this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.pictureBox1.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_internal_60px;
-			this.pictureBox1.Location = new System.Drawing.Point(37, 20);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(74, 64);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox1.TabIndex = 6;
-			this.pictureBox1.TabStop = false;
-			// 
-			// label2
-			// 
-			this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.label2.AutoSize = true;
-			this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
-			this.label2.ForeColor = System.Drawing.Color.White;
-			this.label2.Location = new System.Drawing.Point(49, 87);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(51, 19);
-			this.label2.TabIndex = 5;
-			this.label2.Text = "Inward";
-			// 
-			// elInward
-			// 
-			this.elInward.ElipseRadius = 10;
-			this.elInward.TargetControl = this.Inward;
-			// 
-			// elOutward
-			// 
-			this.elOutward.ElipseRadius = 10;
-			this.elOutward.TargetControl = this.Outward;
 			// 
 			// Navbar
 			// 
@@ -170,6 +65,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 			this.Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.Back.TabIndex = 8;
 			this.Back.TabStop = false;
+			this.Back.Click += new System.EventHandler(this.Back_Click);
 			// 
 			// NavTitle
 			// 
@@ -182,44 +78,118 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 			this.NavTitle.TabIndex = 7;
 			this.NavTitle.Text = "Shipment Manager";
 			// 
+			// Canva
+			// 
+			this.Canva.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Canva.Location = new System.Drawing.Point(157, 30);
+			this.Canva.Name = "Canva";
+			this.Canva.Size = new System.Drawing.Size(801, 498);
+			this.Canva.TabIndex = 12;
+			// 
+			// MenuBar
+			// 
+			this.MenuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+			this.MenuBar.Controls.Add(this.Reports);
+			this.MenuBar.Controls.Add(this.Outward);
+			this.MenuBar.Controls.Add(this.Inward);
+			this.MenuBar.Dock = System.Windows.Forms.DockStyle.Left;
+			this.MenuBar.Location = new System.Drawing.Point(0, 30);
+			this.MenuBar.Name = "MenuBar";
+			this.MenuBar.Size = new System.Drawing.Size(157, 498);
+			this.MenuBar.TabIndex = 11;
+			// 
+			// Reports
+			// 
+			this.Reports.Dock = System.Windows.Forms.DockStyle.Top;
+			this.Reports.FlatAppearance.BorderSize = 0;
+			this.Reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Reports.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Reports.ForeColor = System.Drawing.Color.White;
+			this.Reports.IconChar = FontAwesome.Sharp.IconChar.None;
+			this.Reports.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.Reports.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.Reports.IconSize = 30;
+			this.Reports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.Reports.Location = new System.Drawing.Point(0, 74);
+			this.Reports.Name = "Reports";
+			this.Reports.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+			this.Reports.Size = new System.Drawing.Size(157, 37);
+			this.Reports.TabIndex = 21;
+			this.Reports.Text = "Reports";
+			this.Reports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.Reports.UseVisualStyleBackColor = true;
+			this.Reports.Click += new System.EventHandler(this.Reports_Click);
+			// 
+			// Outward
+			// 
+			this.Outward.Dock = System.Windows.Forms.DockStyle.Top;
+			this.Outward.FlatAppearance.BorderSize = 0;
+			this.Outward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Outward.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Outward.ForeColor = System.Drawing.Color.White;
+			this.Outward.IconChar = FontAwesome.Sharp.IconChar.None;
+			this.Outward.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.Outward.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.Outward.IconSize = 30;
+			this.Outward.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.Outward.Location = new System.Drawing.Point(0, 37);
+			this.Outward.Name = "Outward";
+			this.Outward.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+			this.Outward.Size = new System.Drawing.Size(157, 37);
+			this.Outward.TabIndex = 20;
+			this.Outward.Text = "Outward";
+			this.Outward.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.Outward.UseVisualStyleBackColor = true;
+			this.Outward.Click += new System.EventHandler(this.Outward_Click);
+			// 
+			// Inward
+			// 
+			this.Inward.Dock = System.Windows.Forms.DockStyle.Top;
+			this.Inward.FlatAppearance.BorderSize = 0;
+			this.Inward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Inward.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Inward.ForeColor = System.Drawing.Color.White;
+			this.Inward.IconChar = FontAwesome.Sharp.IconChar.None;
+			this.Inward.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.Inward.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.Inward.IconSize = 30;
+			this.Inward.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.Inward.Location = new System.Drawing.Point(0, 0);
+			this.Inward.Name = "Inward";
+			this.Inward.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+			this.Inward.Size = new System.Drawing.Size(157, 37);
+			this.Inward.TabIndex = 19;
+			this.Inward.Text = "Inward";
+			this.Inward.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.Inward.UseVisualStyleBackColor = true;
+			this.Inward.Click += new System.EventHandler(this.Inward_Click);
+			// 
 			// UC_ShipmentManager
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
+			this.Controls.Add(this.Canva);
+			this.Controls.Add(this.MenuBar);
 			this.Controls.Add(this.Navbar);
-			this.Controls.Add(this.label);
-			this.Controls.Add(this.Outward);
-			this.Controls.Add(this.Inward);
 			this.Name = "UC_ShipmentManager";
 			this.Size = new System.Drawing.Size(958, 528);
-			this.Outward.ResumeLayout(false);
-			this.Outward.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-			this.Inward.ResumeLayout(false);
-			this.Inward.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.Navbar.ResumeLayout(false);
 			this.Navbar.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Back)).EndInit();
+			this.MenuBar.ResumeLayout(false);
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.Label label;
-		private System.Windows.Forms.Panel Outward;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.PictureBox pictureBox2;
-		private System.Windows.Forms.Panel Inward;
-		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.Label label2;
-		private Bunifu.Framework.UI.BunifuElipse elInward;
-		private Bunifu.Framework.UI.BunifuElipse elOutward;
 		private System.Windows.Forms.Panel Navbar;
 		private System.Windows.Forms.PictureBox Back;
-		private System.Windows.Forms.Label NavTitle;
+		private System.Windows.Forms.Panel Canva;
+		private System.Windows.Forms.Panel MenuBar;
+		private FontAwesome.Sharp.IconButton Reports;
+		private FontAwesome.Sharp.IconButton Outward;
+		private FontAwesome.Sharp.IconButton Inward;
+		public System.Windows.Forms.Label NavTitle;
 	}
 }

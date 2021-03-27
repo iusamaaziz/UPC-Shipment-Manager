@@ -199,7 +199,7 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.ShipmentManager.Name = "ShipmentManager";
 			this.ShipmentManager.Size = new System.Drawing.Size(148, 120);
 			this.ShipmentManager.TabIndex = 4;
-			this.ShipmentManager.Click += new System.EventHandler(this.Inward_Click);
+			this.ShipmentManager.Click += new System.EventHandler(this.ShipmentManager_Click);
 			// 
 			// pictureBox1
 			// 
@@ -212,7 +212,7 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.pictureBox1.TabIndex = 6;
 			this.pictureBox1.TabStop = false;
-			this.pictureBox1.Click += new System.EventHandler(this.Inward_Click);
+			this.pictureBox1.Click += new System.EventHandler(this.ShipmentManager_Click);
 			// 
 			// label2
 			// 
@@ -226,7 +226,7 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.label2.Size = new System.Drawing.Size(126, 19);
 			this.label2.TabIndex = 5;
 			this.label2.Text = "Shipment Manager";
-			this.label2.Click += new System.EventHandler(this.Inward_Click);
+			this.label2.Click += new System.EventHandler(this.ShipmentManager_Click);
 			// 
 			// elOutward
 			// 
