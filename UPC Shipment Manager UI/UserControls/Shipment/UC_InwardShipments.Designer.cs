@@ -80,6 +80,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 			this.GodownStock.Name = "GodownStock";
 			this.GodownStock.Size = new System.Drawing.Size(109, 22);
 			this.GodownStock.Text = "Bulk Shipments";
+			this.GodownStock.Click += new System.EventHandler(this.GodownStock_Click);
 			// 
 			// toolStripSeparator2
 			// 

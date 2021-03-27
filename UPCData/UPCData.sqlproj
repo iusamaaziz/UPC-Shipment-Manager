@@ -97,6 +97,7 @@
     <Build Include="Functions\TableValuedFunctions\GetCourierNames.sql" />
     <Build Include="Functions\TableValuedFunctions\GetInwardSingleShipments.sql" />
     <Build Include="Functions\TableValuedFunctions\GetOutwardShipments.sql" />
+    <Build Include="Functions\ScalerValuedFunctions\IsTrackingExists.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\UPCData.publish.xml" />

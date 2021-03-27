@@ -60,5 +60,11 @@ namespace UPC.UIManager
 			SqlParameter[] parameters = { new SqlParameter("@name", godown) };
 			return await Access.GetBooleanAsync("SELECT [dbo].[IsCourierNameExists](@name)", parameters);
 		}
+
+		public static async Task<bool> IsTrackingIdExistsAsync(string godown)
+		{
+			SqlParameter[] parameters = { new SqlParameter("@name", godown) };
+			return await Access.GetBooleanAsync("SELECT [dbo].[IsTrackingExists](@name)", parameters);
+		}
 	}
 }
