@@ -80,6 +80,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.BulkShipments.Name = "BulkShipments";
 			this.BulkShipments.Size = new System.Drawing.Size(109, 22);
 			this.BulkShipments.Text = "Bulk Shipments";
+			this.BulkShipments.Click += new System.EventHandler(this.BulkShipments_Click);
 			// 
 			// toolStripSeparator2
 			// 

@@ -207,6 +207,12 @@
     <Compile Include="UserControls\Inventory\UC_Reports.Designer.cs">
       <DependentUpon>UC_Reports.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Shipment\UC_BulkOutward.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Shipment\UC_BulkOutward.Designer.cs">
+      <DependentUpon>UC_BulkOutward.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Shipment\UC_InwardShipments.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -236,6 +242,12 @@
     </Compile>
     <Compile Include="UserControls\Shipment\UC_SearchInward.Designer.cs">
       <DependentUpon>UC_SearchInward.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Shipment\UC_ShipmentReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Shipment\UC_ShipmentReports.Designer.cs">
+      <DependentUpon>UC_ShipmentReports.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Shipment\UC_SingleInward.cs">
       <SubType>UserControl</SubType>
@@ -307,6 +319,9 @@
     <EmbeddedResource Include="UserControls\Inventory\UC_Reports.resx">
       <DependentUpon>UC_Reports.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Shipment\UC_BulkOutward.resx">
+      <DependentUpon>UC_BulkOutward.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Shipment\UC_InwardShipments.resx">
       <DependentUpon>UC_InwardShipments.cs</DependentUpon>
     </EmbeddedResource>
@@ -321,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Shipment\UC_SearchInward.resx">
       <DependentUpon>UC_SearchInward.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Shipment\UC_ShipmentReports.resx">
+      <DependentUpon>UC_ShipmentReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Shipment\UC_SingleInward.resx">
       <DependentUpon>UC_SingleInward.cs</DependentUpon>

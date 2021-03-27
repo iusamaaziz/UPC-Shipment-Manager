@@ -174,6 +174,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 			this.Controls.Add(this.Navbar);
 			this.Name = "UC_ShipmentManager";
 			this.Size = new System.Drawing.Size(958, 528);
+			this.Load += new System.EventHandler(this.UC_ShipmentManager_Load);
 			this.Navbar.ResumeLayout(false);
 			this.Navbar.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Back)).EndInit();

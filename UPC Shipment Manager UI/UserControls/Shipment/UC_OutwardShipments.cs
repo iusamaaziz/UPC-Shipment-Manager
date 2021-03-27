@@ -15,10 +15,12 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 	public partial class UC_OutwardShipments : UserControl
 	{
 		UC_SingleOutward so;
+		UC_BulkOutward bo;
 		public UC_OutwardShipments()
 		{
 			InitializeComponent();
 			so = new UC_SingleOutward();
+			bo = new UC_BulkOutward();
 		}
 
 		private void SingleShipments_Click(object sender, EventArgs e)
@@ -37,6 +39,12 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 		private void UC_OutwardShipments_Load(object sender, EventArgs e)
 		{
 			SingleShipments_Click(SingleShipments, e);
+		}
+
+		private void BulkShipments_Click(object sender, EventArgs e)
+		{
+			(this.Parent.Parent as UC_ShipmentManager).NavTitle.Text = "UPC Inventory Manager → Outward → Bulk Shipment";
+			ActivateControls(bo);
 		}
 	}
 }
