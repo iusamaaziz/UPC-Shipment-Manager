@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Data;
 using UPC.Library.InventoryModels;
 using UPC.Library.LoginModels;
+using UPC.Library.Models;
 
 namespace UPCData.Library
 {
@@ -198,6 +199,36 @@ namespace UPCData.Library
 							Remarks = reader["Remarks"].ToString()
 						};
 						col.Add(item);
+					}
+				}
+			}
+			return col.ToArray();
+		}
+
+		public static async Task<InwardSingleShipment[]> GetInwardSingleShipmentsAsync(string command, SqlParameter[] parameters = null)
+		{
+			List<InwardSingleShipment> col = new List<InwardSingleShipment>();
+			using (SqlConnection cnn = await DB.GetSqlConnectionAsync())
+			{
+				SqlCommand cmd = new SqlCommand(command, cnn);
+				if (parameters != null)
+					cmd.Parameters.AddRange(parameters);
+				SqlDataReader reader = await cmd.ExecuteReaderAsync();
+				if (reader.HasRows)
+				{
+					while (await reader.ReadAsync())
+					{
+						InwardSingleShipment ship = new InwardSingleShipment()
+						{
+							Date = (DateTime)reader["ShipmentDate"],
+							ItemCondition = (string)reader["ItemCondition"],
+							ItemName = (string)reader["ItemName"],
+							Remarks = (string)reader["Remarks"],
+							TrackingId = (string)reader["TrackingId"],
+							CourierName = (string)reader["CourierName"],
+							ShipmentType = (string)reader["ShipmentType"]
+						};
+						col.Add(ship);
 					}
 				}
 			}

@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using UPC_Shipment_Manager_UI.Forms.Login;
-using UPC_Shipment_Manager_UI.UserControls;
 using UPC_Shipment_Manager_UI.UserControls.Inventory;
-using UPC.Library.LoginModels;
 using UPC_Shipment_Manager_UI.UserControls.ShipmentManager;
 
 namespace UPC_Shipment_Manager_UI.Forms

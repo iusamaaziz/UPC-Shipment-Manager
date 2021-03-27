@@ -89,6 +89,13 @@
     <Build Include="StoredProcedures\InsertUser.sql" />
     <Build Include="Functions\TableValuedFunctions\GetUserForLogin.sql" />
     <Build Include="Functions\ScalerValuedFunctions\GetUserCount.sql" />
+    <Build Include="Tables\Shipment.sql" />
+    <Build Include="StoredProcedures\InsertShipment.sql" />
+    <Build Include="Tables\CourierName.sql" />
+    <Build Include="StoredProcedures\InsertCourierName.sql" />
+    <Build Include="Functions\ScalerValuedFunctions\IsCourierNameExists.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetCourierNames.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetInwardSingleShipments.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\UPCData.publish.xml" />

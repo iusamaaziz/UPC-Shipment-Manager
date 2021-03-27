@@ -23,5 +23,12 @@ namespace UPC.Library.Models
 		public string ItemCondition { get; set; }
 
 		public string Remarks { get; set; }
+
+		/// <summary>
+		/// Inward/Outward
+		/// </summary>
+		[DisplayName("Shipment Type")]
+		public string ShipmentType { get; set; }
+
 	}
 }

@@ -48,17 +48,20 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.label8 = new System.Windows.Forms.Label();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.dg = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+			this.ShipmentDate = new System.Windows.Forms.DateTimePicker();
+			this.NewGodown = new System.Windows.Forms.PictureBox();
 			this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.trackingIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.courierNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.itemConditionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.shipmentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.inwardSingleShipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
-			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-			this.ShipmentDate = new System.Windows.Forms.DateTimePicker();
 			((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.NewGodown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.inwardSingleShipmentBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.SuspendLayout();
@@ -78,8 +81,11 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			// CourierName
 			// 
 			this.CourierName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.CourierName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.CourierName.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.CourierName.FormattingEnabled = true;
+			this.CourierName.Items.AddRange(new object[] {
+            "courier"});
 			this.CourierName.Location = new System.Drawing.Point(119, 93);
 			this.CourierName.Name = "CourierName";
 			this.CourierName.Size = new System.Drawing.Size(236, 25);
@@ -169,8 +175,12 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			// ItemCondition
 			// 
 			this.ItemCondition.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.ItemCondition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.ItemCondition.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.ItemCondition.FormattingEnabled = true;
+			this.ItemCondition.Items.AddRange(new object[] {
+            "Good",
+            "Bad"});
 			this.ItemCondition.Location = new System.Drawing.Point(473, 124);
 			this.ItemCondition.Name = "ItemCondition";
 			this.ItemCondition.Size = new System.Drawing.Size(236, 25);
@@ -253,7 +263,8 @@ namespace UPC_Shipment_Manager_UI.UserControls
             this.courierNameDataGridViewTextBoxColumn,
             this.itemNameDataGridViewTextBoxColumn,
             this.itemConditionDataGridViewTextBoxColumn,
-            this.remarksDataGridViewTextBoxColumn});
+            this.remarksDataGridViewTextBoxColumn,
+            this.shipmentTypeDataGridViewTextBoxColumn});
 			this.dg.DataSource = this.inwardSingleShipmentBindingSource;
 			this.dg.DoubleBuffered = true;
 			this.dg.EnableHeadersVisualStyles = false;
@@ -267,6 +278,34 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.dg.Size = new System.Drawing.Size(715, 209);
 			this.dg.TabIndex = 6;
 			this.toolTip1.SetToolTip(this.dg, "All Single Inward Shipments");
+			// 
+			// bunifuElipse1
+			// 
+			this.bunifuElipse1.ElipseRadius = 7;
+			this.bunifuElipse1.TargetControl = this.dg;
+			// 
+			// ShipmentDate
+			// 
+			this.ShipmentDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.ShipmentDate.Location = new System.Drawing.Point(119, 67);
+			this.ShipmentDate.Name = "ShipmentDate";
+			this.ShipmentDate.Size = new System.Drawing.Size(236, 22);
+			this.ShipmentDate.TabIndex = 29;
+			// 
+			// NewGodown
+			// 
+			this.NewGodown.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.NewGodown.BackColor = System.Drawing.Color.White;
+			this.NewGodown.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.NewGodown.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_add_24px;
+			this.NewGodown.Location = new System.Drawing.Point(358, 93);
+			this.NewGodown.Name = "NewGodown";
+			this.NewGodown.Size = new System.Drawing.Size(24, 24);
+			this.NewGodown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.NewGodown.TabIndex = 37;
+			this.NewGodown.TabStop = false;
+			this.toolTip1.SetToolTip(this.NewGodown, "Add new Godown number");
+			this.NewGodown.Click += new System.EventHandler(this.NewGodown_Click);
 			// 
 			// dateDataGridViewTextBoxColumn
 			// 
@@ -310,6 +349,13 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
 			this.remarksDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
+			// shipmentTypeDataGridViewTextBoxColumn
+			// 
+			this.shipmentTypeDataGridViewTextBoxColumn.DataPropertyName = "ShipmentType";
+			this.shipmentTypeDataGridViewTextBoxColumn.HeaderText = "Shipment Type";
+			this.shipmentTypeDataGridViewTextBoxColumn.Name = "shipmentTypeDataGridViewTextBoxColumn";
+			this.shipmentTypeDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
 			// inwardSingleShipmentBindingSource
 			// 
 			this.inwardSingleShipmentBindingSource.DataSource = typeof(UPC.Library.Models.InwardSingleShipment);
@@ -329,24 +375,12 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.toolTip1.SetToolTip(this.pictureBox2, "Export all Inward Single Shipments");
 			this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
 			// 
-			// bunifuElipse1
-			// 
-			this.bunifuElipse1.ElipseRadius = 7;
-			this.bunifuElipse1.TargetControl = this.dg;
-			// 
-			// ShipmentDate
-			// 
-			this.ShipmentDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.ShipmentDate.Location = new System.Drawing.Point(119, 67);
-			this.ShipmentDate.Name = "ShipmentDate";
-			this.ShipmentDate.Size = new System.Drawing.Size(236, 22);
-			this.ShipmentDate.TabIndex = 29;
-			// 
 			// UC_SingleInward
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
+			this.Controls.Add(this.NewGodown);
 			this.Controls.Add(this.ShipmentDate);
 			this.Controls.Add(this.dg);
 			this.Controls.Add(this.pictureBox2);
@@ -369,6 +403,7 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.Size = new System.Drawing.Size(801, 473);
 			this.Load += new System.EventHandler(this.UC_SingleInward_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.NewGodown)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.inwardSingleShipmentBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			this.ResumeLayout(false);
@@ -396,13 +431,15 @@ namespace UPC_Shipment_Manager_UI.UserControls
 		private System.Windows.Forms.ToolTip toolTip1;
 		private Bunifu.Framework.UI.BunifuCustomDataGrid dg;
 		private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+		private System.Windows.Forms.DateTimePicker ShipmentDate;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn trackingIdDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn courierNameDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn itemConditionDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn remarksDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn shipmentTypeDataGridViewTextBoxColumn;
 		private System.Windows.Forms.BindingSource inwardSingleShipmentBindingSource;
-		private System.Windows.Forms.DateTimePicker ShipmentDate;
+		private System.Windows.Forms.PictureBox NewGodown;
 	}
 }

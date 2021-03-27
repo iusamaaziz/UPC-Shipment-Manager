@@ -108,6 +108,12 @@
     <Compile Include="Forms\FormImportTrackingId.Designer.cs">
       <DependentUpon>FormImportTrackingId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormNewCourierName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormNewCourierName.Designer.cs">
+      <DependentUpon>FormNewCourierName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormNewGodown.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,34 +200,34 @@
     <Compile Include="UserControls\Inventory\UC_Reports.Designer.cs">
       <DependentUpon>UC_Reports.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ShipmentManager\UC_InwardShipments.cs">
+    <Compile Include="UserControls\Shipment\UC_InwardShipments.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ShipmentManager\UC_InwardShipments.Designer.cs">
+    <Compile Include="UserControls\Shipment\UC_InwardShipments.Designer.cs">
       <DependentUpon>UC_InwardShipments.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ShipmentManager\UC_ShipmentManager.cs">
+    <Compile Include="UserControls\Shipment\UC_ShipmentManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ShipmentManager\UC_ShipmentManager.Designer.cs">
+    <Compile Include="UserControls\Shipment\UC_ShipmentManager.Designer.cs">
       <DependentUpon>UC_ShipmentManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ShipmentManager\UC_BulkInward.cs">
+    <Compile Include="UserControls\Shipment\UC_BulkInward.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ShipmentManager\UC_BulkInward.Designer.cs">
+    <Compile Include="UserControls\Shipment\UC_BulkInward.Designer.cs">
       <DependentUpon>UC_BulkInward.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ShipmentManager\UC_SearchInward.cs">
+    <Compile Include="UserControls\Shipment\UC_SearchInward.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ShipmentManager\UC_SearchInward.Designer.cs">
+    <Compile Include="UserControls\Shipment\UC_SearchInward.Designer.cs">
       <DependentUpon>UC_SearchInward.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ShipmentManager\UC_SingleInward.cs">
+    <Compile Include="UserControls\Shipment\UC_SingleInward.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ShipmentManager\UC_SingleInward.Designer.cs">
+    <Compile Include="UserControls\Shipment\UC_SingleInward.Designer.cs">
       <DependentUpon>UC_SingleInward.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\Dashboard.resx">
@@ -232,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormImportTrackingId.resx">
       <DependentUpon>FormImportTrackingId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormNewCourierName.resx">
+      <DependentUpon>FormNewCourierName.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormNewGodown.resx">
       <DependentUpon>FormNewGodown.cs</DependentUpon>
@@ -279,19 +288,19 @@
     <EmbeddedResource Include="UserControls\Inventory\UC_Reports.resx">
       <DependentUpon>UC_Reports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ShipmentManager\UC_InwardShipments.resx">
+    <EmbeddedResource Include="UserControls\Shipment\UC_InwardShipments.resx">
       <DependentUpon>UC_InwardShipments.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ShipmentManager\UC_ShipmentManager.resx">
+    <EmbeddedResource Include="UserControls\Shipment\UC_ShipmentManager.resx">
       <DependentUpon>UC_ShipmentManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ShipmentManager\UC_BulkInward.resx">
+    <EmbeddedResource Include="UserControls\Shipment\UC_BulkInward.resx">
       <DependentUpon>UC_BulkInward.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ShipmentManager\UC_SearchInward.resx">
+    <EmbeddedResource Include="UserControls\Shipment\UC_SearchInward.resx">
       <DependentUpon>UC_SearchInward.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ShipmentManager\UC_SingleInward.resx">
+    <EmbeddedResource Include="UserControls\Shipment\UC_SingleInward.resx">
       <DependentUpon>UC_SingleInward.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

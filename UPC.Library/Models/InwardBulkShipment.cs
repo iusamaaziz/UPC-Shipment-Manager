@@ -17,7 +17,6 @@ namespace UPC.Library.Models
 		[DisplayName("Tracking Id")]
 		public string TrackingId { get; set; }
 
-
 		public string Remarks { get; set; }
 
 	}
