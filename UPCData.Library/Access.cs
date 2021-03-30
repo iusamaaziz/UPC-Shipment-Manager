@@ -9,6 +9,7 @@ using System.Data;
 using UPC.Library.InventoryModels;
 using UPC.Library.LoginModels;
 using UPC.Library.Models;
+using UPC.Library.CRMModels;
 
 namespace UPCData.Library
 {
@@ -248,6 +249,42 @@ namespace UPCData.Library
 				adapter.Fill(dt);
 			}
 			return dt;
+		}
+
+		public static async Task<CustomerEntry[]> GetCustomerEntriesAsync(string command, SqlParameter[] parameters = null)
+		{
+			List<CustomerEntry> col = new List<CustomerEntry>();
+			using (SqlConnection cnn = await DB.GetSqlConnectionAsync())
+			{
+				SqlCommand cmd = new SqlCommand(command, cnn);
+				if (parameters != null)
+					cmd.Parameters.AddRange(parameters);
+				SqlDataReader reader = await cmd.ExecuteReaderAsync();
+				if (reader.HasRows)
+				{
+					while (await reader.ReadAsync())
+					{
+						CustomerEntry item = new CustomerEntry()
+						{
+							Id = (int)reader["Id"],
+							CustomerName = (string)reader["CustomerName"],
+							Phone = (string)reader["Phone"],
+							Email = (string)reader["Email"],
+							Action = (string)reader["Action"],
+							MarketPlace = (string)reader["MarketPlace"],
+							OrderDate = (string)reader["OrderDate"],
+							OrderNumber = (string)reader["OrderNumber"],
+							Product = (string)reader["Product"],
+							Query = (string)reader["Query"],
+							Status = (string)reader["Status"],
+							Type = (string)reader["Type"],
+							WhatsappMessage = (string)reader["WhatsappMessage"]
+						};
+						col.Add(item);
+					}
+				}
+			}
+			return col.ToArray();
 		}
 	}
 }

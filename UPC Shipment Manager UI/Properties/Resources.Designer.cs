@@ -113,6 +113,16 @@ namespace UPC_Shipment_Manager_UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_user_male_26px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_add_user_male_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_download_52px {
             get {
                 object obj = ResourceManager.GetObject("icons8_download_52px", resourceCulture);
@@ -273,6 +283,16 @@ namespace UPC_Shipment_Manager_UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_user_24px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_user_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_users_settings_24px {
             get {
                 object obj = ResourceManager.GetObject("icons8_users_settings_24px", resourceCulture);
@@ -286,6 +306,16 @@ namespace UPC_Shipment_Manager_UI.Properties {
         internal static System.Drawing.Bitmap icons8_warehouse_24px {
             get {
                 object obj = ResourceManager.GetObject("icons8_warehouse_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_whatsapp_24px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_whatsapp_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

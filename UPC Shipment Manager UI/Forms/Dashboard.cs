@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 
 using UPC_Shipment_Manager_UI.Forms.Login;
+using UPC_Shipment_Manager_UI.UserControls.CRM;
 using UPC_Shipment_Manager_UI.UserControls.Inventory;
 using UPC_Shipment_Manager_UI.UserControls.ShipmentManager;
 
@@ -95,7 +96,7 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.CRM.Name = "CRM";
 			this.CRM.Size = new System.Drawing.Size(148, 120);
 			this.CRM.TabIndex = 5;
-			this.CRM.Click += new System.EventHandler(this.Outward_Click);
+			this.CRM.Click += new System.EventHandler(this.CRM_Click);
 			// 
 			// label3
 			// 
@@ -109,7 +110,7 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.label3.Size = new System.Drawing.Size(39, 19);
 			this.label3.TabIndex = 6;
 			this.label3.Text = "CRM";
-			this.label3.Click += new System.EventHandler(this.Outward_Click);
+			this.label3.Click += new System.EventHandler(this.CRM_Click);
 			// 
 			// pictureBox2
 			// 
@@ -122,7 +123,7 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.pictureBox2.TabIndex = 5;
 			this.pictureBox2.TabStop = false;
-			this.pictureBox2.Click += new System.EventHandler(this.Outward_Click);
+			this.pictureBox2.Click += new System.EventHandler(this.CRM_Click);
 			// 
 			// Canva
 			// 
@@ -205,11 +206,9 @@ namespace UPC_Shipment_Manager_UI.Forms
 			ActivateControl(new UC_ShipmentManager());
 		}
 
-		public void Outward_Click(object sender, EventArgs e)
+		public void CRM_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("Will be available sooner.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-			return;
-			ActivateControl(new UC_ShipmentManager());
+			ActivateControl(new UC_CRM());
 		}
 
 		public void InventoryManager_Click(object sender, EventArgs e)

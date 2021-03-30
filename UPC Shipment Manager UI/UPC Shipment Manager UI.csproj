@@ -165,6 +165,36 @@
       <DependentUpon>FormPicklistPrintout.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UserControls\CRM\UC_CRM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CRM\UC_CRM.Designer.cs">
+      <DependentUpon>UC_CRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CRM\UC_ExistingCustomerEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CRM\UC_ExistingCustomerEntry.Designer.cs">
+      <DependentUpon>UC_ExistingCustomerEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CRM\UC_NewCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CRM\UC_NewCustomer.Designer.cs">
+      <DependentUpon>UC_NewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CRM\UC_NewCustomerEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CRM\UC_NewCustomerEntry.Designer.cs">
+      <DependentUpon>UC_NewCustomerEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CRM\UC_SearchEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CRM\UC_SearchEntry.Designer.cs">
+      <DependentUpon>UC_SearchEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Inventory\UC_GodownStock.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -310,6 +340,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reporting\GodownStockPrintout.rdlc" />
     <EmbeddedResource Include="Reporting\PicklistPrintout.rdlc" />
+    <EmbeddedResource Include="UserControls\CRM\UC_CRM.resx">
+      <DependentUpon>UC_CRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CRM\UC_ExistingCustomerEntry.resx">
+      <DependentUpon>UC_ExistingCustomerEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CRM\UC_NewCustomer.resx">
+      <DependentUpon>UC_NewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CRM\UC_NewCustomerEntry.resx">
+      <DependentUpon>UC_NewCustomerEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CRM\UC_SearchEntry.resx">
+      <DependentUpon>UC_SearchEntry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Inventory\UC_GodownStock.resx">
       <DependentUpon>UC_GodownStock.cs</DependentUpon>
     </EmbeddedResource>
@@ -365,6 +410,7 @@
       <DependentUpon>UC_SingleOutward.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\UPC.Library.CRMModels.CustomerEntry.datasource" />
     <None Include="Properties\DataSources\UPC.Library.InventoryModels.InventoryItem.datasource" />
     <None Include="Properties\DataSources\UPC.Library.Models.InwardBulkShipment.datasource" />
     <None Include="Properties\DataSources\UPC.Library.Models.InwardShipment.datasource" />
@@ -412,6 +458,9 @@
     <Content Include="Icons\UPCLogo-min.png" />
     <Content Include="Icons\UPCLogo.png" />
     <None Include="Resources\icons8_search_property_26px.png" />
+    <None Include="Resources\icons8_user_24px.png" />
+    <None Include="Resources\icons8_add_user_male_26px.png" />
+    <None Include="Resources\icons8_whatsapp_24px.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -449,8 +498,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserControls\CRM\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

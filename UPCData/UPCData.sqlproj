@@ -103,6 +103,8 @@
     <Build Include="Tables\CustomerEntry.sql" />
     <Build Include="StoredProcedures\InsertCustomerEntry.sql" />
     <Build Include="StoredProcedures\UpdateCustomerEntry.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetEntriesByName.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetCustomerNames.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\UPCData.publish.xml" />

@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CRMManager.cs" />
     <Compile Include="GeneralManager.cs" />
     <Compile Include="InventoryManager\InventoryManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

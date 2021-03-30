@@ -34,5 +34,10 @@ namespace UPC.Library.CRMModels
 		/// Open/Closed
 		/// </summary>
 		public string Status { get; set; } = "Open";
+
+		/// <summary>
+		/// New/Existing
+		/// </summary>
+		public string Type { get; set; } = "New";
 	}
 }

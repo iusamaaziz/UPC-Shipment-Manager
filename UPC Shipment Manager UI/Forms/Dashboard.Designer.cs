@@ -244,7 +244,7 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.CRM.Name = "CRM";
 			this.CRM.Size = new System.Drawing.Size(148, 120);
 			this.CRM.TabIndex = 5;
-			this.CRM.Click += new System.EventHandler(this.Outward_Click);
+			this.CRM.Click += new System.EventHandler(this.CRM_Click);
 			// 
 			// label3
 			// 
@@ -258,7 +258,7 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.label3.Size = new System.Drawing.Size(39, 19);
 			this.label3.TabIndex = 6;
 			this.label3.Text = "CRM";
-			this.label3.Click += new System.EventHandler(this.Outward_Click);
+			this.label3.Click += new System.EventHandler(this.CRM_Click);
 			// 
 			// pictureBox2
 			// 
@@ -271,7 +271,7 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.pictureBox2.TabIndex = 5;
 			this.pictureBox2.TabStop = false;
-			this.pictureBox2.Click += new System.EventHandler(this.Outward_Click);
+			this.pictureBox2.Click += new System.EventHandler(this.CRM_Click);
 			// 
 			// Canva
 			// 
@@ -345,8 +345,7 @@ namespace UPC_Shipment_Manager_UI.Forms
 			// 
 			// Dashboard
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.ClientSize = new System.Drawing.Size(958, 559);
 			this.Controls.Add(this.Canva);
 			this.Controls.Add(this.TitleBar);
