@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CRMModels\CustomerEntry.cs" />
     <Compile Include="InventoryModels\InventoryItem.cs" />
     <Compile Include="LoginModels\Login.cs" />
     <Compile Include="LoginModels\User.cs" />
