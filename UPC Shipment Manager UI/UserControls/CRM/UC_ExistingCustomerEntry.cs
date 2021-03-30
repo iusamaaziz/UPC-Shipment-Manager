@@ -102,5 +102,10 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 				}
 			}
 		}
+
+		private void toolTip1_Popup(object sender, PopupEventArgs e)
+		{
+
+		}
 	}
 }

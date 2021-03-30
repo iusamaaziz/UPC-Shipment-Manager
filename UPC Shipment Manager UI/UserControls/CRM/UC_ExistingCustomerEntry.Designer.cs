@@ -54,9 +54,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.label11 = new System.Windows.Forms.Label();
 			this.OrderDate = new System.Windows.Forms.TextBox();
 			this.label12 = new System.Windows.Forms.Label();
-			this.NewMarketPlace = new System.Windows.Forms.PictureBox();
 			this.Marketplace = new System.Windows.Forms.ComboBox();
-			((System.ComponentModel.ISupportInitialize)(this.NewMarketPlace)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// Action
@@ -92,6 +90,10 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.toolTip1.SetToolTip(this.Whatsapp, "Send to Whatsapp");
 			this.Whatsapp.UseVisualStyleBackColor = true;
 			this.Whatsapp.Click += new System.EventHandler(this.Whatsapp_Click);
+			// 
+			// toolTip1
+			// 
+			this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
 			// 
 			// WhatsappMessage
 			// 
@@ -317,36 +319,27 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.label12.TabIndex = 75;
 			this.label12.Text = "Order Date";
 			// 
-			// NewMarketPlace
-			// 
-			this.NewMarketPlace.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.NewMarketPlace.BackColor = System.Drawing.Color.White;
-			this.NewMarketPlace.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.NewMarketPlace.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_add_24px;
-			this.NewMarketPlace.Location = new System.Drawing.Point(370, 135);
-			this.NewMarketPlace.Name = "NewMarketPlace";
-			this.NewMarketPlace.Size = new System.Drawing.Size(24, 24);
-			this.NewMarketPlace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-			this.NewMarketPlace.TabIndex = 79;
-			this.NewMarketPlace.TabStop = false;
-			this.toolTip1.SetToolTip(this.NewMarketPlace, "New MarketPlace");
-			// 
 			// Marketplace
 			// 
 			this.Marketplace.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.Marketplace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Marketplace.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.Marketplace.FormattingEnabled = true;
+			this.Marketplace.Items.AddRange(new object[] {
+            "Amazon",
+            "Flipkart",
+            "Firstcry",
+            "StarAndDaisy",
+            "Others"});
 			this.Marketplace.Location = new System.Drawing.Point(159, 134);
 			this.Marketplace.Name = "Marketplace";
-			this.Marketplace.Size = new System.Drawing.Size(206, 25);
+			this.Marketplace.Size = new System.Drawing.Size(236, 25);
 			this.Marketplace.TabIndex = 3;
 			// 
 			// UC_ExistingCustomerEntry
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.BackColor = System.Drawing.Color.White;
-			this.Controls.Add(this.NewMarketPlace);
 			this.Controls.Add(this.Marketplace);
 			this.Controls.Add(this.Product);
 			this.Controls.Add(this.label11);
@@ -373,7 +366,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.Controls.Add(this.label4);
 			this.Name = "UC_ExistingCustomerEntry";
 			this.Size = new System.Drawing.Size(801, 473);
-			((System.ComponentModel.ISupportInitialize)(this.NewMarketPlace)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -405,7 +397,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.TextBox OrderDate;
 		private System.Windows.Forms.Label label12;
-		private System.Windows.Forms.PictureBox NewMarketPlace;
 		private System.Windows.Forms.ComboBox Marketplace;
 	}
 }

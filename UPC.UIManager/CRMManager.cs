@@ -36,6 +36,16 @@ namespace UPC.UIManager
 			Access.ExecuteProcedure("[dbo].[InsertCustomerEntry]", parameters.ToArray());
 		}
 
+		public static void UpdateCustomerEntry(int id, string status)
+		{
+			List<SqlParameter> parameters = new List<SqlParameter>()
+			{
+				new SqlParameter("@id", id),
+				new SqlParameter("@status", status),
+			};
+			Access.ExecuteProcedure("[dbo].[UpdateCustomerEntry]", parameters.ToArray());
+		}
+
 		public static async Task<CustomerEntry[]> GetCustomerEntriesAsync(string customer)
 		{
 			List<SqlParameter> parameters = new List<SqlParameter>()
