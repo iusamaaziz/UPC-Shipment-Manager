@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using UPC.Library.CRMModels;
+using UPC.Library.LoginModels;
 using UPC.UIManager;
 
 using UPC_Shipment_Manager_UI.UserControls.Inventory;
@@ -70,6 +71,11 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 
 		private void OpenEntry_Click(object sender, EventArgs e)
 		{
+			if (Login.Role == "Operator")
+			{
+				MessageBox.Show("Operators do not have access to open entries. Please contact administrator for further details.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
+			}
 			if (IsValid)
 			{
 				try

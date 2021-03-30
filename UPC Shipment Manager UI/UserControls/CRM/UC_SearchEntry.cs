@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using UPC.Library.CRMModels;
+using UPC.Library.LoginModels;
 using UPC.UIManager;
 
 namespace UPC_Shipment_Manager_UI.UserControls.CRM
@@ -52,7 +53,11 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 		{
 			try
 			{
-
+				if (Login.Role == "Operator")
+				{
+					MessageBox.Show("Operators do not have access close entries. Please contact administrator for further details.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					return;
+				}
 				CRMManager.UpdateCustomerEntry(selectedId, "Closed");
 				MessageBox.Show("The entry was successfully closed.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 				Clear();
