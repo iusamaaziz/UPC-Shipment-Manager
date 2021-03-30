@@ -100,6 +100,9 @@
     <Build Include="Functions\ScalerValuedFunctions\IsTrackingExists.sql" />
     <Build Include="Functions\TableValuedFunctions\GetShipmentsByTracking.sql" />
     <Build Include="Functions\TableValuedFunctions\GetShipmentsByDate.sql" />
+    <Build Include="Tables\CustomerEntry.sql" />
+    <Build Include="StoredProcedures\InsertCustomerEntry.sql" />
+    <Build Include="StoredProcedures\UpdateCustomerEntry.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\UPCData.publish.xml" />
