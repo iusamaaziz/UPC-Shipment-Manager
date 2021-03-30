@@ -33,7 +33,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.Back = new System.Windows.Forms.PictureBox();
 			this.NavTitle = new System.Windows.Forms.Label();
 			this.MenuBar = new System.Windows.Forms.Panel();
-			this.Reports = new FontAwesome.Sharp.IconButton();
 			this.SearchEntry = new FontAwesome.Sharp.IconButton();
 			this.NewEntry = new FontAwesome.Sharp.IconButton();
 			this.Canva = new System.Windows.Forms.Panel();
@@ -65,6 +64,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.Back.TabIndex = 8;
 			this.Back.TabStop = false;
+			this.Back.Click += new System.EventHandler(this.Back_Click);
 			// 
 			// NavTitle
 			// 
@@ -80,7 +80,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// MenuBar
 			// 
 			this.MenuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-			this.MenuBar.Controls.Add(this.Reports);
 			this.MenuBar.Controls.Add(this.SearchEntry);
 			this.MenuBar.Controls.Add(this.NewEntry);
 			this.MenuBar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -88,27 +87,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.MenuBar.Name = "MenuBar";
 			this.MenuBar.Size = new System.Drawing.Size(157, 498);
 			this.MenuBar.TabIndex = 3;
-			// 
-			// Reports
-			// 
-			this.Reports.Dock = System.Windows.Forms.DockStyle.Top;
-			this.Reports.FlatAppearance.BorderSize = 0;
-			this.Reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Reports.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Reports.ForeColor = System.Drawing.Color.White;
-			this.Reports.IconChar = FontAwesome.Sharp.IconChar.None;
-			this.Reports.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.Reports.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.Reports.IconSize = 30;
-			this.Reports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.Reports.Location = new System.Drawing.Point(0, 74);
-			this.Reports.Name = "Reports";
-			this.Reports.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-			this.Reports.Size = new System.Drawing.Size(157, 37);
-			this.Reports.TabIndex = 21;
-			this.Reports.Text = "Reports";
-			this.Reports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.Reports.UseVisualStyleBackColor = true;
 			// 
 			// SearchEntry
 			// 
@@ -187,7 +165,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 		private System.Windows.Forms.PictureBox Back;
 		public System.Windows.Forms.Label NavTitle;
 		private System.Windows.Forms.Panel MenuBar;
-		private FontAwesome.Sharp.IconButton Reports;
 		private FontAwesome.Sharp.IconButton SearchEntry;
 		private FontAwesome.Sharp.IconButton NewEntry;
 		private System.Windows.Forms.Panel Canva;

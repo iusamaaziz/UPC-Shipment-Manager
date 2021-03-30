@@ -45,6 +45,9 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			CourierName.Text = "";
 			TrackingId.Clear();
 			Register.Enabled = false;
+			Prepaid.Checked = true;
+			CODAmount.ResetText();
+			CustomerName.Clear();
 			CourierName.Focus();
 		}
 
@@ -71,7 +74,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 		{
 			try
 			{
-				InwardSingleShipment si = new InwardSingleShipment() { CourierName = CourierName.Text, Date = ShipmentDate.Value, ItemCondition = "", ItemName = ItemName.Text, Remarks = Remarks.Text, TrackingId = TrackingId.Text, CustomerName = CustomerName.Text, ShipmentType = "Outward" };
+				InwardSingleShipment si = new InwardSingleShipment() { CourierName = CourierName.Text, Date = ShipmentDate.Value, ItemCondition = "N/A", ItemName = ItemName.Text, Remarks = Remarks.Text, TrackingId = TrackingId.Text, CustomerName = CustomerName.Text, ShipmentType = "Outward", PaymentType = COD.Checked ? "COD" : "Prepaid", Amount = COD.Checked ? CODAmount.Value.ToString() : "N/A" };
 				ShipmentLibrary.InsertInwardSingleShipment(si);
 				MessageBox.Show("Shipment Registered", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 				Clear();
@@ -93,6 +96,20 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 					CourierName.Items.Clear();
 					CourierName.Items.AddRange(await ShipmentLibrary.GetCourierNamesAsync());
 				}
+			}
+		}
+
+		private void COD_CheckedChanged(object sender, EventArgs e)
+		{
+			if (COD.Checked)
+			{
+				CODLabel.Visible = true;
+				CODAmount.Visible = true;
+			}
+			else
+			{
+				CODLabel.Visible = false;
+				CODAmount.Visible = false;
 			}
 		}
 	}

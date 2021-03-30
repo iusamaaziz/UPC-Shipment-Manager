@@ -6,7 +6,9 @@
     @condition  nvarchar(128),
     @remarks    nvarchar(max),
     @type       nvarchar(128),
-    @customer   nvarchar(128)
+    @customer   nvarchar(128),
+    @payment    nvarchar(50),
+    @amount     nvarchar(50)
 AS
     INSERT INTO [dbo].[Shipment]
            ([ShipmentDate]
@@ -16,7 +18,9 @@ AS
            ,[ItemCondition]
            ,[Remarks]
            ,[ShipmentType]
-           ,[CustomerName])
+           ,[CustomerName]
+           ,[PaymentType]
+           ,[Amount])
      VALUES
            (@date     
            ,@tracking 
@@ -25,5 +29,7 @@ AS
            ,@condition
            ,@remarks  
            ,@type
-           ,@customer)   
+           ,@customer
+           ,@payment
+           ,@amount)   
 

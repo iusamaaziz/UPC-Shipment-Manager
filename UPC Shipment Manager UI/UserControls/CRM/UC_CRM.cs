@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using UPC_Shipment_Manager_UI.Forms;
 using UPC_Shipment_Manager_UI.UserControls.Inventory;
 
 namespace UPC_Shipment_Manager_UI.UserControls.CRM
@@ -41,6 +42,11 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 		private void UC_CRM_Load(object sender, EventArgs e)
 		{
 			NewEntry_Click(this, e);
+		}
+
+		private void Back_Click(object sender, EventArgs e)
+		{
+			(this.ParentForm as Dashboard).ActivateInitials();
 		}
 	}
 }

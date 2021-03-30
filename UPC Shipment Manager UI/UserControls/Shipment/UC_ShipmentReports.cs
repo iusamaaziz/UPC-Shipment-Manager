@@ -34,13 +34,19 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 
 		private void Search_Click(object sender, EventArgs e)
 		{
-			(this.Parent.Parent as UC_ShipmentManager).NavTitle.Text = "UPC Shipment Manager → Inwards → Search Tracking Id";
+			(this.Parent.Parent as UC_ShipmentManager).NavTitle.Text = "UPC Shipment Manager → Reports → Search Tracking Id";
 			ActivateControls(new UC_SearchTrackingId());
 		}
 
 		private void UC_ShipmentReports_Load(object sender, EventArgs e)
 		{
 			Search_Click(Search, e);
+		}
+
+		private void COD_Click(object sender, EventArgs e)
+		{
+			(this.Parent.Parent as UC_ShipmentManager).NavTitle.Text = "UPC Shipment Manager → Reports → COD Shipments";
+			ActivateControls(new UC_COD());
 		}
 	}
 }

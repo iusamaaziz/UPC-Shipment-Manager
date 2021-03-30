@@ -35,6 +35,7 @@ namespace UPCData.Library
 						Console.WriteLine($"Commit Exception Type {ex.GetType()}");
 						Console.WriteLine($"Commit Exception Message {ex.Message}");
 						transaction.Rollback();
+						throw ex;
 					}
 					catch (Exception ex1)
 					{
@@ -228,7 +229,9 @@ namespace UPCData.Library
 							TrackingId = (string)reader["TrackingId"],
 							CourierName = (string)reader["CourierName"],
 							ShipmentType = (string)reader["ShipmentType"],
-							CustomerName = (string)reader["CustomerName"]
+							CustomerName = (string)reader["CustomerName"],
+							Amount = (string)reader["Amount"],
+							PaymentType = (string)reader["PaymentType"]
 						};
 						col.Add(ship);
 					}

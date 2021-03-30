@@ -243,6 +243,12 @@
     <Compile Include="UserControls\Shipment\UC_BulkOutward.Designer.cs">
       <DependentUpon>UC_BulkOutward.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Shipment\UC_COD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Shipment\UC_COD.Designer.cs">
+      <DependentUpon>UC_COD.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Shipment\UC_InwardShipments.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -378,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Shipment\UC_BulkOutward.resx">
       <DependentUpon>UC_BulkOutward.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Shipment\UC_COD.resx">
+      <DependentUpon>UC_COD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Shipment\UC_InwardShipments.resx">
       <DependentUpon>UC_InwardShipments.cs</DependentUpon>

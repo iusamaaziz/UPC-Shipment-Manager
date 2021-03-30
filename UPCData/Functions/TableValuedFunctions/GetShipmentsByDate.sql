@@ -6,4 +6,4 @@
 RETURNS TABLE
 AS
 RETURN
-	SELECT * FROM [dbo].[Shipment] WHERE [ShipmentDate] >= @start AND [ShipmentDate] <= @end;
+	SELECT * FROM [dbo].[Shipment] WHERE CONVERT(date, [ShipmentDate]) >= @start AND CONVERT(date, [ShipmentDate]) <= @end;

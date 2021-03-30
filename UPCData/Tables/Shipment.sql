@@ -9,5 +9,8 @@
     [Remarks] NVARCHAR(MAX) NULL, 
     [ShipmentType] NVARCHAR(128) NOT NULL, 
     [CustomerName] NVARCHAR(128) NULL, 
-    CONSTRAINT [CK_Shipment_Type] CHECK ([ShipmentType] = 'Inward' OR [ShipmentType] = 'Outward')
+    [Amount] NVARCHAR(50) NULL, 
+    [PaymentType] NVARCHAR(50) NOT NULL, 
+    CONSTRAINT [CK_Shipment_Type] CHECK ([ShipmentType] = 'Inward' OR [ShipmentType] = 'Outward'),
+    CONSTRAINT [CK_PaymentType] CHECK ([PaymentType] = 'Prepaid' OR [PaymentType] = 'COD')
 )

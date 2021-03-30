@@ -32,6 +32,15 @@ namespace UPC.Library.Models
 
 		[DisplayName("Customer Name")]
 		public string CustomerName { get; set; }
+		/// <summary>
+		/// Prepaid/COD
+		/// </summary>
+		public string PaymentType { get; set; }
+		/// <summary>
+		/// COD Amount
+		/// </summary>
+		public string Amount { get; set; }
+
 
 	}
 }

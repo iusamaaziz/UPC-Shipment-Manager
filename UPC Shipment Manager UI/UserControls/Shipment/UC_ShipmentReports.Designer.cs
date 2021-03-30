@@ -30,10 +30,12 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 		private void InitializeComponent()
 		{
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-			this.Canva = new System.Windows.Forms.Panel();
 			this.Report = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.Search = new System.Windows.Forms.ToolStripButton();
+			this.Canva = new System.Windows.Forms.Panel();
+			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+			this.COD = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -42,25 +44,14 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Report,
             this.toolStripSeparator1,
-            this.Search});
+            this.Search,
+            this.toolStripSeparator2,
+            this.COD});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.Size = new System.Drawing.Size(801, 25);
 			this.toolStrip1.TabIndex = 1;
 			this.toolStrip1.Text = "toolStrip1";
-			// 
-			// toolStripSeparator1
-			// 
-			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-			// 
-			// Canva
-			// 
-			this.Canva.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.Canva.Location = new System.Drawing.Point(0, 25);
-			this.Canva.Name = "Canva";
-			this.Canva.Size = new System.Drawing.Size(801, 473);
-			this.Canva.TabIndex = 2;
 			// 
 			// Report
 			// 
@@ -71,6 +62,11 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.Report.Text = "Shipment Reports";
 			this.Report.Click += new System.EventHandler(this.Report_Click);
 			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+			// 
 			// Search
 			// 
 			this.Search.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_search_property_26px;
@@ -79,6 +75,28 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.Search.Size = new System.Drawing.Size(122, 22);
 			this.Search.Text = "Search Tracking Id";
 			this.Search.Click += new System.EventHandler(this.Search_Click);
+			// 
+			// Canva
+			// 
+			this.Canva.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Canva.Location = new System.Drawing.Point(0, 25);
+			this.Canva.Name = "Canva";
+			this.Canva.Size = new System.Drawing.Size(801, 473);
+			this.Canva.TabIndex = 2;
+			// 
+			// toolStripSeparator2
+			// 
+			this.toolStripSeparator2.Name = "toolStripSeparator2";
+			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+			// 
+			// COD
+			// 
+			this.COD.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_warehouse_24px;
+			this.COD.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.COD.Name = "COD";
+			this.COD.Size = new System.Drawing.Size(111, 22);
+			this.COD.Text = "COD Shipments";
+			this.COD.Click += new System.EventHandler(this.COD_Click);
 			// 
 			// UC_ShipmentReports
 			// 
@@ -104,5 +122,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripButton Search;
 		private System.Windows.Forms.Panel Canva;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+		private System.Windows.Forms.ToolStripButton COD;
 	}
 }

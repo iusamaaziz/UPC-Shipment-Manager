@@ -28,7 +28,9 @@ namespace UPC.UIManager
 				new SqlParameter("@condition", si.ItemCondition),
 				new SqlParameter("@remarks  ", si.Remarks),
 				new SqlParameter("@type     ", si.ShipmentType),
-				new SqlParameter("@customer ", si.CustomerName)
+				new SqlParameter("@customer ", si.CustomerName),
+				new SqlParameter("@payment ", si.PaymentType),
+				new SqlParameter("@amount ", si.Amount),
 			};
 			Access.ExecuteProcedure("[dbo].[InsertShipment]", parameters.ToArray());
 		}
@@ -69,6 +71,16 @@ namespace UPC.UIManager
 				new SqlParameter("@end", end)
 			};
 			return await Access.GetInwardSingleShipmentsAsync("SELECT * FROM [dbo].[GetShipmentsByDate](@start, @end)", parameters.ToArray());
+		}
+
+		public static async Task<InwardSingleShipment[]> GetCODShipmentsAsync(DateTime start, DateTime end)
+		{
+			List<SqlParameter> parameters = new List<SqlParameter>()
+			{
+				new SqlParameter("@start", start),
+				new SqlParameter("@end", end)
+			};
+			return await Access.GetInwardSingleShipmentsAsync("SELECT * FROM [dbo].[GetCODShipmentsByDate](@start, @end)", parameters.ToArray());
 		}
 
 		public static async Task<string[]> GetCourierNamesAsync()

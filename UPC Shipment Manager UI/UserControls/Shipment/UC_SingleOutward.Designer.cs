@@ -35,13 +35,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.ShipmentDate = new System.Windows.Forms.DateTimePicker();
 			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
 			this.dg = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-			this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.trackingIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.courierNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.CustomerNamedgclm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.shipmentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.inwardSingleShipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -60,10 +53,26 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.CourierName = new System.Windows.Forms.ComboBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.CustomerName = new System.Windows.Forms.TextBox();
+			this.Prepaid = new System.Windows.Forms.RadioButton();
+			this.COD = new System.Windows.Forms.RadioButton();
+			this.label9 = new System.Windows.Forms.Label();
+			this.CODAmount = new System.Windows.Forms.NumericUpDown();
+			this.CODLabel = new System.Windows.Forms.Label();
+			this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.trackingIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.courierNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.itemConditionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.shipmentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.paymentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.inwardSingleShipmentBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.NewGodown)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.CODAmount)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// ShipmentDate
@@ -90,7 +99,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.dg.AutoGenerateColumns = false;
-			this.dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dg.BackgroundColor = System.Drawing.Color.Gainsboro;
 			this.dg.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -108,71 +116,25 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
             this.trackingIdDataGridViewTextBoxColumn,
             this.courierNameDataGridViewTextBoxColumn,
             this.itemNameDataGridViewTextBoxColumn,
-            this.CustomerNamedgclm,
             this.remarksDataGridViewTextBoxColumn,
-            this.shipmentTypeDataGridViewTextBoxColumn});
+            this.itemConditionDataGridViewTextBoxColumn,
+            this.shipmentTypeDataGridViewTextBoxColumn,
+            this.customerNameDataGridViewTextBoxColumn,
+            this.paymentTypeDataGridViewTextBoxColumn,
+            this.amountDataGridViewTextBoxColumn});
 			this.dg.DataSource = this.inwardSingleShipmentBindingSource;
 			this.dg.DoubleBuffered = true;
 			this.dg.EnableHeadersVisualStyles = false;
 			this.dg.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
 			this.dg.HeaderForeColor = System.Drawing.Color.White;
-			this.dg.Location = new System.Drawing.Point(44, 253);
+			this.dg.Location = new System.Drawing.Point(44, 291);
 			this.dg.Name = "dg";
 			this.dg.ReadOnly = true;
 			this.dg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
 			this.dg.RowHeadersVisible = false;
-			this.dg.Size = new System.Drawing.Size(715, 209);
+			this.dg.Size = new System.Drawing.Size(715, 171);
 			this.dg.TabIndex = 44;
 			this.toolTip1.SetToolTip(this.dg, "All Single Inward Shipments");
-			// 
-			// dateDataGridViewTextBoxColumn
-			// 
-			this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-			this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-			this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-			this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// trackingIdDataGridViewTextBoxColumn
-			// 
-			this.trackingIdDataGridViewTextBoxColumn.DataPropertyName = "TrackingId";
-			this.trackingIdDataGridViewTextBoxColumn.HeaderText = "Tracking ID";
-			this.trackingIdDataGridViewTextBoxColumn.Name = "trackingIdDataGridViewTextBoxColumn";
-			this.trackingIdDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// courierNameDataGridViewTextBoxColumn
-			// 
-			this.courierNameDataGridViewTextBoxColumn.DataPropertyName = "CourierName";
-			this.courierNameDataGridViewTextBoxColumn.HeaderText = "Courier name";
-			this.courierNameDataGridViewTextBoxColumn.Name = "courierNameDataGridViewTextBoxColumn";
-			this.courierNameDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// itemNameDataGridViewTextBoxColumn
-			// 
-			this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
-			this.itemNameDataGridViewTextBoxColumn.HeaderText = "Item Name";
-			this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
-			this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// CustomerNamedgclm
-			// 
-			this.CustomerNamedgclm.DataPropertyName = "CustomerName";
-			this.CustomerNamedgclm.HeaderText = "Customer Name";
-			this.CustomerNamedgclm.Name = "CustomerNamedgclm";
-			this.CustomerNamedgclm.ReadOnly = true;
-			// 
-			// remarksDataGridViewTextBoxColumn
-			// 
-			this.remarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks";
-			this.remarksDataGridViewTextBoxColumn.HeaderText = "Remarks";
-			this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
-			this.remarksDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// shipmentTypeDataGridViewTextBoxColumn
-			// 
-			this.shipmentTypeDataGridViewTextBoxColumn.DataPropertyName = "ShipmentType";
-			this.shipmentTypeDataGridViewTextBoxColumn.HeaderText = "Shipment Type";
-			this.shipmentTypeDataGridViewTextBoxColumn.Name = "shipmentTypeDataGridViewTextBoxColumn";
-			this.shipmentTypeDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// inwardSingleShipmentBindingSource
 			// 
@@ -184,7 +146,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.pictureBox2.BackColor = System.Drawing.Color.White;
 			this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.pictureBox2.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_file_excel_24px_1;
-			this.pictureBox2.Location = new System.Drawing.Point(729, 217);
+			this.pictureBox2.Location = new System.Drawing.Point(729, 255);
 			this.pictureBox2.Name = "pictureBox2";
 			this.pictureBox2.Size = new System.Drawing.Size(30, 30);
 			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -225,10 +187,10 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.Register.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.Register.Enabled = false;
 			this.Register.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-			this.Register.Location = new System.Drawing.Point(289, 214);
+			this.Register.Location = new System.Drawing.Point(289, 252);
 			this.Register.Name = "Register";
 			this.Register.Size = new System.Drawing.Size(236, 33);
-			this.Register.TabIndex = 6;
+			this.Register.TabIndex = 9;
 			this.Register.Text = "Register";
 			this.Register.UseVisualStyleBackColor = true;
 			this.Register.Click += new System.EventHandler(this.Register_Click);
@@ -370,11 +332,152 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.CustomerName.Size = new System.Drawing.Size(236, 25);
 			this.CustomerName.TabIndex = 4;
 			// 
+			// Prepaid
+			// 
+			this.Prepaid.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.Prepaid.AutoSize = true;
+			this.Prepaid.Checked = true;
+			this.Prepaid.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+			this.Prepaid.Location = new System.Drawing.Point(126, 212);
+			this.Prepaid.Name = "Prepaid";
+			this.Prepaid.Size = new System.Drawing.Size(64, 17);
+			this.Prepaid.TabIndex = 6;
+			this.Prepaid.TabStop = true;
+			this.Prepaid.Text = "Prepaid";
+			this.Prepaid.UseVisualStyleBackColor = true;
+			// 
+			// COD
+			// 
+			this.COD.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.COD.AutoSize = true;
+			this.COD.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+			this.COD.Location = new System.Drawing.Point(196, 212);
+			this.COD.Name = "COD";
+			this.COD.Size = new System.Drawing.Size(49, 17);
+			this.COD.TabIndex = 7;
+			this.COD.Text = "COD";
+			this.COD.UseVisualStyleBackColor = true;
+			this.COD.CheckedChanged += new System.EventHandler(this.COD_CheckedChanged);
+			// 
+			// label9
+			// 
+			this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label9.AutoSize = true;
+			this.label9.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.label9.ForeColor = System.Drawing.Color.Black;
+			this.label9.Location = new System.Drawing.Point(86, 213);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(31, 15);
+			this.label9.TabIndex = 58;
+			this.label9.Text = "Type";
+			// 
+			// CODAmount
+			// 
+			this.CODAmount.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+			this.CODAmount.Location = new System.Drawing.Point(336, 212);
+			this.CODAmount.Maximum = new decimal(new int[] {
+            1215752192,
+            23,
+            0,
+            0});
+			this.CODAmount.Name = "CODAmount";
+			this.CODAmount.Size = new System.Drawing.Size(120, 22);
+			this.CODAmount.TabIndex = 8;
+			this.CODAmount.Visible = false;
+			// 
+			// CODLabel
+			// 
+			this.CODLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.CODLabel.AutoSize = true;
+			this.CODLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.CODLabel.ForeColor = System.Drawing.Color.Black;
+			this.CODLabel.Location = new System.Drawing.Point(251, 214);
+			this.CODLabel.Name = "CODLabel";
+			this.CODLabel.Size = new System.Drawing.Size(79, 15);
+			this.CODLabel.TabIndex = 60;
+			this.CODLabel.Text = "COD Amount";
+			this.CODLabel.Visible = false;
+			// 
+			// dateDataGridViewTextBoxColumn
+			// 
+			this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+			this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+			this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+			this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// trackingIdDataGridViewTextBoxColumn
+			// 
+			this.trackingIdDataGridViewTextBoxColumn.DataPropertyName = "TrackingId";
+			this.trackingIdDataGridViewTextBoxColumn.HeaderText = "Tracking ID";
+			this.trackingIdDataGridViewTextBoxColumn.Name = "trackingIdDataGridViewTextBoxColumn";
+			this.trackingIdDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// courierNameDataGridViewTextBoxColumn
+			// 
+			this.courierNameDataGridViewTextBoxColumn.DataPropertyName = "CourierName";
+			this.courierNameDataGridViewTextBoxColumn.HeaderText = "Courier name";
+			this.courierNameDataGridViewTextBoxColumn.Name = "courierNameDataGridViewTextBoxColumn";
+			this.courierNameDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// itemNameDataGridViewTextBoxColumn
+			// 
+			this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
+			this.itemNameDataGridViewTextBoxColumn.HeaderText = "Item Name";
+			this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
+			this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// remarksDataGridViewTextBoxColumn
+			// 
+			this.remarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks";
+			this.remarksDataGridViewTextBoxColumn.HeaderText = "Remarks";
+			this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
+			this.remarksDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// itemConditionDataGridViewTextBoxColumn
+			// 
+			this.itemConditionDataGridViewTextBoxColumn.DataPropertyName = "ItemCondition";
+			this.itemConditionDataGridViewTextBoxColumn.HeaderText = "Item Condition";
+			this.itemConditionDataGridViewTextBoxColumn.Name = "itemConditionDataGridViewTextBoxColumn";
+			this.itemConditionDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// shipmentTypeDataGridViewTextBoxColumn
+			// 
+			this.shipmentTypeDataGridViewTextBoxColumn.DataPropertyName = "ShipmentType";
+			this.shipmentTypeDataGridViewTextBoxColumn.HeaderText = "Shipment Type";
+			this.shipmentTypeDataGridViewTextBoxColumn.Name = "shipmentTypeDataGridViewTextBoxColumn";
+			this.shipmentTypeDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// customerNameDataGridViewTextBoxColumn
+			// 
+			this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
+			this.customerNameDataGridViewTextBoxColumn.HeaderText = "Customer Name";
+			this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
+			this.customerNameDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// paymentTypeDataGridViewTextBoxColumn
+			// 
+			this.paymentTypeDataGridViewTextBoxColumn.DataPropertyName = "PaymentType";
+			this.paymentTypeDataGridViewTextBoxColumn.HeaderText = "PaymentType";
+			this.paymentTypeDataGridViewTextBoxColumn.Name = "paymentTypeDataGridViewTextBoxColumn";
+			this.paymentTypeDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// amountDataGridViewTextBoxColumn
+			// 
+			this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+			this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+			this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+			this.amountDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
 			// UC_SingleOutward
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
+			this.Controls.Add(this.CODLabel);
+			this.Controls.Add(this.CODAmount);
+			this.Controls.Add(this.label9);
+			this.Controls.Add(this.COD);
+			this.Controls.Add(this.Prepaid);
 			this.Controls.Add(this.CustomerName);
 			this.Controls.Add(this.pictureBox2);
 			this.Controls.Add(this.NewGodown);
@@ -400,6 +503,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			((System.ComponentModel.ISupportInitialize)(this.inwardSingleShipmentBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.NewGodown)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.CODAmount)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -413,7 +517,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 		private System.Windows.Forms.DateTimePicker ShipmentDate;
 		private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
 		private Bunifu.Framework.UI.BunifuCustomDataGrid dg;
-		private System.Windows.Forms.BindingSource inwardSingleShipmentBindingSource;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Button Register;
 		private System.Windows.Forms.Label label7;
@@ -428,12 +531,21 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 		private System.Windows.Forms.ComboBox CourierName;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox CustomerName;
+		private System.Windows.Forms.RadioButton Prepaid;
+		private System.Windows.Forms.RadioButton COD;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.NumericUpDown CODAmount;
+		private System.Windows.Forms.Label CODLabel;
+		private System.Windows.Forms.BindingSource inwardSingleShipmentBindingSource;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn trackingIdDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn courierNameDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn CustomerNamedgclm;
 		private System.Windows.Forms.DataGridViewTextBoxColumn remarksDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn itemConditionDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn shipmentTypeDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn customerNameDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn paymentTypeDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
 	}
 }
