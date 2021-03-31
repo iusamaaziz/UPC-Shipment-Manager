@@ -276,7 +276,7 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.dg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
 			this.dg.RowHeadersVisible = false;
 			this.dg.Size = new System.Drawing.Size(715, 209);
-			this.dg.TabIndex = 6;
+			this.dg.TabIndex = 7;
 			this.toolTip1.SetToolTip(this.dg, "All Single Inward Shipments");
 			// 
 			// dateDataGridViewTextBoxColumn
