@@ -225,7 +225,7 @@ namespace UPC_Shipment_Manager_UI.Forms.Login
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "FormRegister";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "FormRegister";
+			this.Text = "Register - UPC";
 			this.TitleBar.ResumeLayout(false);
 			this.TitleBar.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();

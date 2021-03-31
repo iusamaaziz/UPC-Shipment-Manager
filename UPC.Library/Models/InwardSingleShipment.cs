@@ -31,15 +31,15 @@ namespace UPC.Library.Models
 		public string ShipmentType { get; set; }
 
 		[DisplayName("Customer Name")]
-		public string CustomerName { get; set; }
+		public string CustomerName { get; set; } = "N/A";
 		/// <summary>
 		/// Prepaid/COD
 		/// </summary>
-		public string PaymentType { get; set; }
+		public string PaymentType { get; set; } = "N/A";
 		/// <summary>
 		/// COD Amount
 		/// </summary>
-		public string Amount { get; set; }
+		public string Amount { get; set; } = "N/A";
 
 
 	}

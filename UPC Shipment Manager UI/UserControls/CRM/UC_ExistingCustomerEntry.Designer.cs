@@ -59,6 +59,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// Action
 			// 
+			this.Action.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.Action.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
 			this.Action.Location = new System.Drawing.Point(159, 267);
 			this.Action.Name = "Action";
@@ -68,6 +69,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// Query
 			// 
+			this.Query.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.Query.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
 			this.Query.Location = new System.Drawing.Point(159, 196);
 			this.Query.Name = "Query";
@@ -77,7 +79,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// Whatsapp
 			// 
-			this.Whatsapp.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.Whatsapp.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.Whatsapp.BackgroundImage = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_whatsapp_24px;
 			this.Whatsapp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.Whatsapp.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -97,6 +99,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// WhatsappMessage
 			// 
+			this.WhatsappMessage.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.WhatsappMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
 			this.WhatsappMessage.Location = new System.Drawing.Point(159, 338);
 			this.WhatsappMessage.Name = "WhatsappMessage";
@@ -106,7 +109,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// OpenEntry
 			// 
-			this.OpenEntry.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.OpenEntry.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.OpenEntry.Location = new System.Drawing.Point(348, 409);
 			this.OpenEntry.Name = "OpenEntry";
 			this.OpenEntry.Size = new System.Drawing.Size(152, 29);
@@ -117,7 +120,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label2
 			// 
-			this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label2.ForeColor = System.Drawing.Color.Black;
@@ -129,7 +132,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label6
 			// 
-			this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label6.ForeColor = System.Drawing.Color.Black;
@@ -141,7 +144,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label9
 			// 
-			this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label9.AutoSize = true;
 			this.label9.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label9.ForeColor = System.Drawing.Color.Black;
@@ -153,7 +156,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// Email
 			// 
-			this.Email.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.Email.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
 			this.Email.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.Email.Location = new System.Drawing.Point(454, 104);
@@ -163,7 +166,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label3
 			// 
-			this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label3.ForeColor = System.Drawing.Color.Black;
@@ -175,7 +178,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// Phone
 			// 
-			this.Phone.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.Phone.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.Phone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
 			this.Phone.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.Phone.Location = new System.Drawing.Point(159, 104);
@@ -185,7 +188,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label1
 			// 
-			this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label1.ForeColor = System.Drawing.Color.Black;
@@ -197,7 +200,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label5
 			// 
-			this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label5.ForeColor = System.Drawing.Color.Black;
@@ -209,7 +212,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label7
 			// 
-			this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
 			this.label7.ForeColor = System.Drawing.Color.Black;
@@ -221,7 +224,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// CustomerName
 			// 
-			this.CustomerName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.CustomerName.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.CustomerName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
 			this.CustomerName.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.CustomerName.Location = new System.Drawing.Point(159, 72);
@@ -231,7 +234,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label4
 			// 
-			this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label4.ForeColor = System.Drawing.Color.Black;
@@ -243,7 +246,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label8
 			// 
-			this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label8.AutoSize = true;
 			this.label8.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label8.ForeColor = System.Drawing.Color.Black;
@@ -255,7 +258,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// OrderNumber
 			// 
-			this.OrderNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.OrderNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.OrderNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
 			this.OrderNumber.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.OrderNumber.Location = new System.Drawing.Point(454, 134);
@@ -265,7 +268,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label10
 			// 
-			this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label10.AutoSize = true;
 			this.label10.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label10.ForeColor = System.Drawing.Color.Black;
@@ -277,7 +280,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// Product
 			// 
-			this.Product.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.Product.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.Product.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
 			this.Product.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.Product.Location = new System.Drawing.Point(454, 165);
@@ -287,7 +290,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label11
 			// 
-			this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label11.AutoSize = true;
 			this.label11.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label11.ForeColor = System.Drawing.Color.Black;
@@ -299,7 +302,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// OrderDate
 			// 
-			this.OrderDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.OrderDate.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.OrderDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
 			this.OrderDate.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.OrderDate.Location = new System.Drawing.Point(159, 165);
@@ -309,7 +312,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label12
 			// 
-			this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label12.AutoSize = true;
 			this.label12.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label12.ForeColor = System.Drawing.Color.Black;
@@ -321,7 +324,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// Marketplace
 			// 
-			this.Marketplace.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.Marketplace.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.Marketplace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Marketplace.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.Marketplace.FormattingEnabled = true;

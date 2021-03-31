@@ -76,7 +76,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			{
 				InwardSingleShipment si = new InwardSingleShipment() { CourierName = CourierName.Text, Date = ShipmentDate.Value, ItemCondition = "N/A", ItemName = ItemName.Text, Remarks = Remarks.Text, TrackingId = TrackingId.Text, CustomerName = CustomerName.Text, ShipmentType = "Outward", PaymentType = COD.Checked ? "COD" : "Prepaid", Amount = COD.Checked ? CODAmount.Value.ToString() : "N/A" };
 				ShipmentLibrary.InsertInwardSingleShipment(si);
-				MessageBox.Show("Shipment Registered", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+				Notification.Show("Shipment Registered.", Notification.Type.Success);
 				Clear();
 				inwardSingleShipmentBindingSource.DataSource = await ShipmentLibrary.GetOutwardShipmentsAsync();
 				dg.ClearSelection();

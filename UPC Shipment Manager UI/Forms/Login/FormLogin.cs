@@ -32,13 +32,14 @@ namespace UPC_Shipment_Manager_UI.Forms.Login
 			var result = await UserManager.GetUser(Username.Text, Password.Text);
 			if (result == null)
 			{
-				MessageBox.Show("Invalid Username or Password.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				Notification.Show("Invalid Credentials.", Notification.Type.Error);
 				return;
 			}
 			UPC.Library.LoginModels.Login.Id = result.Id;
 			UPC.Library.LoginModels.Login.Username = result.Username;
 			UPC.Library.LoginModels.Login.Password = result.Password;
 			UPC.Library.LoginModels.Login.Role = result.Role;
+			Notification.Show($"Welcome {result.Role}", Notification.Type.Info);
 			Dashboard dsh = new Dashboard();
 			dsh.Show();
 			this.Hide();

@@ -73,7 +73,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 				{
 					InventoryItem item = new InventoryItem() { ItemName = ItemName.Text, Godown = Godown.Text, Quantity = Convert.ToInt32(Quantity.Value), Remarks = Remarks.Text, TransactionDate = TransactionDate.Value };
 					InventoryManager.InsertInventoryIn(item);
-					MessageBox.Show("Added"); // UNDONE - Customize notification
+					Notification.Show("Inventory added", Notification.Type.Success);
 					Clear();
 					UC_InventoryIn_Load(this, e);
 				}

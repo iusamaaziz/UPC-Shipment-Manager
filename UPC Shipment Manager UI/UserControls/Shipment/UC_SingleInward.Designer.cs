@@ -48,11 +48,6 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.label8 = new System.Windows.Forms.Label();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.dg = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-			this.ShipmentDate = new System.Windows.Forms.DateTimePicker();
-			this.NewGodown = new System.Windows.Forms.PictureBox();
-			this.pictureBox2 = new System.Windows.Forms.PictureBox();
-			this.inwardSingleShipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.trackingIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.courierNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,10 +55,15 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.itemConditionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.shipmentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.inwardSingleShipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.NewGodown = new System.Windows.Forms.PictureBox();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+			this.ShipmentDate = new System.Windows.Forms.DateTimePicker();
 			((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.inwardSingleShipmentBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.NewGodown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.inwardSingleShipmentBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -89,7 +89,7 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.CourierName.Location = new System.Drawing.Point(119, 93);
 			this.CourierName.Name = "CourierName";
 			this.CourierName.Size = new System.Drawing.Size(236, 25);
-			this.CourierName.TabIndex = 0;
+			this.CourierName.TabIndex = 1;
 			this.CourierName.SelectedIndexChanged += new System.EventHandler(this.Tb_TextChanged);
 			// 
 			// label2
@@ -159,7 +159,7 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.TrackingId.Location = new System.Drawing.Point(473, 93);
 			this.TrackingId.Name = "TrackingId";
 			this.TrackingId.Size = new System.Drawing.Size(236, 25);
-			this.TrackingId.TabIndex = 1;
+			this.TrackingId.TabIndex = 2;
 			this.TrackingId.TextChanged += new System.EventHandler(this.Tb_TextChanged);
 			// 
 			// ItemName
@@ -169,7 +169,7 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.ItemName.Location = new System.Drawing.Point(119, 124);
 			this.ItemName.Name = "ItemName";
 			this.ItemName.Size = new System.Drawing.Size(236, 25);
-			this.ItemName.TabIndex = 2;
+			this.ItemName.TabIndex = 3;
 			this.ItemName.TextChanged += new System.EventHandler(this.Tb_TextChanged);
 			// 
 			// ItemCondition
@@ -184,7 +184,7 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.ItemCondition.Location = new System.Drawing.Point(473, 124);
 			this.ItemCondition.Name = "ItemCondition";
 			this.ItemCondition.Size = new System.Drawing.Size(236, 25);
-			this.ItemCondition.TabIndex = 3;
+			this.ItemCondition.TabIndex = 4;
 			this.ItemCondition.SelectedIndexChanged += new System.EventHandler(this.Tb_TextChanged);
 			// 
 			// Remarks
@@ -194,7 +194,7 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.Remarks.Location = new System.Drawing.Point(119, 155);
 			this.Remarks.Name = "Remarks";
 			this.Remarks.Size = new System.Drawing.Size(590, 48);
-			this.Remarks.TabIndex = 4;
+			this.Remarks.TabIndex = 5;
 			this.Remarks.Text = "";
 			// 
 			// label7
@@ -217,7 +217,7 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.Register.Location = new System.Drawing.Point(282, 211);
 			this.Register.Name = "Register";
 			this.Register.Size = new System.Drawing.Size(236, 33);
-			this.Register.TabIndex = 5;
+			this.Register.TabIndex = 6;
 			this.Register.Text = "Register";
 			this.Register.UseVisualStyleBackColor = true;
 			this.Register.Click += new System.EventHandler(this.Register_Click);
@@ -279,54 +279,6 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.dg.TabIndex = 6;
 			this.toolTip1.SetToolTip(this.dg, "All Single Inward Shipments");
 			// 
-			// bunifuElipse1
-			// 
-			this.bunifuElipse1.ElipseRadius = 7;
-			this.bunifuElipse1.TargetControl = this.dg;
-			// 
-			// ShipmentDate
-			// 
-			this.ShipmentDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.ShipmentDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.ShipmentDate.Location = new System.Drawing.Point(119, 67);
-			this.ShipmentDate.Name = "ShipmentDate";
-			this.ShipmentDate.Size = new System.Drawing.Size(236, 22);
-			this.ShipmentDate.TabIndex = 29;
-			// 
-			// NewGodown
-			// 
-			this.NewGodown.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.NewGodown.BackColor = System.Drawing.Color.White;
-			this.NewGodown.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.NewGodown.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_add_24px;
-			this.NewGodown.Location = new System.Drawing.Point(358, 93);
-			this.NewGodown.Name = "NewGodown";
-			this.NewGodown.Size = new System.Drawing.Size(24, 24);
-			this.NewGodown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-			this.NewGodown.TabIndex = 37;
-			this.NewGodown.TabStop = false;
-			this.toolTip1.SetToolTip(this.NewGodown, "Add new Godown number");
-			this.NewGodown.Click += new System.EventHandler(this.NewGodown_Click);
-			// 
-			// pictureBox2
-			// 
-			this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.pictureBox2.BackColor = System.Drawing.Color.White;
-			this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.pictureBox2.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_file_excel_24px_1;
-			this.pictureBox2.Location = new System.Drawing.Point(722, 214);
-			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.pictureBox2.TabIndex = 28;
-			this.pictureBox2.TabStop = false;
-			this.toolTip1.SetToolTip(this.pictureBox2, "Export all Inward Single Shipments");
-			this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-			// 
-			// inwardSingleShipmentBindingSource
-			// 
-			this.inwardSingleShipmentBindingSource.DataSource = typeof(UPC.Library.Models.InwardSingleShipment);
-			// 
 			// dateDataGridViewTextBoxColumn
 			// 
 			this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
@@ -376,6 +328,54 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.shipmentTypeDataGridViewTextBoxColumn.Name = "shipmentTypeDataGridViewTextBoxColumn";
 			this.shipmentTypeDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
+			// inwardSingleShipmentBindingSource
+			// 
+			this.inwardSingleShipmentBindingSource.DataSource = typeof(UPC.Library.Models.InwardSingleShipment);
+			// 
+			// NewGodown
+			// 
+			this.NewGodown.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.NewGodown.BackColor = System.Drawing.Color.White;
+			this.NewGodown.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.NewGodown.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_add_24px;
+			this.NewGodown.Location = new System.Drawing.Point(358, 93);
+			this.NewGodown.Name = "NewGodown";
+			this.NewGodown.Size = new System.Drawing.Size(24, 24);
+			this.NewGodown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.NewGodown.TabIndex = 37;
+			this.NewGodown.TabStop = false;
+			this.toolTip1.SetToolTip(this.NewGodown, "Add new Godown number");
+			this.NewGodown.Click += new System.EventHandler(this.NewGodown_Click);
+			// 
+			// pictureBox2
+			// 
+			this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.pictureBox2.BackColor = System.Drawing.Color.White;
+			this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.pictureBox2.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_file_excel_24px_1;
+			this.pictureBox2.Location = new System.Drawing.Point(722, 214);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.pictureBox2.TabIndex = 28;
+			this.pictureBox2.TabStop = false;
+			this.toolTip1.SetToolTip(this.pictureBox2, "Export all Inward Single Shipments");
+			this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+			// 
+			// bunifuElipse1
+			// 
+			this.bunifuElipse1.ElipseRadius = 7;
+			this.bunifuElipse1.TargetControl = this.dg;
+			// 
+			// ShipmentDate
+			// 
+			this.ShipmentDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.ShipmentDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.ShipmentDate.Location = new System.Drawing.Point(119, 67);
+			this.ShipmentDate.Name = "ShipmentDate";
+			this.ShipmentDate.Size = new System.Drawing.Size(236, 22);
+			this.ShipmentDate.TabIndex = 0;
+			// 
 			// UC_SingleInward
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,9 +404,9 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.Size = new System.Drawing.Size(801, 473);
 			this.Load += new System.EventHandler(this.UC_SingleInward_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.inwardSingleShipmentBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.NewGodown)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.inwardSingleShipmentBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

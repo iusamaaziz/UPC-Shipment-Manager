@@ -114,6 +114,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			this.Controls.Add(this.toolStrip1);
 			this.Name = "UC_Reports";
 			this.Size = new System.Drawing.Size(801, 498);
+			this.Load += new System.EventHandler(this.UC_Reports_Load);
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
 			this.ResumeLayout(false);

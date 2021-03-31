@@ -8,6 +8,7 @@ using UPC.Library.LoginModels;
 using UPC.UIManager;
 using UPC.UIManager.InventoryManager;
 
+using UPC_Shipment_Manager_UI.Forms;
 using UPC_Shipment_Manager_UI.Reporting;
 
 namespace UPC_Shipment_Manager_UI.UserControls.Inventory
@@ -164,7 +165,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 					InventoryItem item = new InventoryItem() { ItemName = ItemName.Text, Godown = Godown.Text, Quantity = Convert.ToInt32(Quantity.Value * -1), Remarks = Remarks.Text, TransactionDate = TransactionDate.Value };
 
 					InventoryManager.InsertInventoryOut(item);
-					MessageBox.Show("Checked out"); // UNDONE -- Notification
+					Notification.Show("Checked out", Notification.Type.Success);
 					ResetSingle();
 					dg.DataSource = await InventoryManager.GetLast30InventoryCheckoutsAsync();
 				}
@@ -228,7 +229,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 		{
 			if (inventoryItemBindingSource.List.Count == 0)
 			{
-				MessageBox.Show("Picklist is empty. You can not checkout at the moment.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				Notification.Show("Picklist Empty", Notification.Type.Error);
 				return;
 			}
 			try
@@ -237,7 +238,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 				foreach (InventoryItem item in inventoryItemBindingSource.List.OfType<InventoryItem>())
 				{
 					InventoryManager.InsertPicklistItem(item);
-					// UNDONE -- Show notification
+					Notification.Show("Picklist generated", Notification.Type.Success);
 				}
 			}
 			catch (Exception ex)

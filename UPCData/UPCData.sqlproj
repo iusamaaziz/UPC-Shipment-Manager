@@ -106,6 +106,10 @@
     <Build Include="Functions\TableValuedFunctions\GetEntriesByName.sql" />
     <Build Include="Functions\TableValuedFunctions\GetCustomerNames.sql" />
     <Build Include="Functions\TableValuedFunctions\GetCODShipmentsByDate.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetEntriesByPhone.sql" />
+    <Build Include="Functions\TableValuedFunctions\GetCustomerPhones.sql" />
+    <Build Include="StoredProcedures\UpdateInventoryItem.sql" />
+    <Build Include="StoredProcedures\DeleteInventoryItem.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\UPCData.publish.xml" />

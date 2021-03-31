@@ -28,7 +28,7 @@ namespace UPC_Shipment_Manager_UI.Forms.Login
 
 		private void Exit_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Application.Exit();
 		}
 
 		private void Cancel_Click(object sender, EventArgs e)

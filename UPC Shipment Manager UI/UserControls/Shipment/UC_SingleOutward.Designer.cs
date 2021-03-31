@@ -35,6 +35,16 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.ShipmentDate = new System.Windows.Forms.DateTimePicker();
 			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
 			this.dg = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+			this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.trackingIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.courierNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.itemConditionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.shipmentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.paymentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.inwardSingleShipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -58,16 +68,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.label9 = new System.Windows.Forms.Label();
 			this.CODAmount = new System.Windows.Forms.NumericUpDown();
 			this.CODLabel = new System.Windows.Forms.Label();
-			this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.trackingIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.courierNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.itemConditionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.shipmentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.paymentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.inwardSingleShipmentBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -133,8 +133,79 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.dg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
 			this.dg.RowHeadersVisible = false;
 			this.dg.Size = new System.Drawing.Size(715, 171);
-			this.dg.TabIndex = 44;
+			this.dg.TabIndex = 10;
+			this.dg.TabStop = false;
 			this.toolTip1.SetToolTip(this.dg, "All Single Inward Shipments");
+			// 
+			// dateDataGridViewTextBoxColumn
+			// 
+			this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+			this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+			this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+			this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// trackingIdDataGridViewTextBoxColumn
+			// 
+			this.trackingIdDataGridViewTextBoxColumn.DataPropertyName = "TrackingId";
+			this.trackingIdDataGridViewTextBoxColumn.HeaderText = "Tracking ID";
+			this.trackingIdDataGridViewTextBoxColumn.Name = "trackingIdDataGridViewTextBoxColumn";
+			this.trackingIdDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// courierNameDataGridViewTextBoxColumn
+			// 
+			this.courierNameDataGridViewTextBoxColumn.DataPropertyName = "CourierName";
+			this.courierNameDataGridViewTextBoxColumn.HeaderText = "Courier name";
+			this.courierNameDataGridViewTextBoxColumn.Name = "courierNameDataGridViewTextBoxColumn";
+			this.courierNameDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// itemNameDataGridViewTextBoxColumn
+			// 
+			this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
+			this.itemNameDataGridViewTextBoxColumn.HeaderText = "Item Name";
+			this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
+			this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// remarksDataGridViewTextBoxColumn
+			// 
+			this.remarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks";
+			this.remarksDataGridViewTextBoxColumn.HeaderText = "Remarks";
+			this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
+			this.remarksDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// itemConditionDataGridViewTextBoxColumn
+			// 
+			this.itemConditionDataGridViewTextBoxColumn.DataPropertyName = "ItemCondition";
+			this.itemConditionDataGridViewTextBoxColumn.HeaderText = "Item Condition";
+			this.itemConditionDataGridViewTextBoxColumn.Name = "itemConditionDataGridViewTextBoxColumn";
+			this.itemConditionDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// shipmentTypeDataGridViewTextBoxColumn
+			// 
+			this.shipmentTypeDataGridViewTextBoxColumn.DataPropertyName = "ShipmentType";
+			this.shipmentTypeDataGridViewTextBoxColumn.HeaderText = "Shipment Type";
+			this.shipmentTypeDataGridViewTextBoxColumn.Name = "shipmentTypeDataGridViewTextBoxColumn";
+			this.shipmentTypeDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// customerNameDataGridViewTextBoxColumn
+			// 
+			this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
+			this.customerNameDataGridViewTextBoxColumn.HeaderText = "Customer Name";
+			this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
+			this.customerNameDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// paymentTypeDataGridViewTextBoxColumn
+			// 
+			this.paymentTypeDataGridViewTextBoxColumn.DataPropertyName = "PaymentType";
+			this.paymentTypeDataGridViewTextBoxColumn.HeaderText = "PaymentType";
+			this.paymentTypeDataGridViewTextBoxColumn.Name = "paymentTypeDataGridViewTextBoxColumn";
+			this.paymentTypeDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// amountDataGridViewTextBoxColumn
+			// 
+			this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+			this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+			this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+			this.amountDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// inwardSingleShipmentBindingSource
 			// 
@@ -373,6 +444,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			// 
 			// CODAmount
 			// 
+			this.CODAmount.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.CODAmount.Font = new System.Drawing.Font("Segoe UI", 8.25F);
 			this.CODAmount.Location = new System.Drawing.Point(336, 212);
 			this.CODAmount.Maximum = new decimal(new int[] {
@@ -397,76 +469,6 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.CODLabel.TabIndex = 60;
 			this.CODLabel.Text = "COD Amount";
 			this.CODLabel.Visible = false;
-			// 
-			// dateDataGridViewTextBoxColumn
-			// 
-			this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-			this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-			this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-			this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// trackingIdDataGridViewTextBoxColumn
-			// 
-			this.trackingIdDataGridViewTextBoxColumn.DataPropertyName = "TrackingId";
-			this.trackingIdDataGridViewTextBoxColumn.HeaderText = "Tracking ID";
-			this.trackingIdDataGridViewTextBoxColumn.Name = "trackingIdDataGridViewTextBoxColumn";
-			this.trackingIdDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// courierNameDataGridViewTextBoxColumn
-			// 
-			this.courierNameDataGridViewTextBoxColumn.DataPropertyName = "CourierName";
-			this.courierNameDataGridViewTextBoxColumn.HeaderText = "Courier name";
-			this.courierNameDataGridViewTextBoxColumn.Name = "courierNameDataGridViewTextBoxColumn";
-			this.courierNameDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// itemNameDataGridViewTextBoxColumn
-			// 
-			this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
-			this.itemNameDataGridViewTextBoxColumn.HeaderText = "Item Name";
-			this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
-			this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// remarksDataGridViewTextBoxColumn
-			// 
-			this.remarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks";
-			this.remarksDataGridViewTextBoxColumn.HeaderText = "Remarks";
-			this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
-			this.remarksDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// itemConditionDataGridViewTextBoxColumn
-			// 
-			this.itemConditionDataGridViewTextBoxColumn.DataPropertyName = "ItemCondition";
-			this.itemConditionDataGridViewTextBoxColumn.HeaderText = "Item Condition";
-			this.itemConditionDataGridViewTextBoxColumn.Name = "itemConditionDataGridViewTextBoxColumn";
-			this.itemConditionDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// shipmentTypeDataGridViewTextBoxColumn
-			// 
-			this.shipmentTypeDataGridViewTextBoxColumn.DataPropertyName = "ShipmentType";
-			this.shipmentTypeDataGridViewTextBoxColumn.HeaderText = "Shipment Type";
-			this.shipmentTypeDataGridViewTextBoxColumn.Name = "shipmentTypeDataGridViewTextBoxColumn";
-			this.shipmentTypeDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// customerNameDataGridViewTextBoxColumn
-			// 
-			this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
-			this.customerNameDataGridViewTextBoxColumn.HeaderText = "Customer Name";
-			this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
-			this.customerNameDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// paymentTypeDataGridViewTextBoxColumn
-			// 
-			this.paymentTypeDataGridViewTextBoxColumn.DataPropertyName = "PaymentType";
-			this.paymentTypeDataGridViewTextBoxColumn.HeaderText = "PaymentType";
-			this.paymentTypeDataGridViewTextBoxColumn.Name = "paymentTypeDataGridViewTextBoxColumn";
-			this.paymentTypeDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// amountDataGridViewTextBoxColumn
-			// 
-			this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
-			this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
-			this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-			this.amountDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// UC_SingleOutward
 			// 

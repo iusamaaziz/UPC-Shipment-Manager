@@ -99,7 +99,8 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.dg.AllowUserToDeleteRows = false;
 			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.dg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-			this.dg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.dg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.dg.AutoGenerateColumns = false;
 			this.dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -251,7 +252,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.From.Location = new System.Drawing.Point(216, 47);
 			this.From.Name = "From";
 			this.From.Size = new System.Drawing.Size(189, 20);
-			this.From.TabIndex = 80;
+			this.From.TabIndex = 0;
 			// 
 			// To
 			// 
@@ -261,7 +262,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.To.Location = new System.Drawing.Point(436, 47);
 			this.To.Name = "To";
 			this.To.Size = new System.Drawing.Size(189, 20);
-			this.To.TabIndex = 81;
+			this.To.TabIndex = 1;
 			// 
 			// Search
 			// 
@@ -270,7 +271,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.Search.Location = new System.Drawing.Point(326, 73);
 			this.Search.Name = "Search";
 			this.Search.Size = new System.Drawing.Size(145, 27);
-			this.Search.TabIndex = 82;
+			this.Search.TabIndex = 2;
 			this.Search.Text = "Search";
 			this.Search.UseVisualStyleBackColor = true;
 			this.Search.Click += new System.EventHandler(this.Search_Click);

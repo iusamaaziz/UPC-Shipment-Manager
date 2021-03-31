@@ -145,9 +145,9 @@ namespace UPC_Shipment_Manager_UI.Forms.Login
 			this.label2.ForeColor = System.Drawing.Color.Black;
 			this.label2.Location = new System.Drawing.Point(35, 184);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(74, 15);
+			this.label2.Size = new System.Drawing.Size(30, 15);
 			this.label2.TabIndex = 30;
-			this.label2.Text = "Godown No.";
+			this.label2.Text = "Role";
 			// 
 			// Role
 			// 
@@ -240,7 +240,7 @@ namespace UPC_Shipment_Manager_UI.Forms.Login
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "FormNewUser";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "FormNewUser";
+			this.Text = "New User";
 			this.TextChanged += new System.EventHandler(this.Tb_TextChanged);
 			this.TitleBar.ResumeLayout(false);
 			this.TitleBar.PerformLayout();

@@ -45,10 +45,10 @@ namespace UPC_Shipment_Manager_UI.Forms
 			{
 				configuration.ConnectionStrings.ConnectionStrings["Database"].ConnectionString = $"Server={tbServer.Text};Database=UPCShipmentManager;Trusted_Connection=True;";
 			}
-			configuration.Save(ConfigurationSaveMode.Modified);
-			ConfigurationManager.RefreshSection("connectionStrings");
 			if (GeneralManager.IsConnected)
 			{
+				configuration.Save(ConfigurationSaveMode.Modified);
+				ConfigurationManager.RefreshSection("connectionStrings");
 				MessageBox.Show("You were successfully connected to SQL server.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 				this.Close();
 			}
@@ -60,6 +60,8 @@ namespace UPC_Shipment_Manager_UI.Forms
 			{
 				tbUser.Enabled = false;
 				tbPassword.Enabled = false;
+				tbUser.Clear();
+				tbPassword.Clear();
 			}
 			else
 			{

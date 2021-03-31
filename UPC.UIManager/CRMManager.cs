@@ -56,9 +56,23 @@ namespace UPC.UIManager
 			return await Access.GetCustomerEntriesAsync("SELECT * FROM [dbo].[GetEntriesByName](@name)", parameters.ToArray());
 		}
 
+		public static async Task<CustomerEntry[]> GetCustomerEntriesByPhoneAsync(string phone)
+		{
+			List<SqlParameter> parameters = new List<SqlParameter>()
+			{
+				new SqlParameter("@phone", phone)
+			};
+			return await Access.GetCustomerEntriesAsync("SELECT * FROM [dbo].[GetEntriesByPhone](@phone)", parameters.ToArray());
+		}
+
 		public static async Task<AutoCompleteStringCollection> GetCustomerNamesAsync()
 		{
 			return await Access.GetAutoCompleteStringCollectionAsync("SELECT * FROM [dbo].[GetCustomerNames]()");
+		}
+
+		public static async Task<AutoCompleteStringCollection> GetCustomerPhonesAsync()
+		{
+			return await Access.GetAutoCompleteStringCollectionAsync("SELECT * FROM [dbo].[GetCustomerPhones]()");
 		}
 
 	}

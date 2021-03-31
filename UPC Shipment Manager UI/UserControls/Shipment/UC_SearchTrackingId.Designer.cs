@@ -30,17 +30,15 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.ItemName = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.dg = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-			this.inwardSingleShipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.trackingIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.courierNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +47,8 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.shipmentTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.inwardSingleShipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.inwardSingleShipmentBindingSource)).BeginInit();
@@ -65,7 +65,8 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.ItemName.Location = new System.Drawing.Point(265, 41);
 			this.ItemName.Name = "ItemName";
 			this.ItemName.Size = new System.Drawing.Size(236, 25);
-			this.ItemName.TabIndex = 70;
+			this.ItemName.TabIndex = 0;
+			this.ItemName.Click += new System.EventHandler(this.ItemName_Click);
 			this.ItemName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ItemName_KeyDown);
 			// 
 			// label4
@@ -107,8 +108,8 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			// 
 			this.dg.AllowUserToAddRows = false;
 			this.dg.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.dg.AutoGenerateColumns = false;
@@ -118,14 +119,14 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.dg.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle10.BackColor = System.Drawing.Color.Maroon;
-			dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F);
-			dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dateDataGridViewTextBoxColumn,
@@ -137,14 +138,14 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
             this.shipmentTypeDataGridViewTextBoxColumn,
             this.customerNameDataGridViewTextBoxColumn});
 			this.dg.DataSource = this.inwardSingleShipmentBindingSource;
-			dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9F);
-			dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Transparent;
-			dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dg.DefaultCellStyle = dataGridViewCellStyle11;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dg.DefaultCellStyle = dataGridViewCellStyle3;
 			this.dg.DoubleBuffered = true;
 			this.dg.EnableHeadersVisualStyles = false;
 			this.dg.HeaderBgColor = System.Drawing.Color.Maroon;
@@ -155,21 +156,12 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.dg.ReadOnly = true;
 			this.dg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
 			this.dg.RowHeadersVisible = false;
-			dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Transparent;
-			dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-			this.dg.RowsDefaultCellStyle = dataGridViewCellStyle12;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+			this.dg.RowsDefaultCellStyle = dataGridViewCellStyle4;
 			this.dg.Size = new System.Drawing.Size(686, 361);
 			this.dg.TabIndex = 67;
 			this.dg.TabStop = false;
-			// 
-			// bunifuElipse1
-			// 
-			this.bunifuElipse1.ElipseRadius = 7;
-			this.bunifuElipse1.TargetControl = this.dg;
-			// 
-			// inwardSingleShipmentBindingSource
-			// 
-			this.inwardSingleShipmentBindingSource.DataSource = typeof(UPC.Library.Models.InwardSingleShipment);
 			// 
 			// dateDataGridViewTextBoxColumn
 			// 
@@ -226,6 +218,15 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.customerNameDataGridViewTextBoxColumn.HeaderText = "Customer Name";
 			this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
 			this.customerNameDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// inwardSingleShipmentBindingSource
+			// 
+			this.inwardSingleShipmentBindingSource.DataSource = typeof(UPC.Library.Models.InwardSingleShipment);
+			// 
+			// bunifuElipse1
+			// 
+			this.bunifuElipse1.ElipseRadius = 7;
+			this.bunifuElipse1.TargetControl = this.dg;
 			// 
 			// pictureBox2
 			// 

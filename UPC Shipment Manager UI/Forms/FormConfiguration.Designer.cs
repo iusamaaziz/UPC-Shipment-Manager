@@ -39,6 +39,7 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.label1 = new System.Windows.Forms.Label();
 			this.tbServer = new System.Windows.Forms.TextBox();
 			this.LocalHost = new System.Windows.Forms.CheckBox();
+			this.label5 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// label4
@@ -160,11 +161,23 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.LocalHost.UseVisualStyleBackColor = true;
 			this.LocalHost.CheckedChanged += new System.EventHandler(this.LocalHost_CheckedChanged);
 			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Sitka Small", 9F);
+			this.label5.ForeColor = System.Drawing.Color.Black;
+			this.label5.Location = new System.Drawing.Point(12, 301);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(397, 18);
+			this.label5.TabIndex = 41;
+			this.label5.Text = "Please run application as administrator before making changes.";
+			// 
 			// FormConfiguration
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(419, 298);
+			this.ClientSize = new System.Drawing.Size(419, 328);
+			this.Controls.Add(this.label5);
 			this.Controls.Add(this.LocalHost);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.tbPassword);
@@ -197,5 +210,6 @@ namespace UPC_Shipment_Manager_UI.Forms
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox tbServer;
 		private System.Windows.Forms.CheckBox LocalHost;
+		private System.Windows.Forms.Label label5;
 	}
 }

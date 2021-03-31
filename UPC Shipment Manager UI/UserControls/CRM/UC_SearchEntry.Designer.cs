@@ -30,10 +30,10 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.CustomerName = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
@@ -81,6 +81,8 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.label6 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+			this.CustomerPhone = new System.Windows.Forms.TextBox();
+			this.label16 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.customerEntryBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -94,9 +96,9 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.CustomerName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
 			this.CustomerName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
 			this.CustomerName.Font = new System.Drawing.Font("Segoe UI", 10F);
-			this.CustomerName.Location = new System.Drawing.Point(270, 29);
+			this.CustomerName.Location = new System.Drawing.Point(181, 29);
 			this.CustomerName.Name = "CustomerName";
-			this.CustomerName.Size = new System.Drawing.Size(236, 25);
+			this.CustomerName.Size = new System.Drawing.Size(173, 25);
 			this.CustomerName.TabIndex = 0;
 			this.CustomerName.Click += new System.EventHandler(this.CustomerName_Click);
 			this.CustomerName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CustomerName_KeyDown);
@@ -107,7 +109,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label4.ForeColor = System.Drawing.Color.Black;
-			this.label4.Location = new System.Drawing.Point(225, 34);
+			this.label4.Location = new System.Drawing.Point(136, 34);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(39, 15);
 			this.label4.TabIndex = 77;
@@ -141,8 +143,8 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			this.dg.AllowUserToAddRows = false;
 			this.dg.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
 			this.dg.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.dg.AutoGenerateColumns = false;
 			this.dg.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -150,14 +152,14 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.dg.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle14.BackColor = System.Drawing.Color.Maroon;
+			dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9F);
+			dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
 			this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -174,14 +176,14 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
             this.actionDataGridViewTextBoxColumn,
             this.whatsappMessageDataGridViewTextBoxColumn});
 			this.dg.DataSource = this.customerEntryBindingSource;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
-			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dg.DefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 9F);
+			dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Transparent;
+			dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dg.DefaultCellStyle = dataGridViewCellStyle15;
 			this.dg.DoubleBuffered = true;
 			this.dg.EnableHeadersVisualStyles = false;
 			this.dg.HeaderBgColor = System.Drawing.Color.Maroon;
@@ -192,9 +194,9 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.dg.ReadOnly = true;
 			this.dg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
 			this.dg.RowHeadersVisible = false;
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-			this.dg.RowsDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Transparent;
+			dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+			this.dg.RowsDefaultCellStyle = dataGridViewCellStyle16;
 			this.dg.Size = new System.Drawing.Size(736, 122);
 			this.dg.TabIndex = 1;
 			this.dg.TabStop = false;
@@ -640,11 +642,39 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.label2.TabIndex = 80;
 			this.label2.Text = "Click the desired result row to fetch entry in following form:";
 			// 
+			// CustomerPhone
+			// 
+			this.CustomerPhone.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.CustomerPhone.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.CustomerPhone.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+			this.CustomerPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+			this.CustomerPhone.Font = new System.Drawing.Font("Segoe UI", 10F);
+			this.CustomerPhone.Location = new System.Drawing.Point(412, 29);
+			this.CustomerPhone.Name = "CustomerPhone";
+			this.CustomerPhone.Size = new System.Drawing.Size(173, 25);
+			this.CustomerPhone.TabIndex = 81;
+			this.CustomerPhone.Click += new System.EventHandler(this.CustomerPhone_Click);
+			this.CustomerPhone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CustomerPhone_KeyDown);
+			// 
+			// label16
+			// 
+			this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label16.AutoSize = true;
+			this.label16.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.label16.ForeColor = System.Drawing.Color.Black;
+			this.label16.Location = new System.Drawing.Point(365, 34);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(41, 15);
+			this.label16.TabIndex = 82;
+			this.label16.Text = "Phone";
+			// 
 			// UC_SearchEntry
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
+			this.Controls.Add(this.CustomerPhone);
+			this.Controls.Add(this.label16);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.bunifuCards1);
 			this.Controls.Add(this.CustomerName);
@@ -715,5 +745,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 		private System.Windows.Forms.Label label15;
 		private System.Windows.Forms.Button Whatsapp;
 		private System.Windows.Forms.ToolTip toolTip1;
+		private System.Windows.Forms.TextBox CustomerPhone;
+		private System.Windows.Forms.Label label16;
 	}
 }

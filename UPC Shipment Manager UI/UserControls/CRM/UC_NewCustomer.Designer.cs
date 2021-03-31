@@ -43,15 +43,15 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.label2 = new System.Windows.Forms.Label();
 			this.OpenEntry = new System.Windows.Forms.Button();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+			this.Whatsapp = new System.Windows.Forms.Button();
 			this.Query = new System.Windows.Forms.RichTextBox();
 			this.Action = new System.Windows.Forms.RichTextBox();
 			this.WhatsappMessage = new System.Windows.Forms.RichTextBox();
-			this.Whatsapp = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label5
 			// 
-			this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label5.ForeColor = System.Drawing.Color.Black;
@@ -63,7 +63,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label7
 			// 
-			this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
 			this.label7.ForeColor = System.Drawing.Color.Black;
@@ -75,7 +75,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// CustomerName
 			// 
-			this.CustomerName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.CustomerName.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.CustomerName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
 			this.CustomerName.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.CustomerName.Location = new System.Drawing.Point(147, 83);
@@ -85,7 +85,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label4
 			// 
-			this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label4.ForeColor = System.Drawing.Color.Black;
@@ -97,7 +97,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// Phone
 			// 
-			this.Phone.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.Phone.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.Phone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
 			this.Phone.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.Phone.Location = new System.Drawing.Point(442, 114);
@@ -107,7 +107,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label1
 			// 
-			this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label1.ForeColor = System.Drawing.Color.Black;
@@ -119,7 +119,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// Email
 			// 
-			this.Email.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.Email.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
 			this.Email.Font = new System.Drawing.Font("Segoe UI", 10F);
 			this.Email.Location = new System.Drawing.Point(147, 114);
@@ -129,7 +129,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label3
 			// 
-			this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label3.ForeColor = System.Drawing.Color.Black;
@@ -141,7 +141,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label9
 			// 
-			this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label9.AutoSize = true;
 			this.label9.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label9.ForeColor = System.Drawing.Color.Black;
@@ -153,7 +153,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label6
 			// 
-			this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label6.ForeColor = System.Drawing.Color.Black;
@@ -165,7 +165,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// label2
 			// 
-			this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.label2.ForeColor = System.Drawing.Color.Black;
@@ -177,7 +177,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			// 
 			// OpenEntry
 			// 
-			this.OpenEntry.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.OpenEntry.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.OpenEntry.Location = new System.Drawing.Point(336, 358);
 			this.OpenEntry.Name = "OpenEntry";
 			this.OpenEntry.Size = new System.Drawing.Size(152, 29);
@@ -186,36 +186,9 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.OpenEntry.UseVisualStyleBackColor = true;
 			this.OpenEntry.Click += new System.EventHandler(this.OpenEntry_Click);
 			// 
-			// Query
-			// 
-			this.Query.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-			this.Query.Location = new System.Drawing.Point(147, 145);
-			this.Query.Name = "Query";
-			this.Query.Size = new System.Drawing.Size(531, 65);
-			this.Query.TabIndex = 3;
-			this.Query.Text = "";
-			// 
-			// Action
-			// 
-			this.Action.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-			this.Action.Location = new System.Drawing.Point(147, 216);
-			this.Action.Name = "Action";
-			this.Action.Size = new System.Drawing.Size(531, 65);
-			this.Action.TabIndex = 4;
-			this.Action.Text = "";
-			// 
-			// WhatsappMessage
-			// 
-			this.WhatsappMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-			this.WhatsappMessage.Location = new System.Drawing.Point(147, 287);
-			this.WhatsappMessage.Name = "WhatsappMessage";
-			this.WhatsappMessage.Size = new System.Drawing.Size(531, 65);
-			this.WhatsappMessage.TabIndex = 5;
-			this.WhatsappMessage.Text = "";
-			// 
 			// Whatsapp
 			// 
-			this.Whatsapp.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.Whatsapp.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.Whatsapp.BackgroundImage = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_whatsapp_24px;
 			this.Whatsapp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.Whatsapp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -227,6 +200,36 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 			this.toolTip1.SetToolTip(this.Whatsapp, "Send to Whatsapp");
 			this.Whatsapp.UseVisualStyleBackColor = true;
 			this.Whatsapp.Click += new System.EventHandler(this.Whatsapp_Click);
+			// 
+			// Query
+			// 
+			this.Query.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.Query.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+			this.Query.Location = new System.Drawing.Point(147, 145);
+			this.Query.Name = "Query";
+			this.Query.Size = new System.Drawing.Size(531, 65);
+			this.Query.TabIndex = 3;
+			this.Query.Text = "";
+			// 
+			// Action
+			// 
+			this.Action.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.Action.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+			this.Action.Location = new System.Drawing.Point(147, 216);
+			this.Action.Name = "Action";
+			this.Action.Size = new System.Drawing.Size(531, 65);
+			this.Action.TabIndex = 4;
+			this.Action.Text = "";
+			// 
+			// WhatsappMessage
+			// 
+			this.WhatsappMessage.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.WhatsappMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+			this.WhatsappMessage.Location = new System.Drawing.Point(147, 287);
+			this.WhatsappMessage.Name = "WhatsappMessage";
+			this.WhatsappMessage.Size = new System.Drawing.Size(531, 65);
+			this.WhatsappMessage.TabIndex = 5;
+			this.WhatsappMessage.Text = "";
 			// 
 			// UC_NewCustomer
 			// 

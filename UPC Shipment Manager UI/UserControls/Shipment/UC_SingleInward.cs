@@ -41,8 +41,8 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			CourierName.SelectedIndex = -1;
 			CourierName.Text = "";
 			TrackingId.Clear();
-			CourierName.Focus();
 			Register.Enabled = false;
+			CourierName.Focus();
 		}
 
 		private void Tb_TextChanged(object sender, EventArgs e)
@@ -68,9 +68,9 @@ namespace UPC_Shipment_Manager_UI.UserControls
 		{
 			try
 			{
-				InwardSingleShipment si = new InwardSingleShipment() { CourierName = CourierName.Text, Date = ShipmentDate.Value, ItemCondition = ItemCondition.Text, ItemName = ItemName.Text, Remarks = Remarks.Text, TrackingId = TrackingId.Text, ShipmentType = "Inward", CustomerName = "" };
+				InwardSingleShipment si = new InwardSingleShipment() { CourierName = CourierName.Text, Date = ShipmentDate.Value, ItemCondition = ItemCondition.Text, ItemName = ItemName.Text, Remarks = Remarks.Text, TrackingId = TrackingId.Text, ShipmentType = "Inward", CustomerName = "N/A", PaymentType = "N/A", Amount = "N/A" };
 				ShipmentLibrary.InsertInwardSingleShipment(si);
-				MessageBox.Show("Shipment Registered", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+				Notification.Show("Shipment registered", Notification.Type.Success);
 				Clear();
 				inwardSingleShipmentBindingSource.DataSource = await ShipmentLibrary.GetInwardShipmentsAsync();
 				dg.ClearSelection();

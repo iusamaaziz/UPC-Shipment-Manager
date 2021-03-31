@@ -393,7 +393,6 @@ namespace UPC_Shipment_Manager_UI.Forms
 		private Bunifu.Framework.UI.BunifuElipse elOutward;
 		private System.Windows.Forms.Panel Canva;
 		private System.Windows.Forms.PictureBox UserSettings;
-		private System.Windows.Forms.PictureBox pictureBox3;
 		private System.Windows.Forms.Label label;
 		private System.Windows.Forms.Panel CRM;
 		private System.Windows.Forms.Label label3;

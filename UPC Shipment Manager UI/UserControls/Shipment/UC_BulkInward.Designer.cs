@@ -30,10 +30,11 @@ namespace UPC_Shipment_Manager_UI.UserControls
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.ImportTrackingId = new System.Windows.Forms.PictureBox();
+			this.NewGodown = new System.Windows.Forms.PictureBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.Register = new System.Windows.Forms.Button();
 			this.label7 = new System.Windows.Forms.Label();
@@ -55,13 +56,12 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.inwardSingleShipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-			this.NewGodown = new System.Windows.Forms.PictureBox();
 			this.TrackingIdCount = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.ImportTrackingId)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.NewGodown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.inwardSingleShipmentBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.NewGodown)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// ImportTrackingId
@@ -78,6 +78,21 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.ImportTrackingId.TabStop = false;
 			this.toolTip1.SetToolTip(this.ImportTrackingId, "Import Tracking IDs");
 			this.ImportTrackingId.Click += new System.EventHandler(this.ImportTrackingId_Click);
+			// 
+			// NewGodown
+			// 
+			this.NewGodown.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.NewGodown.BackColor = System.Drawing.Color.White;
+			this.NewGodown.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.NewGodown.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_add_24px;
+			this.NewGodown.Location = new System.Drawing.Point(519, 98);
+			this.NewGodown.Name = "NewGodown";
+			this.NewGodown.Size = new System.Drawing.Size(24, 24);
+			this.NewGodown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.NewGodown.TabIndex = 54;
+			this.NewGodown.TabStop = false;
+			this.toolTip1.SetToolTip(this.NewGodown, "Add new Godown number");
+			this.NewGodown.Click += new System.EventHandler(this.NewGodown_Click);
 			// 
 			// label8
 			// 
@@ -200,8 +215,8 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			// 
 			this.dg.AllowUserToAddRows = false;
 			this.dg.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -210,14 +225,14 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.dg.BackgroundColor = System.Drawing.Color.Gainsboro;
 			this.dg.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
-			dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dateDataGridViewTextBoxColumn,
@@ -312,21 +327,6 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.bunifuElipse1.ElipseRadius = 7;
 			this.bunifuElipse1.TargetControl = this.dg;
 			// 
-			// NewGodown
-			// 
-			this.NewGodown.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.NewGodown.BackColor = System.Drawing.Color.White;
-			this.NewGodown.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.NewGodown.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_add_24px;
-			this.NewGodown.Location = new System.Drawing.Point(519, 98);
-			this.NewGodown.Name = "NewGodown";
-			this.NewGodown.Size = new System.Drawing.Size(24, 24);
-			this.NewGodown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-			this.NewGodown.TabIndex = 54;
-			this.NewGodown.TabStop = false;
-			this.toolTip1.SetToolTip(this.NewGodown, "Add new Godown number");
-			this.NewGodown.Click += new System.EventHandler(this.NewGodown_Click);
-			// 
 			// TrackingIdCount
 			// 
 			this.TrackingIdCount.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -364,10 +364,10 @@ namespace UPC_Shipment_Manager_UI.UserControls
 			this.Size = new System.Drawing.Size(801, 498);
 			this.Load += new System.EventHandler(this.UC_BulkInward_Load);
 			((System.ComponentModel.ISupportInitialize)(this.ImportTrackingId)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.NewGodown)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.inwardSingleShipmentBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.NewGodown)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

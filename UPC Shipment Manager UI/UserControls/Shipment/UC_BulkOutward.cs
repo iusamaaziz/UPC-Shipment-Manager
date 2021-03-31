@@ -145,10 +145,10 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			{
 				foreach (var item in TrackingIds)
 				{
-					InwardSingleShipment si = new InwardSingleShipment() { CourierName = CourierName.Text, Date = ShipmentDate.Value, ItemCondition = "", ItemName = "", Remarks = Remarks.Text, TrackingId = item, ShipmentType = "Outward", CustomerName = "" };
+					InwardSingleShipment si = new InwardSingleShipment() { CourierName = CourierName.Text, Date = ShipmentDate.Value, ItemCondition = "N/A", ItemName = "N/A", Remarks = Remarks.Text, TrackingId = item, ShipmentType = "Outward", CustomerName = "N/A", PaymentType = "N/A", Amount = "N/A" };
 					ShipmentLibrary.InsertInwardSingleShipment(si);
 				}
-				MessageBox.Show("Shipments Registered", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+				Notification.Show("Shipments registered", Notification.Type.Success);
 				Clear();
 				inwardSingleShipmentBindingSource.DataSource = await ShipmentLibrary.GetOutwardShipmentsAsync();
 				dg.ClearSelection();

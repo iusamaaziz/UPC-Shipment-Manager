@@ -16,6 +16,8 @@ using UPC.Library.CRMModels;
 using UPC.Library.LoginModels;
 using UPC.UIManager;
 
+using UPC_Shipment_Manager_UI.Forms;
+
 namespace UPC_Shipment_Manager_UI.UserControls.CRM
 {
 	public partial class UC_ExistingCustomerEntry : UserControl
@@ -98,7 +100,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 						Type = "Existing",
 						WhatsappMessage = WhatsappMessage.Text
 					});
-					MessageBox.Show("Entry for existing Customer was successfully opened.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+					Notification.Show("Entry Opened.", Notification.Type.Success);
 					Clear();
 				}
 				catch (Exception ex)

@@ -13,6 +13,8 @@ using UPC.Library.CRMModels;
 using UPC.Library.LoginModels;
 using UPC.UIManager;
 
+using UPC_Shipment_Manager_UI.Forms;
+
 namespace UPC_Shipment_Manager_UI.UserControls.CRM
 {
 	public partial class UC_SearchEntry : UserControl
@@ -34,6 +36,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 		private async void UC_SearchEntry_Load(object sender, EventArgs e)
 		{
 			CustomerName.AutoCompleteCustomSource = await CRMManager.GetCustomerNamesAsync();
+			CustomerPhone.AutoCompleteCustomSource = await CRMManager.GetCustomerPhonesAsync();
 		}
 
 		private void CustomerName_Click(object sender, EventArgs e)
@@ -59,7 +62,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 					return;
 				}
 				CRMManager.UpdateCustomerEntry(selectedId, "Closed");
-				MessageBox.Show("The entry was successfully closed.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+				Notification.Show("Entry Closed.", Notification.Type.Success);
 				Clear();
 			}
 			catch (Exception ex)
@@ -105,6 +108,19 @@ namespace UPC_Shipment_Manager_UI.UserControls.CRM
 				CustomerEntry ent = customerEntryBindingSource.List[e.RowIndex] as CustomerEntry;
 				Display(ent);
 			}
+		}
+
+		private async void CustomerPhone_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter && CustomerPhone.TextLength > 0)
+			{
+				customerEntryBindingSource.DataSource = await CRMManager.GetCustomerEntriesByPhoneAsync(CustomerPhone.Text);
+			}
+		}
+
+		private void CustomerPhone_Click(object sender, EventArgs e)
+		{
+			(sender as TextBox).Clear();
 		}
 	}
 }

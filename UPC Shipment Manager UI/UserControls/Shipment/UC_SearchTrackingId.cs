@@ -36,5 +36,10 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 				inwardSingleShipmentBindingSource.DataSource = await ShipmentLibrary.GetShipmentsByTrackingAsync(ItemName.Text);
 			}
 		}
+
+		private void ItemName_Click(object sender, EventArgs e)
+		{
+			(sender as TextBox).Clear();
+		}
 	}
 }

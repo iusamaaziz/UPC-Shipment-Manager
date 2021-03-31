@@ -38,5 +38,10 @@ namespace UPC_Shipment_Manager_UI.UserControls.Inventory
 			ActivateControl(new UC_PastPicklists());
 			(this.Parent.Parent as UC_InventoryManager).NavTitle.Text = "UPC Inventory Manager → Reports → Past Picklists";
 		}
+
+		private void UC_Reports_Load(object sender, EventArgs e)
+		{
+			ItemReports_Click(ItemReports, e);
+		}
 	}
 }

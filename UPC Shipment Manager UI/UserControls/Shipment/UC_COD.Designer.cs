@@ -67,7 +67,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.Search.Location = new System.Drawing.Point(326, 73);
 			this.Search.Name = "Search";
 			this.Search.Size = new System.Drawing.Size(145, 27);
-			this.Search.TabIndex = 91;
+			this.Search.TabIndex = 2;
 			this.Search.Text = "Search";
 			this.Search.UseVisualStyleBackColor = true;
 			this.Search.Click += new System.EventHandler(this.Search_Click);
@@ -80,7 +80,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.From.Location = new System.Drawing.Point(216, 47);
 			this.From.Name = "From";
 			this.From.Size = new System.Drawing.Size(189, 20);
-			this.From.TabIndex = 89;
+			this.From.TabIndex = 0;
 			// 
 			// label2
 			// 
@@ -252,7 +252,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.To.Location = new System.Drawing.Point(436, 47);
 			this.To.Name = "To";
 			this.To.Size = new System.Drawing.Size(189, 20);
-			this.To.TabIndex = 90;
+			this.To.TabIndex = 1;
 			// 
 			// label1
 			// 

@@ -30,8 +30,8 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.TrackingIdCount = new System.Windows.Forms.Label();
 			this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
 			this.dg = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -86,8 +86,8 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			// 
 			this.dg.AllowUserToAddRows = false;
 			this.dg.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
 			this.dg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -96,14 +96,14 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.dg.BackgroundColor = System.Drawing.Color.Gainsboro;
 			this.dg.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
-			dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-			dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(11)))), ((int)(((byte)(11)))));
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dateDataGridViewTextBoxColumn,
@@ -216,7 +216,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.ShipmentDate.Location = new System.Drawing.Point(588, 101);
 			this.ShipmentDate.Name = "ShipmentDate";
 			this.ShipmentDate.Size = new System.Drawing.Size(152, 20);
-			this.ShipmentDate.TabIndex = 57;
+			this.ShipmentDate.TabIndex = 1;
 			// 
 			// ImportTrackingId
 			// 
@@ -253,7 +253,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.Register.Location = new System.Drawing.Point(309, 211);
 			this.Register.Name = "Register";
 			this.Register.Size = new System.Drawing.Size(236, 33);
-			this.Register.TabIndex = 59;
+			this.Register.TabIndex = 3;
 			this.Register.Text = "Register";
 			this.Register.UseVisualStyleBackColor = true;
 			this.Register.Click += new System.EventHandler(this.Register_Click);
@@ -277,7 +277,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.Remarks.Location = new System.Drawing.Point(121, 130);
 			this.Remarks.Name = "Remarks";
 			this.Remarks.Size = new System.Drawing.Size(619, 48);
-			this.Remarks.TabIndex = 58;
+			this.Remarks.TabIndex = 2;
 			this.Remarks.Text = "";
 			// 
 			// label6
@@ -325,7 +325,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			this.CourierName.Location = new System.Drawing.Point(121, 99);
 			this.CourierName.Name = "CourierName";
 			this.CourierName.Size = new System.Drawing.Size(397, 25);
-			this.CourierName.TabIndex = 56;
+			this.CourierName.TabIndex = 0;
 			this.CourierName.SelectedIndexChanged += new System.EventHandler(this.Tb_TextChanged);
 			// 
 			// label1
@@ -344,6 +344,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.Shipment
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.White;
 			this.Controls.Add(this.TrackingIdCount);
 			this.Controls.Add(this.NewGodown);
 			this.Controls.Add(this.dg);

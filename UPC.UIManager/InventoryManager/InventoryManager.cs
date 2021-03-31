@@ -28,6 +28,29 @@ namespace UPC.UIManager.InventoryManager
 			Access.ExecuteProcedure("[dbo].[InsertInventoryItem]", parameters.ToArray());
 		}
 
+		public static void UpdateInventoryItem(InventoryItem item)
+		{
+			List<SqlParameter> parameters = new List<SqlParameter>
+			{
+				new SqlParameter("@id", item.Id),
+				new SqlParameter("@name", item.ItemName),
+				new SqlParameter("@godown", item.Godown),
+				new SqlParameter("@quantity", item.Quantity),
+				new SqlParameter("@remarks", item.Remarks),
+				new SqlParameter("@date", item.TransactionDate),
+			};
+			Access.ExecuteProcedure("[dbo].[UpdateInventoryItem]", parameters.ToArray());
+		}
+
+		public static void DeleteInventoryItem(InventoryItem item)
+		{
+			List<SqlParameter> parameters = new List<SqlParameter>
+			{
+				new SqlParameter("@id", item.Id)
+			};
+			Access.ExecuteProcedure("[dbo].[DeleteInventoryItem]", parameters.ToArray());
+		}
+
 		public static void InsertInventoryOut(InventoryItem item)
 		{
 			List<SqlParameter> parameters = new List<SqlParameter>
