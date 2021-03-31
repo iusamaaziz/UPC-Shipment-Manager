@@ -233,5 +233,12 @@ namespace UPC_Shipment_Manager_UI.Forms
 				frm.ShowDialog();
 			}
 		}
+
+		private void Logout_Click(object sender, EventArgs e)
+		{
+			FormLogin frm = new FormLogin();
+			this.Hide();
+			frm.Show();
+		}
 	}
 }

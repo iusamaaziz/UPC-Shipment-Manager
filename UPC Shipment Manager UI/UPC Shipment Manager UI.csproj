@@ -470,6 +470,8 @@
     <None Include="Resources\icons8_user_24px.png" />
     <None Include="Resources\icons8_add_user_male_26px.png" />
     <None Include="Resources\icons8_whatsapp_24px.png" />
+    <None Include="Resources\icons8_logout_rounded_up_24px.png" />
+    <None Include="Resources\icons8_one_page_24px_1.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

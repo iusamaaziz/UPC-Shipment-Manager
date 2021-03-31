@@ -61,7 +61,7 @@ namespace UPC_Shipment_Manager_UI.UserControls.ShipmentManager
 			// 
 			// SingleShipments
 			// 
-			this.SingleShipments.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.single;
+			this.SingleShipments.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_one_page_24px_1;
 			this.SingleShipments.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.SingleShipments.Name = "SingleShipments";
 			this.SingleShipments.Size = new System.Drawing.Size(118, 22);

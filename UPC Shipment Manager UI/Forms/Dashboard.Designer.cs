@@ -32,8 +32,8 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
 			this.TitleBar = new System.Windows.Forms.Panel();
+			this.Logout = new System.Windows.Forms.PictureBox();
 			this.UserSettings = new System.Windows.Forms.PictureBox();
-			this.Settings = new System.Windows.Forms.PictureBox();
 			this.Minimize = new System.Windows.Forms.PictureBox();
 			this.Maximize = new System.Windows.Forms.PictureBox();
 			this.Exit = new System.Windows.Forms.PictureBox();
@@ -56,8 +56,8 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.label = new System.Windows.Forms.Label();
 			this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
 			this.TitleBar.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.Logout)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.UserSettings)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.Settings)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Minimize)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Maximize)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
@@ -73,8 +73,8 @@ namespace UPC_Shipment_Manager_UI.Forms
 			// TitleBar
 			// 
 			this.TitleBar.BackColor = System.Drawing.Color.Maroon;
+			this.TitleBar.Controls.Add(this.Logout);
 			this.TitleBar.Controls.Add(this.UserSettings);
-			this.TitleBar.Controls.Add(this.Settings);
 			this.TitleBar.Controls.Add(this.Minimize);
 			this.TitleBar.Controls.Add(this.Maximize);
 			this.TitleBar.Controls.Add(this.Exit);
@@ -85,13 +85,28 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.TitleBar.Size = new System.Drawing.Size(958, 31);
 			this.TitleBar.TabIndex = 0;
 			// 
+			// Logout
+			// 
+			this.Logout.BackColor = System.Drawing.Color.Maroon;
+			this.Logout.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Logout.Dock = System.Windows.Forms.DockStyle.Right;
+			this.Logout.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_logout_rounded_up_24px;
+			this.Logout.Location = new System.Drawing.Point(808, 0);
+			this.Logout.Name = "Logout";
+			this.Logout.Size = new System.Drawing.Size(30, 31);
+			this.Logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.Logout.TabIndex = 6;
+			this.Logout.TabStop = false;
+			this.toolTip1.SetToolTip(this.Logout, "Logout");
+			this.Logout.Click += new System.EventHandler(this.Logout_Click);
+			// 
 			// UserSettings
 			// 
 			this.UserSettings.BackColor = System.Drawing.Color.Maroon;
 			this.UserSettings.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.UserSettings.Dock = System.Windows.Forms.DockStyle.Right;
 			this.UserSettings.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_users_settings_24px;
-			this.UserSettings.Location = new System.Drawing.Point(808, 0);
+			this.UserSettings.Location = new System.Drawing.Point(838, 0);
 			this.UserSettings.Name = "UserSettings";
 			this.UserSettings.Size = new System.Drawing.Size(30, 31);
 			this.UserSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -99,20 +114,6 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.UserSettings.TabStop = false;
 			this.toolTip1.SetToolTip(this.UserSettings, "Manage Users - Admin only");
 			this.UserSettings.Click += new System.EventHandler(this.UserSettings_Click);
-			// 
-			// Settings
-			// 
-			this.Settings.BackColor = System.Drawing.Color.Maroon;
-			this.Settings.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Settings.Dock = System.Windows.Forms.DockStyle.Right;
-			this.Settings.Image = global::UPC_Shipment_Manager_UI.Properties.Resources.icons8_settings_24px;
-			this.Settings.Location = new System.Drawing.Point(838, 0);
-			this.Settings.Name = "Settings";
-			this.Settings.Size = new System.Drawing.Size(30, 31);
-			this.Settings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.Settings.TabIndex = 4;
-			this.Settings.TabStop = false;
-			this.toolTip1.SetToolTip(this.Settings, "Settings");
 			// 
 			// Minimize
 			// 
@@ -358,8 +359,8 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.Load += new System.EventHandler(this.Dashboard_Load);
 			this.TitleBar.ResumeLayout(false);
 			this.TitleBar.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.Logout)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.UserSettings)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.Settings)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Minimize)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Maximize)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
@@ -391,7 +392,6 @@ namespace UPC_Shipment_Manager_UI.Forms
 		private Bunifu.Framework.UI.BunifuElipse elInward;
 		private Bunifu.Framework.UI.BunifuElipse elOutward;
 		private System.Windows.Forms.Panel Canva;
-		private System.Windows.Forms.PictureBox Settings;
 		private System.Windows.Forms.PictureBox UserSettings;
 		private System.Windows.Forms.PictureBox pictureBox3;
 		private System.Windows.Forms.Label label;
@@ -405,5 +405,6 @@ namespace UPC_Shipment_Manager_UI.Forms
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.PictureBox pictureBox4;
 		private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+		private System.Windows.Forms.PictureBox Logout;
 	}
 }

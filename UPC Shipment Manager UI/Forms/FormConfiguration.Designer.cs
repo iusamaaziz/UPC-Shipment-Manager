@@ -103,9 +103,9 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.btnCancel.IconColor = System.Drawing.Color.Black;
 			this.btnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnCancel.IconSize = 16;
-			this.btnCancel.Location = new System.Drawing.Point(93, 253);
+			this.btnCancel.Location = new System.Drawing.Point(93, 261);
 			this.btnCancel.Name = "btnCancel";
-			this.btnCancel.Size = new System.Drawing.Size(225, 25);
+			this.btnCancel.Size = new System.Drawing.Size(225, 34);
 			this.btnCancel.TabIndex = 4;
 			this.btnCancel.Text = "Cancel";
 			this.btnCancel.UseVisualStyleBackColor = true;
@@ -123,7 +123,7 @@ namespace UPC_Shipment_Manager_UI.Forms
 			this.Connect.IconSize = 16;
 			this.Connect.Location = new System.Drawing.Point(93, 222);
 			this.Connect.Name = "Connect";
-			this.Connect.Size = new System.Drawing.Size(225, 25);
+			this.Connect.Size = new System.Drawing.Size(225, 33);
 			this.Connect.TabIndex = 3;
 			this.Connect.Text = "Connect";
 			this.Connect.UseVisualStyleBackColor = true;
@@ -164,7 +164,7 @@ namespace UPC_Shipment_Manager_UI.Forms
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(419, 290);
+			this.ClientSize = new System.Drawing.Size(419, 298);
 			this.Controls.Add(this.LocalHost);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.tbPassword);
